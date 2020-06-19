@@ -52,7 +52,9 @@ Soortgelijke apps zouden bijvoorbeeld thuisbezorgd of uber eats zijn, alleen doe
  
  > [Styleboard](https://www.canva.com/design/DAD8PX-_wvc/yaSw3fNhBU8BlDgOGWQ4xQ/view?utm_content=DAD8PX-_wvc&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink)
  
- > [Ontwerp](https://xd.adobe.com/view/a51285a9-3804-4bb4-60fd-8a759f9837f1-d323/)
+ > [Design](https://xd.adobe.com/view/a51285a9-3804-4bb4-60fd-8a759f9837f1-d323/)
+ 
+ > [Presentatie](https://xd.adobe.com/view/f3d02815-e429-46c5-6357-eab5f8853698-85e1/?fullscreen)
  
  > [Videopresentatie](https://youtu.be/NJQgT6OU364)
 
