@@ -61,7 +61,7 @@ Soortgelijke apps zouden bijvoorbeeld thuisbezorgd of uber eats zijn, alleen doe
  ### Gereed (in Jira-bord)
  > [Pokimoto | Documentatie](https://docs.google.com/document/d/1gEKKa4inJEiDDlx7E4xLKw7DUX5FPZNvJ2ANABqBQ34/edit?usp=sharing)
  
- >
+ > [Pokimoto | Testplan](https://docs.google.com/document/d/1fNg7TFx7xT_p8_fsxBITTRpQMqEG0M1BMPT6MuHxf4w/edit?usp=sharing)
  
  >
  
