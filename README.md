@@ -1,4 +1,4 @@
-# Pokebowl - K_MOD
+# Pokimoto
 
 In deze repository bevinden zich alle benodigde bestanden voor het K_MOD examendeel project 'Pokebowl'
 
