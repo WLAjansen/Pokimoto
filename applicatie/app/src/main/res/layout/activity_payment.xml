@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".startpagina2">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F5F5F5"
+        tools:context=".MainActivity"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="30dp">
+
+        <ImageView
+            android:id="@+id/imageView19"
+            android:layout_width="411dp"
+            android:layout_height="644dp"
+            app:srcCompat="@drawable/custom_background_white"
+            tools:layout_editor_absoluteX="-1dp"
+            tools:layout_editor_absoluteY="84dp" />
+
+        <ImageView
+            android:id="@+id/imageView17"
+            android:layout_width="19dp"
+            android:layout_height="14dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginRight="25dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/image"
+            android:scaleType="fitXY"
+            app:layout_constraintHorizontal_bias="0.122"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/material_keyboard_backspace" />
+
+        <ImageView
+            android:id="@+id/imageView18"
+            android:layout_width="19dp"
+            android:layout_height="18dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginRight="25dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/image"
+            android:scaleType="fitXY"
+            app:layout_constraintHorizontal_bias="0.997"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ellipse_4" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="168dp"
+            android:layout_marginTop="32dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:text="Betalen"
+            android:textColor="@color/colorSecondary"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Poke bowl #1"
+            android:textColor="@color/colorSecondary"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.337" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_border
+            android:gravity="center"
+            android:text="Middelgroot, witte rijst, tonijn"
+            android:textSize="12dp"
+            tools:layout_editor_absoluteX="55dp"
+            tools:layout_editor_absoluteY="289dp" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Selecteer een van de betaalmethoden"
+            android:textColor="@color/colorSecondary"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.506"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.707" />
+
+        <ImageView
+            android:id="@+id/imageView11"
+            android:layout_width="112dp"
+            android:layout_height="36dp"
+            app:srcCompat="@drawable/custom_radiobutton_primary"
+            tools:layout_editor_absoluteX="219dp"
+            tools:layout_editor_absoluteY="551dp" />
+
+        <ImageView
+            android:id="@+id/imageView11"
+            android:layout_width="112dp"
+            android:layout_height="36dp"
+            app:srcCompat="@drawable/custom_radiobutton_primary"
+            tools:ignore="DuplicateIds"
+            tools:layout_editor_absoluteX="80dp"
+            tools:layout_editor_absoluteY="551dp" />
+
+        <ImageView
+            android:id="@+id/imageView13"
+            android:layout_width="110dp"
+            android:layout_height="34dp"
+            app:srcCompat="@drawable/custom_radiobutton_white"
+            tools:layout_editor_absoluteX="81dp"
+            tools:layout_editor_absoluteY="552dp" />
+
+        <ImageView
+            android:id="@+id/imageView14"
+            android:layout_width="110dp"
+            android:layout_height="34dp"
+            app:srcCompat="@drawable/custom_radiobutton_white"
+            tools:layout_editor_absoluteX="220dp"
+            tools:layout_editor_absoluteY="552dp" />
+
+        <Button
+            android:id="@+id/button"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="277dp"
+            android:layout_height="39dp"
+            android:layout_marginEnd="72dp"
+            android:layout_marginRight="72dp"
+            android:background="@drawable/custom_button_volgende"
+            android:text="Volgende"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:layout_editor_absoluteY="668dp" />
+
+        <ImageView
+            android:id="@+id/imageView15"
+            android:layout_width="59dp"
+            android:layout_height="40dp"
+            app:srcCompat="@drawable/be1_img_google"
+            tools:layout_editor_absoluteX="105dp"
+            tools:layout_editor_absoluteY="550dp" />
+
+        <ImageView
+            android:id="@+id/imageView16"
+            android:layout_width="83dp"
+            android:layout_height="22dp"
+            app:srcCompat="@drawable/be1_img_paypal"
+            tools:layout_editor_absoluteX="232dp"
+            tools:layout_editor_absoluteY="558dp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
