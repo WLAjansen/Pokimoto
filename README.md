@@ -1,4 +1,4 @@
-# Pokebowl - K_MOD
+# Pokimoto
 
 In deze repository bevinden zich alle benodigde bestanden voor het K_MOD examendeel project 'Pokebowl'
 
@@ -63,9 +63,9 @@ Soortgelijke apps zouden bijvoorbeeld thuisbezorgd of uber eats zijn, alleen doe
  
  > [Pokimoto | Testplan](https://docs.google.com/document/d/1fNg7TFx7xT_p8_fsxBITTRpQMqEG0M1BMPT6MuHxf4w/edit?usp=sharing)
  
- >
+ > [Pokimoto | Prototype applicatie](https://xd.adobe.com/view/a51285a9-3804-4bb4-60fd-8a759f9837f1-d323/)
  
- >
+ > [Pokimoto | Docenten handleiding](https://docs.google.com/document/d/1OgNMmIs8LmFimOFFM7FJFuABxxLJ-dikYoknEiqgJDQ/edit?usp=sharing)
 
 ### Installeren
 
