@@ -1,0 +1,467 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f3f3f3"
+    tools:context=".menupagina1">
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="435dp"
+        android:layout_height="575dp"
+        app:srcCompat="@drawable/custom_background_white"
+        tools:layout_editor_absoluteX="-12dp"
+        tools:layout_editor_absoluteY="160dp" />
+
+    <ImageView
+        android:id="@+id/imageView40"
+        android:layout_width="303dp"
+        android:layout_height="79dp"
+        app:srcCompat="@drawable/custom_background_grey"
+        tools:layout_editor_absoluteX="51dp"
+        tools:layout_editor_absoluteY="332dp" />
+    <ImageView
+        android:id="@+id/imageView41"
+        android:layout_width="303dp"
+        android:layout_height="79dp"
+        app:srcCompat="@drawable/custom_background_grey"
+        tools:layout_editor_absoluteX="51dp"
+        tools:layout_editor_absoluteY="246dp" />
+
+    <ImageView
+        android:id="@+id/imageView42"
+        android:layout_width="303dp"
+        android:layout_height="79dp"
+        app:srcCompat="@drawable/custom_background_grey"
+        tools:layout_editor_absoluteX="51dp"
+        tools:layout_editor_absoluteY="505dp" />
+
+    <ImageView
+        android:id="@+id/imageView39"
+        android:layout_width="303dp"
+        android:layout_height="79dp"
+        app:srcCompat="@drawable/custom_background_grey"
+        tools:layout_editor_absoluteX="51dp"
+        tools:layout_editor_absoluteY="418dp" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:text="Amstelplein 10, Amsterdam"
+        android:textSize="14dp"
+        tools:layout_editor_absoluteX="87dp"
+        tools:layout_editor_absoluteY="646dp" />
+
+    <TextView
+
+        android:id="@+id/textView21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Poke bowl #1"
+        android:textColor="@color/colorSecondary"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.267"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.86"
+        tools:ignore="DuplicateIds" />
+
+    <TextView
+
+        android:id="@+id/textView25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Poke bowl #1"
+        android:textColor="@color/colorSecondary"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.271"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.492"
+        tools:ignore="DuplicateIds" />
+
+    <ImageView
+        android:id="@+id/imageView26"
+        android:layout_width="303dp"
+        android:layout_height="79dp"
+        app:srcCompat="@drawable/custom_background_grey"
+        tools:layout_editor_absoluteX="51dp"
+        tools:layout_editor_absoluteY="596dp" />
+
+    <ImageView
+        android:id="@+id/imageView45"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/icon_ionic_ios_checkmark_circle"
+        tools:layout_editor_absoluteX="302dp"
+        tools:layout_editor_absoluteY="370dp" />
+
+    <ImageView
+        android:id="@+id/imageView46"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/icon_ionic_ios_checkmark_circle"
+        tools:layout_editor_absoluteX="302dp"
+        tools:layout_editor_absoluteY="370dp" />
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:text="Amstelplein 10, Amsterdam"
+        android:textSize="14dp"
+        tools:layout_editor_absoluteX="87dp"
+        tools:layout_editor_absoluteY="468dp" />
+
+    <TextView
+
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Poke bowl #1"
+        android:textColor="@color/colorSecondary"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.267"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.86"
+        tools:ignore="DuplicateIds" />
+
+    <ImageView
+        android:id="@+id/imageView24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/icon_ionic_ios_checkmark_circle"
+        tools:layout_editor_absoluteX="302dp"
+        tools:layout_editor_absoluteY="621dp" />
+
+    <TextView
+        android:id="@+id/textView27"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:text="Amstelplein 10, Amsterdam"
+        android:textSize="14dp"
+        tools:layout_editor_absoluteX="87dp"
+        tools:layout_editor_absoluteY="293dp" />
+
+    <TextView
+        android:id="@+id/textView30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:text="115 gerechten"
+        android:textSize="14dp"
+        tools:layout_editor_absoluteX="264dp"
+        tools:layout_editor_absoluteY="213dp" />
+
+    <ImageView
+        android:id="@+id/imageView25"
+        android:layout_width="303dp"
+        android:layout_height="79dp"
+        app:srcCompat="@drawable/custom_background_grey"
+        tools:layout_editor_absoluteX="51dp"
+        tools:layout_editor_absoluteY="596dp" />
+
+    <ImageView
+        android:id="@+id/imageView26"
+        android:layout_width="303dp"
+        android:layout_height="79dp"
+        app:srcCompat="@drawable/custom_background_grey"
+        tools:layout_editor_absoluteX="51dp"
+        tools:layout_editor_absoluteY="596dp" />
+
+    <ImageView
+        android:id="@+id/imageView48"
+        android:layout_width="303dp"
+        android:layout_height="79dp"
+        app:srcCompat="@drawable/custom_background_grey"
+        tools:layout_editor_absoluteX="51dp"
+        tools:layout_editor_absoluteY="596dp" />
+
+    <ImageView
+        android:id="@+id/imageView49"
+        android:layout_width="303dp"
+        android:layout_height="79dp"
+        app:srcCompat="@drawable/custom_background_grey"
+        tools:layout_editor_absoluteX="51dp"
+        tools:layout_editor_absoluteY="596dp" />
+
+    <ImageView
+        android:id="@+id/imageView51"
+        android:layout_width="303dp"
+        android:layout_height="79dp"
+        app:srcCompat="@drawable/custom_background_grey"
+        tools:layout_editor_absoluteX="51dp"
+        tools:layout_editor_absoluteY="596dp" />
+
+    <ImageView
+        android:id="@+id/imageView24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/icon_ionic_ios_checkmark_circle"
+        tools:layout_editor_absoluteX="302dp"
+        tools:layout_editor_absoluteY="621dp" />
+
+    <ImageView
+        android:id="@+id/imageView50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/icon_ionic_ios_checkmark_circle"
+        tools:layout_editor_absoluteX="293dp"
+        tools:layout_editor_absoluteY="708dp" />
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:text="Amstelplein 10, Amsterdam"
+        android:textSize="14dp"
+        tools:layout_editor_absoluteX="86dp"
+        tools:layout_editor_absoluteY="554dp" />
+
+    <TextView
+
+        android:id="@+id/textView23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Poke bowl #1"
+        android:textColor="@color/colorSecondary"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.271"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.617"
+        tools:ignore="DuplicateIds" />
+
+    <ImageView
+        android:id="@+id/imageView44"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/icon_ionic_ios_checkmark_circle"
+        tools:layout_editor_absoluteX="302dp"
+        tools:layout_editor_absoluteY="458dp" />
+
+    <TextView
+        android:id="@+id/textView26"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:text="Amstelplein 10, Amsterdam"
+        android:textSize="14dp"
+        tools:layout_editor_absoluteX="86dp"
+        tools:layout_editor_absoluteY="380dp" />
+
+    <ImageView
+        android:id="@+id/imageView43"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/icon_ionic_ios_checkmark_circle"
+        tools:layout_editor_absoluteX="302dp"
+        tools:layout_editor_absoluteY="544dp" />
+
+    <TextView
+
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Poke bowl #1"
+        android:textColor="@color/colorSecondary"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.267"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.86"
+        tools:ignore="DuplicateIds" />
+
+    <TextView
+
+        android:id="@+id/textView31"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Poke bowl #1"
+        android:textColor="@color/colorSecondary"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.271"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.995"
+        tools:ignore="DuplicateIds" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:text="Amstelplein 10, Amsterdam"
+        android:textSize="14dp"
+        tools:layout_editor_absoluteX="87dp"
+        tools:layout_editor_absoluteY="646dp" />
+
+    <TextView
+
+        android:id="@+id/textView28"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Poke bowl #1"
+        android:textColor="@color/colorSecondary"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.271"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.369"
+        tools:ignore="DuplicateIds" />
+
+    <TextView
+
+        android:id="@+id/textView29"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Amsterdam, NL"
+        android:textColor="@color/colorSecondary"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.166"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.298"
+        tools:ignore="DuplicateIds" />
+
+    <TextView
+
+        android:id="@+id/textView21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Poke bowl #1"
+        android:textColor="@color/colorSecondary"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.267"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.734"
+        tools:ignore="DuplicateIds" />
+
+    <ImageView
+        android:id="@+id/imageView47"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/icon_ionic_ios_checkmark_circle"
+        tools:layout_editor_absoluteX="302dp"
+        tools:layout_editor_absoluteY="283dp" />
+
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="168dp"
+        android:layout_marginTop="32dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:text="Zoeken"
+        android:textColor="@color/colorSecondary"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/phone"
+        android:layout_width="341dp"
+        android:layout_height="43dp"
+        android:autofillHints=""
+        android:background="@drawable/custom_input_primary"
+        android:hint="Adres bv. Amstelplein 10"
+        android:inputType="phone"
+        android:paddingStart="28dp"
+        android:paddingLeft="20dp"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.628"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.139"
+        tools:ignore="RtlSymmetry" />
+
+    <ImageView
+        android:id="@+id/imageView22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_material_cancel"
+        tools:layout_editor_absoluteX="358dp"
+        tools:layout_editor_absoluteY="108dp" />
+
+    <ImageView
+        android:id="@+id/imageView23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_ionic_md_pin"
+        tools:layout_editor_absoluteX="53dp"
+        tools:layout_editor_absoluteY="111dp" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="18dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginRight="25dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/image"
+        android:scaleType="fitXY"
+        app:layout_constraintHorizontal_bias="0.997"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/Icon_feather_heart" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="19dp"
+        android:layout_height="14dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginRight="25dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/image"
+        android:scaleType="fitXY"
+        app:layout_constraintHorizontal_bias="0.122"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/material_keyboard_backspace" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
