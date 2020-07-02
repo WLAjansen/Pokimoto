@@ -11,71 +11,69 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="168dp"
+        android:layout_marginTop="32dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
         android:text="@string/gerechten"
         android:textColor="@color/colorSecondary"
         android:textSize="15sp"
         android:textStyle="bold"
-        android:layout_marginTop="32dp"
-        android:layout_marginRight="146dp"
-        android:layout_marginLeft="146dp"
-        android:adjustViewBounds="true"
-        android:scaleType="fitXY"
-        app:layout_constraintHorizontal_bias="0.941"
         app:layout_constraintLeft_toLeftOf="parent"
 
-        app:layout_constraintTop_toTopOf="parent"
-        />
-
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:layout_width="307dp"
-        android:layout_height="138dp"
+        android:layout_width="341dp"
+        android:layout_height="137dp"
         android:adjustViewBounds="true"
+        android:contentDescription="@string/image"
         android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.628"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.755"
-        app:srcCompat="@drawable/pokebowl"
-        android:contentDescription="@string/image" />
+        app:layout_constraintVertical_bias="0.759"
+        app:srcCompat="@drawable/pokebowl" />
 
     <ImageView
 
         android:id="@+id/imageView4"
-        android:layout_width="307dp"
+        android:layout_width="341dp"
         android:layout_height="138dp"
         android:adjustViewBounds="true"
         android:bottomLeftRadius="7dp"
         android:bottomRightRadius="70dp"
+        android:contentDescription="@string/image"
         android:scaleType="fitXY"
         android:topLeftRadius="7dp"
         android:topRightRadius="7dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.628"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.44"
-        app:srcCompat="@drawable/pokebowl"
-        android:contentDescription="@string/image" />
+        app:layout_constraintVertical_bias="0.445"
+        app:srcCompat="@drawable/pokebowl" />
 
     <EditText
         android:id="@+id/phone"
-        android:layout_width="307dp"
+        android:layout_width="341dp"
         android:layout_height="43dp"
+        android:autofillHints=""
         android:background="@drawable/custom_input_primary"
         android:hint="@string/adres_b_v_amstelplein_10"
         android:inputType="phone"
+        android:paddingStart="20dp"
         android:paddingLeft="20dp"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintHorizontal_bias="0.628"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.222"
-        android:autofillHints=""
-        android:paddingStart="20dp"
         tools:ignore="RtlSymmetry" />
 
     <TextView
@@ -87,17 +85,17 @@
         android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.152"
+        app:layout_constraintHorizontal_bias="0.129"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.293" />
+        app:layout_constraintVertical_bias="0.291" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="55dp"
+        android:layout_marginStart="45dp"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="60dp"
@@ -109,7 +107,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/phone"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
         app:layout_constraintVertical_bias="1.0"
@@ -123,43 +121,11 @@
         android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.224"
+        app:layout_constraintHorizontal_bias="0.19"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.111" />
-
-    <ImageView
-
-        android:id="@+id/imageView"
-        android:layout_width="64dp"
-        android:layout_height="50dp"
-        android:adjustViewBounds="true"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.397"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.989"
-        app:srcCompat="@drawable/heart"
-        android:contentDescription="@string/heart" />
-
-    <ImageView
-
-        android:id="@+id/imageView5"
-        android:layout_width="64dp"
-        android:layout_height="50dp"
-        android:adjustViewBounds="true"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.27"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.989"
-        app:srcCompat="@drawable/heart"
-        android:contentDescription="@string/image" />
+        app:layout_constraintVertical_bias="0.104" />
 
     <ImageView
 
@@ -167,15 +133,47 @@
         android:layout_width="64dp"
         android:layout_height="50dp"
         android:adjustViewBounds="true"
+        android:contentDescription="@string/image"
         android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.651"
+        app:layout_constraintHorizontal_bias="0.619"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.989"
-        app:srcCompat="@drawable/heart"
-        android:contentDescription="@string/image" />
+        app:layout_constraintVertical_bias="0.976"
+        app:srcCompat="@drawable/heart" />
+
+    <ImageView
+
+        android:id="@+id/imageView5"
+        android:layout_width="64dp"
+        android:layout_height="50dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/image"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976"
+        app:srcCompat="@drawable/heart" />
+
+    <ImageView
+
+        android:id="@+id/imageView"
+        android:layout_width="64dp"
+        android:layout_height="50dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/heart"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.435"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976"
+        app:srcCompat="@drawable/heart" />
 
     <ImageView
 
@@ -183,31 +181,30 @@
         android:layout_width="64dp"
         android:layout_height="50dp"
         android:adjustViewBounds="true"
+        android:contentDescription="@string/image"
         android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.524"
+        app:layout_constraintHorizontal_bias="0.804"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.989"
-        app:srcCompat="@drawable/heart"
-        android:contentDescription="@string/image" />
+        app:layout_constraintVertical_bias="0.976"
+        app:srcCompat="@drawable/heart" />
 
     <ImageView
         android:id="@+id/imageView6"
         android:layout_width="36dp"
         android:layout_height="38dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="16dp"
         android:layout_marginRight="25dp"
         android:adjustViewBounds="true"
+        android:contentDescription="@string/image"
         android:scaleType="fitXY"
-        app:layout_constraintHorizontal_bias="0.941"
+        app:layout_constraintHorizontal_bias="0.997"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/person"
-        android:layout_marginEnd="25dp"
-        android:contentDescription="@string/image" />
+        app:srcCompat="@drawable/person" />
 
     <ImageView
         android:id="@+id/imageView7"
@@ -216,15 +213,13 @@
         android:layout_marginTop="36dp"
         android:layout_marginRight="25dp"
         android:adjustViewBounds="true"
+        android:contentDescription="@string/image"
         android:scaleType="fitXY"
-        app:layout_constraintHorizontal_bias="0.149"
+        app:layout_constraintHorizontal_bias="0.122"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/arrow_left"
-        android:layout_marginEnd="25dp"
-        android:contentDescription="@string/image" />
-    
+        app:srcCompat="@drawable/arrow_left" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
