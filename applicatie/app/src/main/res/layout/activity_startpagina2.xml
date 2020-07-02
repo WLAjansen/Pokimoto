@@ -15,6 +15,21 @@
         tools:layout_editor_absoluteY="0dp">
 
 
+        <Button
+            android:id="@+id/button6"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="277dp"
+            android:layout_height="39dp"
+            android:layout_marginEnd="64dp"
+            android:layout_marginRight="64dp"
+            android:background="@drawable/custom_button_volgende"
+            android:text="Volgende"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:layout_editor_absoluteY="651dp" />
+
         <TextView
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
@@ -68,21 +83,6 @@
             android:background="@drawable/custom_radiobutton_primary"
             tools:layout_editor_absoluteX="226dp"
             tools:layout_editor_absoluteY="550dp" />
-
-        <Button
-            android:id="@+id/button"
-            style="?android:attr/borderlessButtonStyle"
-            android:layout_width="277dp"
-            android:layout_height="39dp"
-            android:layout_marginEnd="72dp"
-            android:layout_marginRight="72dp"
-            android:background="@drawable/custom_button_volgende"
-            android:text="Volgende"
-            android:textAllCaps="false"
-            android:textColor="#FFFFFF"
-            android:textSize="15sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            tools:layout_editor_absoluteY="668dp" />
 
         <ImageView
             android:id="@+id/imageView4"
