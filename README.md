@@ -18,7 +18,7 @@ In deze repository bevinden zich alle benodigde bestanden voor het K_MOD examend
 | ------------- |:-------------:| -----:|
 | Lucas Jansen     | Front-end & back-end | Design & Front-end & back-end |
 | Regilio Spee      | Front-end     |   Front-end |
-| Vadim Pisa | Back-end     |   Back-end design |
+| Vadim Pisa | Front-end & back-end |   Back-end design |
 | Kevin Geurts | Back-end    |    Back-end |
 
 ### Planning
