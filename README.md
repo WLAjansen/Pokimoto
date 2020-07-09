@@ -16,7 +16,7 @@ In deze repository bevinden zich alle benodigde bestanden voor het K_MOD examend
 
 | Team lid      | Rolverdeling  | Verantwoordelijkheid |
 | ------------- |:-------------:| -----:|
-| Lucas Jansen     | Front-end & back-end | Design & Front-end & back-end |
+| Lucas Jansen     | Design & Front-end & back-end | Design & Front-end |
 | Regilio Spee      | Front-end     |   Front-end |
 | Vadim Pisa | Front-end & back-end |   Back-end design |
 | Kevin Geurts | Back-end    |    Back-end |
