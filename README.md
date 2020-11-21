@@ -1,4 +1,4 @@
-![Next.js blogging template for Netlify](https://repository-images.githubusercontent.com/284910441/d8efc300-e2ae-11ea-9596-b01e3844e39d)
+![Pokimoto](https://i.imgur.com/Y7wo6Gj.png)
 
 In deze repository bevinden zich alle benodigde bestanden voor het K_MOD examendeel project 'Pokebowl'
 
