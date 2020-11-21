@@ -1,4 +1,6 @@
-![Pokimoto](https://i.imgur.com/Y7wo6Gj.png)
+![Pokimoto](https://i.imgur.com/x8pkOWY.png)
+
+[![MADE BY Next.js](https://img.shields.io/badge/MADE%20BY%20Next.js-000000.svg?style=flat&logo=Next.js&labelColor=000)](https://nextjs.org/)
 
 In deze repository bevinden zich alle benodigde bestanden voor het K_MOD examendeel project 'Pokebowl'
 
