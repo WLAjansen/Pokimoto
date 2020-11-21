@@ -4,7 +4,7 @@
 
 In de planning bevatten zich de meeste links zodat het team gemakkelijk door het project heen kan navigeren, hiervoor gebruiken wij een [Jira-bord](https://wlaj.atlassian.net/secure/RapidBoard.jspa?rapidView=7&projectKey=POKI&selectedIssue=POKI-5&atlOrigin=eyJpIjoiMGRiYzNmNGZiNjMzNDQzMGExZWJhOWM1MDhmZjkwNmMiLCJwIjoiaiJ9)
 
-### Rolverdeling
+## Rolverdeling
 
 | Team lid      | Taakverdeling |
 | ------------- |:-------------:| 
@@ -14,7 +14,7 @@ In de planning bevatten zich de meeste links zodat het team gemakkelijk door het
 | Kevin Geurts | Testplan & testrapporten, geheel project   |  
 
 
-### Design
+## Design
  
  > [Videopresentatie](https://youtu.be/NJQgT6OU364)
 
@@ -27,7 +27,13 @@ In de planning bevatten zich de meeste links zodat het team gemakkelijk door het
 - **SEO optimized**: built-in metadata like JSON-LD
 - **Shortcode**: extends content writing with React component like WordPress shortcodes
  
-### User stories
+## User stories
+
+> User must be able to see every movie in the selected genre
+
+> User must be able to see every movie in the selected genre
+
+> User must be able to see every movie in the selected genre
 
 > User must be able to see every movie in the selected genre
 
