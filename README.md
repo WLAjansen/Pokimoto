@@ -2,7 +2,7 @@
 
 [![MADE BY Next.js](https://img.shields.io/badge/MADE%20BY%20Next.js-000000.svg?style=flat&logo=Next.js&labelColor=000)](https://nextjs.org/)
 
-In de planning bevatten zich de meeste links zodat het team gemakkelijk door het project heen kan navigeren, hiervoor gebruiken wij een [Jira-bord](https://wlaj.atlassian.net/secure/RapidBoard.jspa?rapidView=7&projectKey=POKI&selectedIssue=POKI-5&atlOrigin=eyJpIjoiMGRiYzNmNGZiNjMzNDQzMGExZWJhOWM1MDhmZjkwNmMiLCJwIjoiaiJ9)
+In de planning bevatten zich de meeste links zodat het team gemakkelijk door het project heen kan navigeren, hiervoor gebruiken wij een [Click up bord](https://share.clickup.com/b/h/6-36232147-2/7dfafeeca8a42eb)
 
 ## Rolverdeling
 
