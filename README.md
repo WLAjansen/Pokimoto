@@ -2,16 +2,6 @@
 
 In deze repository bevinden zich alle benodigde bestanden voor het K_MOD examendeel project 'Pokebowl'
 
-### Opdrachten 
-
-1. Staat onder rolverdeling
-
-2. Staat onder vragenlijst
-
-3. Staat onder rolverdeling & vragenlijst
-
-4. Staat onder [Images](https://github.com/RegilioSpee/pokebowl-k_mod/tree/master/img)
-
 ### Rolverdeling
 
 | Team lid      | Rolverdeling  | Verantwoordelijkheid |
