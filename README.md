@@ -12,7 +12,7 @@ In deze repository bevinden zich alle benodigde bestanden voor het K_MOD examend
 | Kevin Geurts | Back-end    |    Back-end |
 
 ### Planning
-In de planning bevatten zich de meeste links zodat het team gemakkelijk door het project heen kan navigeren, hiervoor gebruiken wij een [Jira-bord](https://wlaj.atlassian.net/secure/RapidBoard.jspa?rapidView=7&projectKey=POKI&selectedIssue=POKI-5&atlOrigin=eyJpIjoiMGRiYzNmNGZiNjMzNDQzMGExZWJhOWM1MDhmZjkwNmMiLCJwIjoiaiJ9
+In de planning bevatten zich de meeste links zodat het team gemakkelijk door het project heen kan navigeren, hiervoor gebruiken wij een [Jira-bord](https://wlaj.atlassian.net/secure/RapidBoard.jspa?rapidView=7&projectKey=POKI&selectedIssue=POKI-5&atlOrigin=eyJpIjoiMGRiYzNmNGZiNjMzNDQzMGExZWJhOWM1MDhmZjkwNmMiLCJwIjoiaiJ9)
 
 ### Design
  
