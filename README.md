@@ -16,7 +16,7 @@ In de planning bevatten zich de meeste links zodat het team gemakkelijk door het
 
 ## Design
  
- > [Videopresentatie](https://youtu.be/NJQgT6OU364)
+ > [Application - Prototype ](https://www.figma.com/file/UTJiwc1ZpikpogRQdU6AYo/Pokimoto-Applicatie?node-id=0%3A1)
 
 ## Features
 
