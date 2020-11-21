@@ -6,12 +6,12 @@ In de planning bevatten zich de meeste links zodat het team gemakkelijk door het
 
 ### Rolverdeling
 
-| Team lid      | Rolverdeling  | Verantwoordelijkheid |
-| ------------- |:-------------:| -----:|
-| Lucas Jansen     | Design & Front-end & back-end | Design & Front-end |
-| Regilio Spee      | Front-end     |   Front-end |
-| Vadim Pisa | Front-end & back-end |   Back-end design |
-| Kevin Geurts | Back-end    |    Back-end |
+| Team lid      | Taakverdeling |
+| ------------- |:-------------:| 
+| Lucas Jansen     |  Design, & flowchart, geheel project | 
+| Regilio Spee      | marktonderzoek + PVA + productoplevering uitleg document opleveren, geheel project |  
+| Vadim Pisa | User stories, geheel project  |  
+| Kevin Geurts | Testplan & testrapporten, geheel project   |  
 
 
 ### Design
@@ -27,6 +27,10 @@ In de planning bevatten zich de meeste links zodat het team gemakkelijk door het
 - **SEO optimized**: built-in metadata like JSON-LD
 - **Shortcode**: extends content writing with React component like WordPress shortcodes
  
- ### User stories
+### User stories
 
 > User must be able to see every movie in the selected genre
+
+## License
+
+MIT
