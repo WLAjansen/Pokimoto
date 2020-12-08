@@ -36,12 +36,12 @@ Of clone het project en run het met de code hieronder
 
 ## Features
 
-- **Tagging**: organizes content by tags
-- **Author**: displays author names who write a post
-- **Pagination**: limits the number of posts per page
-- **CMS**: built with CMS to allow editors modifying content with the quickest way
-- **SEO optimized**: built-in metadata like JSON-LD
-- **Shortcode**: extends content writing with React component like WordPress shortcodes
+- **Voorbeeldfeature**: omschrijving van de feature
+- **Voorbeeldfeature**: omschrijving van de feature
+- **Voorbeeldfeature**: omschrijving van de feature
+- **Voorbeeldfeature**: omschrijving van de feature
+- **Voorbeeldfeature optimized**: omschrijving van de feature
+- **Voorbeeldfeature**: omschrijving van de feature
 
  
 ## User stories
