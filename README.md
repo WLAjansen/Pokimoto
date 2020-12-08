@@ -8,7 +8,7 @@ In de planning bevatten zich de meeste links zodat het team gemakkelijk door het
 
 | Team lid      | Taakverdeling |
 | ------------- |:-------------:| 
-| Lucas Jansen     |  Design, & flowchart, geheel project | 
+| Lucas Jansen     |  Design, flowchart, opzet project, geheel project | 
 | Regilio Spee      | Marktonderzoek + PVA + productoplevering uitleg document opleveren, geheel project |  
 | Vadim Pisa | User stories, geheel project  |  
 | Kevin Geurts | Testplan & testrapporten, geheel project   |  
