@@ -47,21 +47,6 @@ Of clone het project en run het met de code hieronder
 ## User stories
 
 Voor het project is het noodzakelijk user stories op te stellen, met **[deze link](https://doc.clickup.com/p/h/49v6f-43/f7cde536d7a3445)** zijn deze duidelijk in te zien.
-> Als gebruiker wil ik makkelijk kunnen navigeren
-
-> Als gebruiker wil ik kunnen bestellen als gast
-
-> Als gebruiker wil ik mijn favorieten kunnen weergeven
-
-> Als gebruiker wil ik mijn gerecht kunnen samenstellen
-
-> Als gebruiker wil ik in kunnen loggen met Samsung ID
-
-> Als gebruiker wil ik kunnen betalen met Paypal, Google Pay en Apple pay
-
-> Als gebruiker wil ik een bevestiging krijgen van mijn bestellen
-
-> Als gebruiker wil ik mijn accounts informatie kunnen zien
 
 
 ## Dependencies
