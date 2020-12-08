@@ -2,11 +2,11 @@
 
 [![MADE BY Next.js](https://img.shields.io/badge/MADE%20BY%20Next.js-000000.svg?style=flat&logo=Next.js&labelColor=000)](https://nextjs.org/)
 
-In de planning bevatten zich de meeste links zodat het team gemakkelijk door het project heen kan navigeren, hiervoor gebruiken wij een [Click up bord](https://share.clickup.com/b/h/6-36232147-2/7dfafeeca8a42eb)
+In de planning bevatten zich de meeste links zodat het team gemakkelijk door het project heen kan navigeren, hiervoor gebruiken wij een [Clickup bord](https://share.clickup.com/b/h/6-36232147-2/7dfafeeca8a42eb)
 
-## Rolverdeling
+## Taakverdeling
 
-| Team lid      | Taakverdeling |
+| Team lid      | Taken |
 | ------------- |:-------------:| 
 | Lucas Jansen     |  Design, flowchart, opzet project, geheel project | 
 | Regilio Spee      | Marktonderzoek + PVA + productoplevering uitleg document opleveren, geheel project |  
@@ -28,7 +28,7 @@ Of clone het project en run het met de code hieronder
 ```
 
 
-## References
+## Referenties
  
  > [Application - Prototype ](https://www.figma.com/file/UTJiwc1ZpikpogRQdU6AYo/Pokimoto-Applicatie?node-id=0%3A1)
  
@@ -54,7 +54,7 @@ Voor het project is het noodzakelijk user stories op te stellen, met **[deze lin
 De Pokimoto applicatie is gemaakt met de Expo CLI in React Native. Meer hierover is te zien in ons [testplan](https://doc.clickup.com/p/h/49v6f-162/66812d24d3fe11f)
 
 
-## Structure
+## Structuur
 
 Hieronder is de structuur van het project te zien. 
 
@@ -78,6 +78,6 @@ filecify/
          └── wsgi.py
 ```
 
-## License
+## Licentie
 
 MIT
