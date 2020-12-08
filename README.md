@@ -9,7 +9,7 @@ In de planning bevatten zich de meeste links zodat het team gemakkelijk door het
 | Team lid      | Taakverdeling |
 | ------------- |:-------------:| 
 | Lucas Jansen     |  Design, & flowchart, geheel project | 
-| Regilio Spee      | marktonderzoek + PVA + productoplevering uitleg document opleveren, geheel project |  
+| Regilio Spee      | Marktonderzoek + PVA + productoplevering uitleg document opleveren, geheel project |  
 | Vadim Pisa | User stories, geheel project  |  
 | Kevin Geurts | Testplan & testrapporten, geheel project   |  
 
@@ -46,6 +46,7 @@ Of clone het project en run het met de code hieronder
  
 ## User stories
 
+Voor het project is het noodzakelijk user stories op te stellen, met **[deze link](https://doc.clickup.com/p/h/49v6f-43/f7cde536d7a3445)** zijn deze duidelijk in te zien.
 > Als gebruiker wil ik makkelijk kunnen navigeren
 
 > Als gebruiker wil ik kunnen bestellen als gast
