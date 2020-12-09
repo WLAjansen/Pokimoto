@@ -1,4 +1,4 @@
-![Pokimoto](https://i.imgur.com/2xtsAYQ.png)
+![Pokimoto](https://i.imgur.com/KeKNemU.png)
 
 [![Made with Expo](https://img.shields.io/badge/Made%20with%20Expo-000000.svg?style=flat&logo=Expo&labelColor=000)](https://expo.io/)
 [![Powered by React Native](https://img.shields.io/badge/Powered%20by%20React%20Native-000000.svg?style=flat&logo=React&labelColor=000)](https://expo.io/)
