@@ -6,8 +6,8 @@ export default function App() {
   console.log("Application is running on a device");
   return (
     <SafeAreaView style={styles.container}>
-      <Image source={require('./assets/icon.png')} />
-      <Text style={styles.titleText}>Pokimoto</Text>
+      <Image source={require('./app/assets/icon.png')} />
+      <Text style={styles.titleText}>Pokimoto test</Text>
     </SafeAreaView>
   );
 }

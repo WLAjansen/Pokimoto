@@ -4,9 +4,9 @@
     "slug": "Pokimoto",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./app/assets/icon.png",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./app/assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -21,14 +21,14 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./app/assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       }
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./app/assets/favicon.png"
     },
-    "description": "Lokaal multinationale poke bowls bestellen\n\nWat Pokimoto onderscheid van de concurrenten is het aanbod, ervaring en de levertijden. Wij bieden een groot assortiment van landen aan, namelijk: Japan, Hawaii, Indonesië en Zuid Korea. Daarnaast proberen we de klant alleen het beste eten aan te bieden en is onze app op gelijke voet met grote bezorgings bedrijven. ",
+    "description": "Pokimoto is een poke-bowl-keten met winkels in de randstad. Authentiek eten tegen een lage prijs. Eet lokaal multinationaal met onze poke bowls geïnspireerd door onder andere Hawaii, Japan, Indonesië en Zuid-Korea. ",
     "githubUrl": "https://github.com/wlaj/Pokimoto/tree/examen"
   }
 }
