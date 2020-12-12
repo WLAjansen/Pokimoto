@@ -1,11 +1,21 @@
-import React from 'react';
+import React from 'react'
+import { View, Text, StyleSheet } from 'react-native'
 
-function WelcomeScreen(props) {
+export default function WelcomeScreen() {
     return (
-        <div>
-            
-        </div>
-    );
+        <View style={styles.container}>
+            <Text>Hi whatsup</Text>
+        </View>
+    )
 }
 
-export default WelcomeScreen;
+const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+    title: {
+     
+    },
+  });

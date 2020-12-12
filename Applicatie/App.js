@@ -1,30 +1,50 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, Image, Platform, TouchableWithoutFeedback, SafeAreaView} from 'react-native';
+import * as React from 'react';
+import { View, SafeAreaView, Text, Button, StyleSheet } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import WelcomeScreen from './app/screens/WelcomeScreen';
+import HomeScreen from './app/screens/HomeScreen';
 
-export default function App() {
-  console.log("Application is running on a device");
+function Home({ navigation }) {
   return (
     <SafeAreaView style={styles.container}>
-      <Image source={require('./app/assets/icon.png')} />
-      <Text style={styles.titleText}>Pokimoto test</Text>
+      <Button
+        title="Go to Welcome"
+        onPress={() => navigation.navigate('Welcome')}
+      />
+      <HomeScreen />
     </SafeAreaView>
+  );
+}
+
+function Welcome() {
+  return (
+    < SafeAreaView style={styles.container}>
+      <WelcomeScreen />
+    </SafeAreaView>
+  );
+}
+
+const Stack = createStackNavigator();
+
+function App() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="Welcome" component={Welcome} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#000'
   },
-  titleText: {
-    color: '#fff',
-    fontSize: 36,
-    padding: 20,
-    fontFamily: Platform.OS === "ios" ? 'System' : 'Roboto',
-    fontWeight: 'bold'
-  }
 });
+
+
+export default App;
