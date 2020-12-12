@@ -2,8 +2,11 @@ import * as React from 'react';
 import { View, SafeAreaView, Text, Button, StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+// Import screens 
 import WelcomeScreen from './app/screens/WelcomeScreen';
 import HomeScreen from './app/screens/HomeScreen';
+
+// Home screen: splash page with timer
 
 function Home({ navigation }) {
   return (
@@ -17,6 +20,8 @@ function Home({ navigation }) {
   );
 }
 
+// Welcome screen: login and register
+
 function Welcome() {
   return (
     < SafeAreaView style={styles.container}>
@@ -24,6 +29,8 @@ function Welcome() {
     </SafeAreaView>
   );
 }
+
+// Navigator: Current page and go back button
 
 const Stack = createStackNavigator();
 
@@ -37,6 +44,8 @@ function App() {
     </NavigationContainer>
   );
 }
+
+// StyleSheet: all general styles for every page
 
 const styles = StyleSheet.create({
   container: {
