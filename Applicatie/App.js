@@ -8,24 +8,25 @@ import HomeScreen from './app/screens/HomeScreen';
 
 // Home screen: splash page with timer
 
-function Home({ navigation }) {
-  return (
-    <SafeAreaView style={styles.container}>
-      <Button
-        title="Go to Welcome"
-        onPress={() => navigation.navigate('Welcome')}
-      />
-      <HomeScreen />
-    </SafeAreaView>
-  );
-}
-
-// Welcome screen: login and register
-
 function Welcome() {
   return (
     < SafeAreaView style={styles.container}>
       <WelcomeScreen />
+    </SafeAreaView>
+  );
+}
+
+
+// Welcome screen: login and register
+
+function Home({ navigation }) {
+  return (
+    <SafeAreaView style={styles.container}>
+      <HomeScreen />
+      <Button
+        title="Go to Welcome"
+        onPress={() => navigation.navigate('Welcome')}
+      />
     </SafeAreaView>
   );
 }
@@ -38,7 +39,7 @@ function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="Home" component={Home} options={{ headerStyle: { backgroundColor:'#000000'},  headerTintColor: '#000000', }} />
         <Stack.Screen name="Welcome" component={Welcome} />
       </Stack.Navigator>
     </NavigationContainer>
@@ -52,6 +53,8 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: '#000000',
+    fontFamily: 'Roboto',
   },
 });
 

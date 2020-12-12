@@ -1,10 +1,22 @@
 import React from 'react'
-import { View, Text, Button } from 'react-native'
+import { View, Text, StyleSheet } from 'react-native'
 
 export default function HomeScreen() {
     return (
-        <View>
-            <Text>Home Screen</Text>
+        <View style={styles.container}>
+            <Text style={styles.titleText}>Waar leveren het af?</Text>
         </View>
     )
 }
+
+const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+      flexDirection: 'column',
+      backgroundColor: '#000000',
+    },
+    titleText: {
+        color: '#fff',
+        fontSize: 20,
+    },
+  });

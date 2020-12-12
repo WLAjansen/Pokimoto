@@ -4,7 +4,8 @@
     "slug": "Pokimoto",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./app/assets/icon.png",
+    "icon": "./app/assets/adaptive-icon.png",
+    "backgroundColor": "#000000",
     "splash": {
       "image": "./app/assets/splash.png",
       "resizeMode": "contain",
@@ -17,12 +18,12 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": false
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./app/assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
+        "backgroundColor": "#000000"
       }
     },
     "web": {
