@@ -11,17 +11,16 @@ const Footer = ({
   rightButtonPress = false
 }) => {
   const windowWidth = useWindowDimensions().width;
-  const HEIGHT = windowWidth * 0.21;
+  // const HEIGHT = windowWidth * 0.21;
   const FOOTER_PADDING = windowWidth * 0.1;
 
   return (
     <View
       style={{
-        flexDirection: 'row',
+        flexDirection: 'column',
         justifyContent: leftButtonLabel ? 'space-between' : 'flex-end',
-        height: HEIGHT,
         backgroundColor,
-        opacity: 0.6,
+        padding: 15,
         alignItems: 'center',
         paddingHorizontal: FOOTER_PADDING
       }}

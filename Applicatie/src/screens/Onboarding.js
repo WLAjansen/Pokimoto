@@ -20,7 +20,7 @@ const Onboarding = () => {
         <View key="1">
           <Page
             backgroundColor="#000000"
-            iconName="sushi"
+            image={require('../assets/header1.png')}
             title="Maak jouw eigen poke"
             paragraph="Breng jouw vrienden en familie samen
             met onze vers gemaakte poke bowls
@@ -37,18 +37,19 @@ const Onboarding = () => {
         <View key="2">
           <Page
             backgroundColor="#000000"
-            iconName="sushi"
-            title="Maak jouw eigen poke"
-            paragraph="Breng jouw vrienden en familie samen
-            met onze vers gemaakte poke bowls
-            allemaal binnen handbereik."
+            image={require('../assets/header4.png')}
+            title="Algemene voorwaarden"
+            iconName="escalator-warning"
+            paragraph="Pokimoto collects usage data to improve Pokimoto app. Your searches, browsing, purchases and device trust 
+            score may be used to personalize your experience and prevent fraud. See how your data is managed."
           />
           <Footer
             backgroundColor="#000000"
-            leftButtonLabel="Back"
-            leftButtonPress={() => {
-              handlePageChange(0);
-            }}
+            
+            // leftButtonLabel="Back"
+            // leftButtonPress={() => {
+            //   handlePageChange(0);
+            // }}
             rightButtonLabel="Continue"
             rightButtonPress={() => {
               navigation.navigate('Home');
