@@ -20,7 +20,7 @@ const Onboarding = () => {
         <View key="1">
           <Page
             backgroundColor="#000000"
-            image={require('../assets/header1.png')}
+            image={require('../assets/present.png')}
             title="Maak jouw eigen poke"
             paragraph="Breng jouw vrienden en familie samen
             met onze vers gemaakte poke bowls
@@ -37,7 +37,7 @@ const Onboarding = () => {
         <View key="2">
           <Page
             backgroundColor="#000000"
-            image={require('../assets/header4.png')}
+            image={require('../assets/thumbsup.png')}
             title="Algemene voorwaarden"
             iconName="escalator-warning"
             paragraph="Pokimoto collects usage data to improve Pokimoto app. Your searches, browsing, purchases and device trust 
