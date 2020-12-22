@@ -18,7 +18,7 @@ const Page = ({ backgroundColor, iconName, image, title, paragraph }) => {
         </Text>
        <Image style={{ marginTop: '20%', width: 200, height: 200, }} source={image} />
       <View style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '5%', }}>
-      <MaterialIcons name={iconName} size={30} color="white" />
+      <MaterialIcons name={iconName} size={30} color="#C1C1C1" />
         <Text style={{ fontSize: 12, marginTop: 16, maxWidth: '80%', fontWeight: 'bold', textAlign: 'center', color: 'grey' }}>
           {paragraph}
         </Text>

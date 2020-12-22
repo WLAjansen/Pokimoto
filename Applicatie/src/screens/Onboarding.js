@@ -21,10 +21,10 @@ const Onboarding = () => {
           <Page
             backgroundColor="#000000"
             image={require('../assets/present.png')}
-            title="Maak jouw eigen poke"
-            paragraph="Breng jouw vrienden en familie samen
-            met onze vers gemaakte poke bowls
-            allemaal binnen handbereik."
+            title="Make your own bowl"
+            paragraph="Bring your friends and family together
+            with our freshly made poke bowls
+            all at your fingertips."
           />
           <Footer
             backgroundColor="#000000"
@@ -38,10 +38,11 @@ const Onboarding = () => {
           <Page
             backgroundColor="#000000"
             image={require('../assets/thumbsup.png')}
-            title="Algemene voorwaarden"
+            title="Terms and services"
             iconName="escalator-warning"
-            paragraph="Pokimoto collects usage data to improve Pokimoto app. Your searches, browsing, purchases and device trust 
-            score may be used to personalize your experience and prevent fraud. See how your data is managed."
+            paragraph="Pokimoto collects usage data to improve the app. Your searches and purchases on your device
+            can be used to enhance your personal
+            experience and prevent fraud. See how your data is managed"
           />
           <Footer
             backgroundColor="#000000"
