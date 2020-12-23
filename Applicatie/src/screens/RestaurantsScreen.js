@@ -2,14 +2,15 @@ import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, onPress } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
-const Home = () => {
+const RestaurantScreen = () => {
   const navigation = useNavigation();
+  
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Home Screen</Text>
       <TouchableOpacity
         style={styles.button}
-        onPress={() => {navigation.navigate('Settings');}}
+        onPress={() => {navigation.navigate('SettingsScreen');}}
       >
         <Text>Press Here</Text>
       </TouchableOpacity>
@@ -33,4 +34,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default Home;
+export default RestaurantScreen;

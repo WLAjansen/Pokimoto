@@ -14,6 +14,7 @@ const Onboarding = () => {
     pagerRef.current.setPage(pageNumber);
   };
 
+
   return (
     <View style={{ flex: 1 }}>
       <ViewPager style={{ flex: 1 }} initialPage={0} ref={pagerRef}>
@@ -53,7 +54,7 @@ const Onboarding = () => {
             // }}
             rightButtonLabel="Continue"
             rightButtonPress={() => {
-              navigation.navigate('Home');
+              navigation.navigate('OrderComplete');
             }}
           />
         </View>
