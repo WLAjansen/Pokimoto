@@ -1,10 +1,11 @@
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, ActivityIndicator, SafeAreaView } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, ActivityIndicator, SafeAreaView, onPress } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { Card } from 'react-native-paper';
 import { useFonts } from 'expo-font';
 
 import Restaurants from '../components/Restaurants';
+import { ScrollView } from 'react-native-gesture-handler';
 
 const RestaurantScreen = () => {
   const navigation = useNavigation();
@@ -18,7 +19,16 @@ const RestaurantScreen = () => {
   } else {
     return (
       <SafeAreaView style={styles.container}>
+        <Text style={styles.text}>Poke bowls</Text>
+        <ScrollView>
+        <View style={styles.item}>
+          <Text style={styles.paragraph}>
+           Eigen Poke Bowl maken
+          </Text>
+          <TouchableOpacity style={styles.button} onPress={onPress}><Text style={{fontFamily: 'Sharp-Sans-Bold' }}>-30%</Text></TouchableOpacity>
+        </View>
        <Restaurants />
+       </ScrollView>
       </SafeAreaView>
     );
   }
@@ -31,22 +41,41 @@ const styles = StyleSheet.create({
     backgroundColor: '#000000'
   },
   button: {
-    backgroundColor: 'white'
+    backgroundColor: '#54FA9C',
+    flex: 0.19,
+    height: '100%',
+    width: 10,
+    padding: 12,
+    alignItems: 'center',
+    borderRadius: 8,
+    fontFamily: 'Sharp-Sans-Medium'
+  },
+  item: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    alignSelf: 'center',
+    justifyContent: 'space-between',
+    width: '90%',
+    margin: 10,
+    borderRadius: 8,
+    padding: 10,
+    height: 65,
+    backgroundColor: '#181818',
   },
   text: {
-    fontSize: 20,
-    color: 'white'
+    fontSize: 30,
+    paddingLeft: 20,
+    paddingRight: 20,
+    paddingTop: 40,
+    paddingBottom: 10,
+    color: 'white',
+    fontFamily: 'Sharp-Sans-Bold'
   },
-  card: {
+  paragraph: {
+    color: 'white',
+    flex: 0.8,
     padding: 10,
-    flexDirection: 'row',
-    alignSelf: 'center',
-    backgroundColor: '#000000',
-    borderWidth: 1,
-    borderColor: "#343434",
-    borderRadius: 8,
-    height: 100,
-    width: '90%'
+    fontFamily: 'Sharp-Sans-Medium'
   }
 });
 

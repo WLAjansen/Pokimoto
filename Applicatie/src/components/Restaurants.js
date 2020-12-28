@@ -5,18 +5,14 @@ import { AntDesign } from '@expo/vector-icons';
 class ScrollViewExample extends Component {
    state = {
       restaurants: [
-         {'name': 'Restaurant one', 'image': {uri: 'https://res.cloudinary.com/donglyhya/image/upload/v1516817597/campaign6_lfiwwo.jpg'}, 'id': 1},
-         {'name': 'Restaurant one', 'image': {uri: 'https://res.cloudinary.com/donglyhya/image/upload/v1516817597/campaign6_lfiwwo.jpg'}, 'id': 2},
-         {'name': 'Restaurant one', 'image': {uri: 'https://res.cloudinary.com/donglyhya/image/upload/v1516817597/campaign6_lfiwwo.jpg'}, 'id': 3},
-         {'name': 'Restaurant one', 'image': {uri: 'https://res.cloudinary.com/donglyhya/image/upload/v1516817597/campaign6_lfiwwo.jpg'}, 'id': 4},
-         {'name': 'Restaurant one', 'image': {uri: 'https://res.cloudinary.com/donglyhya/image/upload/v1516817597/campaign6_lfiwwo.jpg'}, 'id': 5},
-         {'name': 'Restaurant one', 'image': {uri: 'https://res.cloudinary.com/donglyhya/image/upload/v1516817597/campaign6_lfiwwo.jpg'}, 'id': 6},
-         {'name': 'Restaurant one', 'image': {uri: 'https://res.cloudinary.com/donglyhya/image/upload/v1516817597/campaign6_lfiwwo.jpg'}, 'id': 7},
-         {'name': 'Restaurant one', 'image': {uri: 'https://res.cloudinary.com/donglyhya/image/upload/v1516817597/campaign6_lfiwwo.jpg'}, 'id': 8},
-         {'name': 'Restaurant one', 'image': {uri: 'https://res.cloudinary.com/donglyhya/image/upload/v1516817597/campaign6_lfiwwo.jpg'}, 'id': 9},
-         {'name': 'Restaurant one', 'image': {uri: 'https://res.cloudinary.com/donglyhya/image/upload/v1516817597/campaign6_lfiwwo.jpg'}, 'id': 10},
-         {'name': 'Restaurant one', 'image': {uri: 'https://res.cloudinary.com/donglyhya/image/upload/v1516817597/campaign6_lfiwwo.jpg'}, 'id': 11},
-         {'name': 'Restaurant one', 'image': {uri: 'https://res.cloudinary.com/donglyhya/image/upload/v1516817597/campaign6_lfiwwo.jpg'}, 'id': 12}
+         {'name': 'Bali', 'image': {uri: 'https://images.unsplash.com/photo-1556040220-cce2e85427df?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80'}, 'id': 1},
+         {'name': 'Tokyo', 'image': {uri: 'https://images.unsplash.com/photo-1556040220-704dadc2b747?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=934&q=80'}, 'id': 2},
+         {'name': 'Honolulu', 'image': {uri: 'https://images.unsplash.com/photo-1556040220-4096d522378d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80'}, 'id': 3},
+         {'name': 'Jeju', 'image': {uri: 'https://images.unsplash.com/photo-1556040221-a1efce785fcc?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=934&q=80'}, 'id': 4},
+         {'name': 'Bali', 'image': {uri: 'https://images.unsplash.com/photo-1556040220-cce2e85427df?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80'}, 'id': 5},
+         {'name': 'Tokyo', 'image': {uri: 'https://images.unsplash.com/photo-1556040220-704dadc2b747?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=934&q=80'}, 'id': 6},
+         {'name': 'Honolulu', 'image': {uri: 'https://images.unsplash.com/photo-1556040220-4096d522378d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80'}, 'id': 7},
+         {'name': 'Jeju', 'image': {uri: 'https://images.unsplash.com/photo-1556040221-a1efce785fcc?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=934&q=80'}, 'id': 8}
       ]
    }
    render() {
@@ -27,7 +23,7 @@ class ScrollViewExample extends Component {
                      <View key = {item.id} style = {styles.item}>
                          <Image style={styles.innerLogo} source={item.image} />
                         <Text style={styles.innerHeader}>{item.name}</Text>
-                        <AntDesign style={styles.innerIcon} name="right" size={12} color="white" />
+                        <AntDesign style={styles.innerIcon} name="right" size={14} color="white" />
                      </View>
                   ))
                }
@@ -44,13 +40,13 @@ const styles = StyleSheet.create ({
       alignSelf: 'center',
       justifyContent: 'space-between',
       width: '90%',
+      fontFamily: 'Roboto',
+      fontWeight: 'bold',
       margin: 10,
       borderRadius: 8,
       padding: 10,
-      borderColor: '#343434',
       borderWidth: 1,
       backgroundColor: '#000000',
-      fontFamily: 'Sharp-Sans-Bold'
    },
    innerLogo: {
     flex: 0.25  ,
@@ -60,7 +56,8 @@ const styles = StyleSheet.create ({
   },
   innerHeader: {
     flex: 0.5,
-      color: 'white',
+    fontSize: 16,
+    color: 'white',
   },
   innerIcon: {
     flex: 0.1,
