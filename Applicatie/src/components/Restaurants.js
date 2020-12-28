@@ -1,21 +1,39 @@
 import React, { Component } from 'react';
-import { Text, Image, View, StyleSheet, ScrollView } from 'react-native';
+import { Text, Image, View, StyleSheet, ScrollView, ActivityIndicator } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
+import * as Font from 'expo-font';
 
-class ScrollViewExample extends Component {
+let customFonts = {
+   'Sharp-Sans-Regular': require('../assets/fonts/samsungsharpsans.otf'),
+    'Sharp-Sans-Medium': require('../assets/fonts/samsungsharpsans-medium.otf'),
+    'Sharp-Sans-Bold': require('../assets/fonts/samsungsharpsans-bold.otf'),
+ };
+
+class Restaurants extends Component {
    state = {
+      fontsLoaded: false,
       restaurants: [
-         {'name': 'Bali', 'image': {uri: 'https://images.unsplash.com/photo-1556040220-cce2e85427df?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80'}, 'id': 1},
-         {'name': 'Tokyo', 'image': {uri: 'https://images.unsplash.com/photo-1556040220-704dadc2b747?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=934&q=80'}, 'id': 2},
-         {'name': 'Honolulu', 'image': {uri: 'https://images.unsplash.com/photo-1556040220-4096d522378d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80'}, 'id': 3},
-         {'name': 'Jeju', 'image': {uri: 'https://images.unsplash.com/photo-1556040221-a1efce785fcc?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=934&q=80'}, 'id': 4},
-         {'name': 'Bali', 'image': {uri: 'https://images.unsplash.com/photo-1556040220-cce2e85427df?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80'}, 'id': 5},
-         {'name': 'Tokyo', 'image': {uri: 'https://images.unsplash.com/photo-1556040220-704dadc2b747?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=934&q=80'}, 'id': 6},
-         {'name': 'Honolulu', 'image': {uri: 'https://images.unsplash.com/photo-1556040220-4096d522378d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80'}, 'id': 7},
-         {'name': 'Jeju', 'image': {uri: 'https://images.unsplash.com/photo-1556040221-a1efce785fcc?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=934&q=80'}, 'id': 8}
+         {'name': 'Poke Perfect', 'image': require('../assets/restaurants/pokeperfect.jpg'), 'id': 1},
+         {'name': 'The Avocado Show', 'image': require('../assets/restaurants/theavocadoshow.jpg'), 'id': 2},
+         {'name': 'The Poké Market', 'image': require('../assets/restaurants/thepokemarket.jpg'), 'id': 3},
+         {'name': 'The Poké Box Weena', 'image': require('../assets/restaurants/thepokeboxweena.jpg'), 'id': 4},
+         {'name': 'Ramen Ohashi', 'image': require('../assets/restaurants/ramenohashi.jpg'), 'id': 5},
+         {'name': 'Momiji Sushi', 'image': require('../assets/restaurants/momijisushi.jpg'), 'id': 6},
+         {'name': 'Shibuya', 'image': require('../assets/restaurants/shibuya.jpg'), 'id': 7},
+         {'name': 'Ramen Ya', 'image': require('../assets/restaurants/ramenya.jpg'), 'id': 8}
       ]
    }
+  
+    async _loadFontsAsync() {
+      await Font.loadAsync(customFonts);
+      this.setState({ fontsLoaded: true });
+    }
+  
+    componentDidMount() {
+      this._loadFontsAsync();
+    }
    render() {
+      if (this.state.fontsLoaded) {;
       return (
             <ScrollView>
                {
@@ -23,15 +41,18 @@ class ScrollViewExample extends Component {
                      <View key = {item.id} style = {styles.item}>
                          <Image style={styles.innerLogo} source={item.image} />
                         <Text style={styles.innerHeader}>{item.name}</Text>
-                        <AntDesign style={styles.innerIcon} name="right" size={14} color="white" />
+                        <AntDesign style={styles.innerIcon} name="right" size={14} color="#888888" />
                      </View>
                   ))
                }
             </ScrollView>
-      )
+      );
+   } else {
+      return <ActivityIndicator size="large" color="#ffffff" />;
    }
+  }
 }
-export default ScrollViewExample
+export default Restaurants
 
 const styles = StyleSheet.create ({
    item: {
@@ -40,7 +61,6 @@ const styles = StyleSheet.create ({
       alignSelf: 'center',
       justifyContent: 'space-between',
       width: '90%',
-      fontFamily: 'Roboto',
       fontWeight: 'bold',
       margin: 10,
       borderRadius: 8,
@@ -49,17 +69,18 @@ const styles = StyleSheet.create ({
       backgroundColor: '#000000',
    },
    innerLogo: {
-    flex: 0.25  ,
+    flex: 0.22,
     width: 50,
-    height: 50,
+    height: 45,
     borderRadius: 8,
   },
   innerHeader: {
-    flex: 0.5,
-    fontSize: 16,
-    color: 'white',
+    flex: 0.6,
+    fontSize: 14,
+    color: '#888888',
+    fontFamily: 'Sharp-Sans-Medium',
   },
   innerIcon: {
-    flex: 0.1,
+    flex: 0.040,
   }
 })
