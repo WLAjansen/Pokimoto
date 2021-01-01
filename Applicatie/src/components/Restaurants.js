@@ -4,7 +4,7 @@ import { AntDesign } from '@expo/vector-icons';
 import * as Font from 'expo-font';
 
 let customFonts = {
-   'Sharp-Sans-Regular': require('../assets/fonts/samsungsharpsans.otf'),
+    'Sharp-Sans-Regular': require('../assets/fonts/samsungsharpsans.otf'),
     'Sharp-Sans-Medium': require('../assets/fonts/samsungsharpsans-medium.otf'),
     'Sharp-Sans-Bold': require('../assets/fonts/samsungsharpsans-bold.otf'),
  };
