@@ -28,7 +28,7 @@ const OrderComplete = () => {
             backgroundColor="#000000"
             rightButtonLabel="Track my order"
             rightButtonPress={() => {
-                navigation.navigate('Restaurants');
+                navigation.navigate('Payment');
               }}
           />
         </View>
