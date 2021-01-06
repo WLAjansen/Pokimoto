@@ -8,6 +8,7 @@ import OrderCompleteScreen from './src/screens/OrderCompleteScreen';
 import RestaurantsScreen from './src/screens/RestaurantsScreen';
 import TrackingScreen from './src/screens/TrackingScreen';
 import HomeScreen from './src/screens/HomeScreen';
+import PaymentScreen from './src/screens/PaymentScreen'
 
 const AppStack = createStackNavigator();
 
@@ -22,6 +23,7 @@ export default function App() {
           <AppStack.Screen name="Restaurants" component={RestaurantsScreen} />
           <AppStack.Screen name="Home" component={HomeScreen} />
           <AppStack.Screen name="Tracking" component={TrackingScreen} />
+          <AppStack.Screen name="Payment" component={PaymentScreen} />
         </AppStack.Navigator>
       </NavigationContainer>
     </>
