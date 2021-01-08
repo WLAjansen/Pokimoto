@@ -1,19 +1,18 @@
-import React, { useRef } from 'react';
+
 import { View, Text, Image, StyleSheet, auto, wrap,row, TouchableOpacity, ActivityIndicator, SafeAreaView, onPress } from 'react-native';
 import ViewPager from '@react-native-community/viewpager';
 import { useNavigation } from '@react-navigation/native';
 import Footer from '../components/Footer';
-import React, { useState } from "react";
-import { View, Picker, StyleSheet } from "react-native";
-// import { black } from 'react-native-paper/lib/typescript/styles/colors';
-import React from 'react'
+import React from "react";
+
 
 const Payment = () => {
     const navigation = useNavigation();
+
     return (
         <View style={{ flex: 1 }}>
-      <ViewPager style={{ flex: 1 }} initialPage={0} ref={pagerRef}>
-        <View key="1">
+    
+       
 
         <View style={styles.wrapper_1} >
           <TouchableOpacity>
@@ -95,8 +94,6 @@ const Payment = () => {
           />
         </View>
 
-      </ViewPager>
-    </View>
     )
 }
 
