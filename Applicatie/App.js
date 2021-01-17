@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 import OnboardingScreen from './src/screens/OnboardingScreen';
 import OrderCompleteScreen from './src/screens/OrderCompleteScreen';
@@ -17,23 +18,55 @@ function RouteStack() {
   return (
     <>
       <StatusBar style='light' />
-        <AppStack.Navigator headerMode='none'>
-          <AppStack.Screen name='Onboarding' component={OnboardingScreen} />
-          <AppStack.Screen name='OrderComplete'component={OrderCompleteScreen}/>
-          <AppStack.Screen name='Tracking' component={TrackingScreen} />
-        </AppStack.Navigator>
+      <AppStack.Navigator headerMode='none'>
+        <AppStack.Screen name='Onboarding' component={OnboardingScreen} />
+        <AppStack.Screen name='OrderComplete' component={OrderCompleteScreen} />
+        <AppStack.Screen name='Tracking' component={TrackingScreen} />
+      </AppStack.Navigator>
     </>
   );
 }
 
-const Tab = createBottomTabNavigator();
+const Tab = createMaterialBottomTabNavigator();
 
 function RouteTabs() {
   return (
-    <Tab.Navigator>
-      <Tab.Screen name='Home' component={HomeScreen} />
-      <Tab.Screen name='Restaurants' component={RestaurantsScreen} />
-      <Tab.Screen name='Dishes' component={DishesScreen} />
+    <Tab.Navigator
+      headerMode='none'
+      initialRouteName='Home'
+      activeColor='#f0edf6'
+      barStyle={{ backgroundColor: '#000000' }}
+    >
+      <Tab.Screen
+        name='Home'
+        component={HomeScreen}
+        options={{
+          tabBarLabel: 'Home',
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons name='home' color={color} size={20} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name='Restaurants'
+        component={RestaurantsScreen}
+        options={{
+          tabBarLabel: 'Restaurants',
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons name='bell' color={color} size={20} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name='Dishes'
+        component={DishesScreen}
+        options={{
+          tabBarLabel: 'Dishes',
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons name='database' color={color} size={20} />
+          ),
+        }}
+      />
     </Tab.Navigator>
   );
 }
