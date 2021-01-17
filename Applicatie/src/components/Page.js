@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
     color: 'grey'
   },
   innerImage: {
-    marginTop: '20%',
+    marginTop: '10%',
     width: 200,
     height: 200
   }

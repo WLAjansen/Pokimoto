@@ -1,39 +1,12 @@
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, onPress } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
+import { StyleSheet, TouchableOpacity, Text, View, Dimensions, OverlayComponent, onPress } from 'react-native';
 
-const Home = () => {
-  const navigation = useNavigation();
-  const {loading} = this.state
-
-  
+function HomeScreen() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Home Screen</Text>
-      <TouchableOpacity
-        style={styles.button}
-        onPress={() => {navigation.navigate('Settings');}}
-      >
-        <Text>Press Here</Text>
-      </TouchableOpacity>
+    <View>
+      <Text>Hi this is a test</Text>
     </View>
   );
-};
+}
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#000000'
-  },
-  button: {
-    backgroundColor: 'white',
-  },
-  text: {
-    fontSize: 20,
-    color: 'white'
-  }
-});
-
-export default Home;
+export default HomeScreen;

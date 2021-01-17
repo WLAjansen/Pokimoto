@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import { Text, Image, View, StyleSheet, ScrollView, ActivityIndicator } from 'react-native';
+import { Text, Image, View, StyleSheet, ScrollView, TouchableHighlight, Button, ActivityIndicator, } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
 import * as Font from 'expo-font';
+
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 let customFonts = {
     'Sharp-Sans-Regular': require('../assets/fonts/samsungsharpsans.otf'),
@@ -13,7 +15,7 @@ class Restaurants extends Component {
    state = {
       fontsLoaded: false,
       restaurants: [
-         {'name': 'Poke Perfect', 'image': require('../assets/restaurants/pokeperfect.jpg'), 'id': 1},
+         {'name': 'Poke Perfect', 'link': 'www.google.com', 'image': require('../assets/restaurants/pokeperfect.jpg'), 'id': 1},
          {'name': 'The Avocado Show', 'image': require('../assets/restaurants/theavocadoshow.jpg'), 'id': 2},
          {'name': 'The Poké Market', 'image': require('../assets/restaurants/thepokemarket.jpg'), 'id': 3},
          {'name': 'The Poké Box Weena', 'image': require('../assets/restaurants/thepokeboxweena.jpg'), 'id': 4},
@@ -37,17 +39,20 @@ class Restaurants extends Component {
       return (
             <ScrollView>
                {
-                  this.state.restaurants.map((item, index) => (
+                  this.state.restaurants.map((item, index ) => (
                      <View key = {item.id} style = {styles.item}>
                          <Image style={styles.innerLogo} source={item.image} />
                         <Text style={styles.innerHeader}>{item.name}</Text>
+                        <TouchableOpacity>
                         <AntDesign style={styles.innerIcon} name="right" size={14} color="#888888" />
+                        </TouchableOpacity>
                      </View>
                   ))
                }
             </ScrollView>
       );
    } else {
+
       return <ActivityIndicator size="large" color="#ffffff" />;
    }
   }
@@ -60,7 +65,7 @@ const styles = StyleSheet.create ({
       alignItems: 'center',
       alignSelf: 'center',
       justifyContent: 'space-between',
-      width: '90%',
+      width: '92%',
       fontWeight: 'bold',
       margin: 10,
       borderRadius: 8,

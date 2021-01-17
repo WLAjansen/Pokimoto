@@ -10,26 +10,26 @@ const OrderComplete = () => {
   const pagerRef = useRef(null);
   const navigation = useNavigation();
 
-  const handlePageChange = pageNumber => {
+  const handlePageChange = (pageNumber) => {
     pagerRef.current.setPage(pageNumber);
   };
 
   return (
     <View style={{ flex: 1 }}>
       <ViewPager style={{ flex: 1 }} initialPage={0} ref={pagerRef}>
-        <View key="1">
+        <View key='1'>
           <Page
-            backgroundColor="#000000"
-            image={require('../assets/present.png')}
-            title="Order complete"
+            backgroundColor='#000000'
+            image={require('../assets/card-reader.png')}
+            title='Order complete'
             paragraph="Your order is on it's way."
           />
           <Footer
-            backgroundColor="#000000"
-            rightButtonLabel="Track my order"
+            backgroundColor='#000000'
+            rightButtonLabel='Track my order'
             rightButtonPress={() => {
-                navigation.navigate('Payment');
-              }}
+              navigation.navigate('RouteTabs');
+            }}
           />
         </View>
       </ViewPager>
