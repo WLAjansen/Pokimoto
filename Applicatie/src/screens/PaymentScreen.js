@@ -9,85 +9,131 @@ import { FontAwesome5 } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 
-const Payment = () => {
+const PaymentScreen = () => {
     const navigation = useNavigation();
 
-    return (
-        <View style={{ flex: 1 }}>
-    
-       
-
-        <View style={styles.wrapper_1} >
-          <TouchableOpacity>
-             <Image style={styles.foto_5} source={require('../assets/chevron_left.png')}></Image>
+    function RenderHeaderBlock() {
+      return (
+        <SafeAreaView style={styles.renderHeaderBack}>
+          <TouchableOpacity
+            style={{
+              width: 50,
+              justifyContent: 'center',
+            }}
+            onPress={() => navigation.goBack()}
+          >
+            <AntDesign name='left' resizeMode='contain' size={20} color='white' />
           </TouchableOpacity>
-             <Text style={styles.text}>Afrekenen</Text>
+          <View style={{ alignItems: 'center', justifyContent: 'center' }}>
+            <Text style={styles.renderHeaderText}>Payment</Text>
           </View>
-        <Text style={styles.bedrag}>Het bedrag is $18 </Text>
+          <TouchableOpacity
+            style={{
+              width: 50,
+              justifyContent: 'center',
+            }}
+            onPress={() => {
+              navigation.navigate('Dishes');
+            }}
+          >
+            <AntDesign
+              name='search1'
+              resizeMode='contain'
+              size={20}
+              color='white'
+            />
+          </TouchableOpacity>
+        </SafeAreaView>
+      );
+    }
 
-        <SafeAreaView style={styles.container}>
-          {/* 1 */}
-          <View style={styles.wrapper}>
-                <View style={styles.item}>
-                  <Text style={styles.headline}>Jouw uitgekozen poke bowl</Text>
-                  <Text style={styles.details}>Honolulu</Text>
-                </View>    
+    function RenderHeaderTitle() {
+      return (
+        <View style={styles.innerContainer}>
+          <Text style={styles.headerTitle}>Afrekenen</Text>
+          <Text style={styles.headerSemiTitle}>Het bedrag is <Text  style={styles.amount}>$18</Text> </Text>
+        </View>
+      );
+    }
 
-                <View style={styles.item_1}>
-                  <TouchableOpacity  onPress={() => { navigation.navigate('Tracking')}}>
-                  <MaterialCommunityIcons style={styles.foto} name="exit-to-app" size={54} color="#54FA9C" />
-                  </TouchableOpacity>
-                </View>
+    function RenderBodyContentWrapper_1() {
+      return (
+        <View style={styles.wrapper}>
+          <View style={styles.description}>
+            <Text style={styles.descriptionHeadline}>Jouw uitgekozen poke bowl</Text>
+            <Text style={styles.descriptionDetails}>Honolulu</Text>
+          </View>    
+
+          <View style={styles.vectorWrapper}>
+            <TouchableOpacity  onPress={() => { navigation.navigate('Tracking')}}>
+            <MaterialCommunityIcons style={styles.vectorExit} name="exit-to-app" size={54} color="#54FA9C" />
+            </TouchableOpacity>
           </View>
-           {/* 2 */}
-           <View style={styles.wrapper}>
-                <View style={styles.item_2}>
-                  <Text style={styles.headline}>Prijs</Text>
-                  <Text style={styles.details}>$17.97</Text>
-                </View>    
+        </View>
+      );
+    }
 
-                <View style={styles.item_2}>
-                  <Text style={styles.headline}>Grootte</Text>
-                  <Text style={styles.details}>Medium</Text>
-                </View> 
+    function RenderBodyContentWrapper_2() {
+      return (
+        <View style={styles.wrapper}>
+          <View style={styles.orderDescription}>
+            <Text style={styles.descriptionHeadline}>Prijs</Text>
+            <Text style={styles.descriptionDetails}>$17.97</Text>
+          </View>    
 
-                <View style={styles.item_2}>
-                  <Text style={styles.headline}>Toppings</Text>
-                  <Text style={styles.details}>5 Stuks</Text>
-                </View> 
-          </View>
-           {/* 3 */}
-           <View style={styles.wrapper}>
-                <TouchableOpacity>
-                <FontAwesome5 style={styles.foto_1} name="location-arrow" size={24} color="#54FA9C" />
+          <View style={styles.orderDescription}>
+            <Text style={styles.descriptionHeadline}>Grootte</Text>
+            <Text style={styles.descriptionDetails}>Medium</Text>
+          </View> 
+
+          <View style={styles.orderDescription}>
+            <Text style={styles.descriptionHeadline}>Toppings</Text>
+            <Text style={styles.descriptionDetails}>5 Stuks</Text>
+          </View> 
+       </View>
+      );
+    }
+
+    function RenderBodyContentWrapper_3() {
+      return (
+        <View style={styles.wrapper}>
+                <TouchableOpacity style={styles.vectorWrapper}>
+                <FontAwesome5 style={styles.vectorLocation} name="location-arrow" size={24} color="#54FA9C" />
                 </TouchableOpacity>  
 
-                <View style={styles.item_3}>
+                <View style={styles.adresWrapper}>
                   <Text style={styles.headline_solo}>Contactweg 36, 1014 AN</Text>
                 </View> 
 
-                <TouchableOpacity onPress={() => { navigation.navigate('Tracking')}}>
-                <AntDesign style={styles.foto_2} name="right" size={24} color="grey" />
+                <TouchableOpacity style={styles.vectorWrapper} onPress={() => { navigation.navigate('Tracking')}}>
+                <AntDesign style={styles.vectorArrow} name="right" size={24} color="grey" />
                 </TouchableOpacity>
           </View>
-          {/* 4 */}
-          <View style={styles.wrapper_2}>
-                <TouchableOpacity onPress={()=>this.changeAdres()}>
-                <AntDesign style={styles.foto_3} name="creditcard" size={44} color="#54FA9C" />
+      );
+    }
+
+    function RenderBodyContentWrapper_4() {
+      return (
+        <View style={styles.wrapper_2}>
+                <TouchableOpacity style={styles.vectorWrapper} onPress={()=>this.changeAdres()}>
+                 <AntDesign style={styles.cardVector} name="creditcard" size={44} color="#54FA9C" />
                 </TouchableOpacity>   
 
-                <View style={styles.item_4}>
-                  <Text style={styles.headlines}>Ideal</Text>
-                  <Text style={styles.detailss}>ABN AMRO</Text>
+                <View style={styles.paymentDetails}>
+                  <Text style={styles.paymentMethod}>Ideal</Text>
+                  <Text style={styles.paymentBank}>ABN AMRO</Text>
                 </View> 
 
-                <TouchableOpacity>
-                <MaterialCommunityIcons style={styles.foto_4} name="pencil" size={34} color="grey" />
+                <TouchableOpacity style={styles.vectorWrapper}>
+                 <MaterialCommunityIcons style={styles.editVector} name="pencil" size={34} color="grey" />
                 </TouchableOpacity>  
           </View>
-        </SafeAreaView>
+      );
+    }
 
-          <Footer
+    function RenderFooter() {
+      return (
+        <Footer
           name="exit-to-app" size={34} color="black"
             backgroundColor="#000000"
             rightButtonLabel="Afrekenen"
@@ -95,160 +141,185 @@ const Payment = () => {
               navigation.navigate('Account');
             }}
           />
-        </View>
+      );
+    }
 
+    return (
+        <SafeAreaView style={styles.droidSafeArea}>
+          <RenderHeaderBlock />
+          <RenderHeaderTitle />
+          <RenderBodyContentWrapper_1 />
+          <RenderBodyContentWrapper_2 />
+          <RenderBodyContentWrapper_3 />
+          <RenderBodyContentWrapper_4 />
+          <RenderFooter />
+        </SafeAreaView>
     )
 }
 
-export default Payment;
+export default PaymentScreen;
 
 const styles = StyleSheet.create({
+    droidSafeArea: {
+      flex: 1,
+      paddingTop: Platform.OS === 'android' ? 25 : 0,
+      backgroundColor: 'black',
+    },
     container: {
       flex: 1,
       padding: 10,
       paddingTop: 60,
       backgroundColor: '#000000',
     },
-  wrapper: {
-    width: '95%',
-    height: '20%',
-    margin: 10,
-    flexDirection: 'row',
-    borderWidth: 1.5 ,
-    borderRadius: 8,
-    borderColor: '#343434',
-  },
-  wrapper_1: {
-    backgroundColor: '#000000',
-    flexDirection: 'row',
-  },
-  wrapper_2: {
-    width: '95%',
-    height: '20%',
-    margin: 10,
-    flexDirection: 'row',
-    borderRadius: 8,
-    backgroundColor: '#181818',
-  },
-  foto: {
-    height: 60,
-    width: 60,
-    alignSelf: 'flex-end',
-    margin: 15,
-  },
-  foto_1: {
-    height: 25,
-    width: 24,
-    margin: 35,
-    marginLeft: 25,
-  },
-  foto_2: {
-    height: 25,
-    width: 24,
-    margin: 35,
-    marginLeft: 35,
-    alignSelf: 'flex-end',
-  },
-  foto_3: {
-    margin: 27,
-    marginLeft: 25,
-    marginRight: 0,
-  },
-  foto_4: {
-    margin: 35,
-    marginLeft: 55,
-    alignSelf: 'flex-end',
-  },
- 
-    bedrag: {
-      color: '#808080',
-      backgroundColor: '#000000',
-      fontSize: 24,
-      paddingLeft: 29,
-      paddingTop: 42,
+    innerContainer: {
+      marginRight: 12,
+      marginLeft: 12,
     },
-    text: {
-      fontSize: 28,
-      paddingLeft: 35,
-      paddingRight: 35,
-      paddingTop: 40,
+    renderHeaderBack: {
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      marginLeft: 8,
+      marginRight: -8,
       paddingBottom: 10,
+    },
+    renderHeaderText: {
+      height: 40,
       color: 'white',
       fontFamily: 'Sharp-Sans-Bold',
-      backgroundColor: '#000000',
+      fontSize: 16,
+      lineHeight: 37,
+      paddingRight: 50,
+      borderRadius: 6,
+      paddingLeft: 50,
+      marginLeft: -20,
+      alignItems: 'center',
+      justifyContent: 'center',
     },
-    item: {
+    headerTitle: {
+      color: '#C1C1C1',
+      fontFamily: 'Sharp-Sans-Bold',
+      fontSize: 42,
+      maxWidth: '70%',
+    },
+    headerSubTitle: {
+      fontFamily: 'Sharp-Sans-Medium',
+      fontSize: 14,
+      color: '#404040',
+    },
+    headerSemiTitle: {
+      fontFamily: 'Sharp-Sans-Medium',
+      fontSize: 28,
+      margin: 10,
+      marginLeft: 0,
+      marginBottom: '10%',
+      color: '#404040',
+    },
+    wrapper: {
+      width: '95%',
+      height: 'auto',
+      margin: 10,
+      flexDirection: 'row',
+      borderWidth: 1.5 ,
+      borderRadius: 8,
+      borderColor: '#343434',
+    },
+    description: {
       alignSelf: 'flex-start',
       justifyContent: 'flex-start',
-      margin: 5,
-      height: 90,
       width: '65%',
     },
-    item_1: {
-      alignSelf: 'flex-start',
-      justifyContent: 'flex-end',
-      margin: 5,
-      height: 90,
-      width: '30%',
-    },
-    headline: {
+    descriptionHeadline: {
       color: '#888888',
-      paddingTop: 20,
-      paddingLeft: 20,
-      paddingBottom: 5,
+      marginTop: 20,
+      marginLeft: 20,
+      marginBottom: 5,
       fontFamily: 'Sharp-Sans-Medium',
       alignSelf: 'flex-start',
       fontSize: 15,
     },
-    headline_solo: {
-      color: '#888888',
-      paddingTop: 33,
-      fontFamily: 'Sharp-Sans-Medium',
-      alignSelf: 'flex-start',
-      fontSize: 18,
-    },
-    details: {
+    descriptionDetails: {
       color: 'white',
-      paddingBottom: 20,
-      paddingLeft: 20,
+      marginBottom: 20,
+      marginLeft: 20,
       fontFamily: 'Sharp-Sans-Medium',
       alignSelf: 'flex-start',
       fontSize: 16,
     },
-  
-    item_2: {
-      alignSelf: 'flex-start',
-      justifyContent: 'flex-start',
-      margin: 5,
-      height: 90,
-      width: '32%',
+    vectorWrapper: {
+      width: '25%',
     },
-    item_4: {
-      alignSelf: 'flex-start',
-      justifyContent: 'flex-start',
-      margin: 5,
-      height: 90,
-      width: '50%',
-    },
-    headlines: {
-      color: 'white',
-      paddingTop: 20,
-      paddingLeft: 20,
-      fontFamily: 'Sharp-Sans-Medium',
-      alignSelf: 'flex-start',
-      fontSize: 16,
-    },
-    detailss: {
-      color: '#888888',
-      paddingBottom: 20,
-      paddingLeft: 20,
-      fontFamily: 'Sharp-Sans-Medium',
-      alignSelf: 'flex-start',
-      fontSize: 16,
-    },
-    rechts: {
-      width: '15%',
+    vectorExit: {
       alignSelf: 'flex-end',
-    justifyContent: 'flex-end',
+      marginTop: 15,
+      marginBottom: 'auto',
     },
-  });
+    orderDescription: {
+      alignSelf: 'flex-start',
+      justifyContent: 'flex-start',
+      margin: 3,
+      height: 90,
+      width: '33%',
+    },
+    vectorLocation: {
+      margin: 35,
+    },
+    vectorArrow: {
+      marginRight: 35,
+      marginTop: 'auto',
+      marginBottom: 'auto',
+      alignSelf: 'flex-end',
+    },
+   adresWrapper: {
+     marginTop: 'auto',
+     marginBottom: 'auto',
+      width: '53%',
+   },
+   headline_solo: {
+    color: '#888888',
+    fontFamily: 'Sharp-Sans-Medium',
+    alignSelf: 'flex-start',
+    fontSize: 18,
+},
+   wrapper_2: {
+    width: '95%',
+    margin: 10,
+    flexDirection: 'row',
+    backgroundColor: '#181818',
+    height: 'auto',
+    flexDirection: 'row',
+    borderRadius: 8,
+  },
+  cardVector: {
+    margin: 27,
+    marginRight: 0,
+    marginTop: 'auto',
+     marginBottom: 'auto',
+  },
+  paymentDetails: {
+    alignSelf: 'flex-start',
+    justifyContent: 'flex-start',
+    marginTop: 'auto',
+     marginBottom: 'auto',
+    width: '50%',
+  },
+  paymentMethod: {
+    color: 'white',
+    fontFamily: 'Sharp-Sans-Medium',
+    alignSelf: 'flex-start',
+    fontSize: 16,
+  },
+  paymentBank: {
+    color: '#888888',
+    fontFamily: 'Sharp-Sans-Medium',
+    alignSelf: 'flex-start',
+    fontSize: 16,
+  },
+  editVector: {
+    margin: 35,
+    alignSelf: 'flex-end',
+  },
+  amount: {
+    color: '#54FA9C',
+  }
+
+});
