@@ -1,13 +1,13 @@
-
 import { View, Text, Image, StyleSheet, TouchableOpacity, ActivityIndicator, SafeAreaView, onPress } from 'react-native';
 import ViewPager from '@react-native-community/viewpager';
 import { useNavigation } from '@react-navigation/native';
 import React from "react";
 import { AntDesign } from '@expo/vector-icons';
 import { Feather } from '@expo/vector-icons';
+import { ScrollView } from 'react-native-gesture-handler';
 
 
-const Account = () => {
+const AccountScreen = () => {
     const navigation = useNavigation();
     function RenderHeaderBlock() {
       return (
@@ -56,7 +56,7 @@ const Account = () => {
     function RenderHeaderContent() {
       return (
         <View style={styles.header}>
-             
+
                 <View style={styles.wrapper}>
                     <TouchableOpacity onPress={()=>this.changeAdres()}>
                         <AntDesign style={styles.card} name="creditcard" size={44} color="#888888" />
@@ -130,17 +130,19 @@ const Account = () => {
 
     return (
       <SafeAreaView style={styles.droidSafeArea}>
+        <ScrollView>
         <RenderHeaderBlock />
         <RenderHeaderTitle />
         <RenderHeaderContent />
         <RenderSettings />
         <RenderBodyOptions />
         <RenderFooter />
+        </ScrollView>
       </SafeAreaView>
   )
 }
 
-export default Account;
+export default AccountScreen;
 
 const styles = StyleSheet.create({
 

@@ -1,12 +1,26 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet,Text, View,SectionList,SafeAreaView,Image, FlatList, ActivityIndicator} from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  SectionList,
+  SafeAreaView,
+  Image,
+  FlatList,
+  ActivityIndicator,
+  TouchableOpacity,
+} from 'react-native';
 import { useFonts } from 'expo-font';
 import { TouchableHighlight } from 'react-native-gesture-handler';
+import { AntDesign } from '@expo/vector-icons';
+import { useNavigation } from '@react-navigation/native';
 
 const ListItem = ({ item }) => {
+  const navigation = useNavigation();
   return (
     <View style={styles.item}>
+      <TouchableOpacity onPress={() => navigation.navigate('Details', item)}>
       <Image
         source={{
           uri: item.uri,
@@ -14,24 +28,53 @@ const ListItem = ({ item }) => {
         style={styles.itemPhoto}
         resizeMode='cover'
       />
+      </TouchableOpacity>
       <Text style={styles.itemText}>{item.text}</Text>
     </View>
   );
 };
 
 const HomeScreen = () => {
+  const navigation = useNavigation();
   let [fontsLoaded] = useFonts({
     'Sharp-Sans-Regular': require('../assets/fonts/samsungsharpsans.otf'),
     'Sharp-Sans-Medium': require('../assets/fonts/samsungsharpsans-medium.otf'),
     'Sharp-Sans-Bold': require('../assets/fonts/samsungsharpsans-bold.otf'),
   });
-  if (!fontsLoaded) {
-    return  <ActivityIndicator size="large" color="#ffffff" />;
-  } else {
-  return (
-    <View style={styles.container}>
-      <StatusBar style='light' />
-      <SafeAreaView style={{ flex: 1, marginTop: 50, }}>
+
+  function renderHeader() {
+    return (
+      <SafeAreaView style={styles.renderHeaderBack}>
+        <TouchableOpacity
+          style={{
+            width: 50,
+            justifyContent: 'center',
+          }}
+          onPress={() => navigation.goBack()}
+        >
+          <AntDesign name='left' resizeMode='contain' size={20} color='white' />
+        </TouchableOpacity>
+        <View style={{alignItems: 'center', justifyContent: 'center'}}>
+          <Text style={styles.renderHeaderText}>Favorieten</Text>
+        </View>
+        <TouchableOpacity
+          style={{
+            width: 50,
+            justifyContent: 'center',
+          }}
+          onPress={() => {
+            navigation.navigate('Payment');
+          }}
+        >
+          <AntDesign name='search1' resizeMode='contain' size={20} color='white' />
+        </TouchableOpacity>
+      </SafeAreaView>
+    );
+  }
+
+  function renderContentBody() {
+    return (
+      <SafeAreaView style={{ flex: 1 }}>
         <SectionList
           contentContainerStyle={{ paddingHorizontal: 10 }}
           stickySectionHeadersEnabled={false}
@@ -58,53 +101,83 @@ const HomeScreen = () => {
           }}
         />
       </SafeAreaView>
-    </View>
-  );
-   }
+    );
+  }
+
+  if (!fontsLoaded) {
+    return <ActivityIndicator size='large' color='#ffffff' />;
+  } else {
+    return (
+      <SafeAreaView style={styles.container}>
+        <StatusBar style='light' />
+        {renderHeader()}
+        {renderContentBody()}
+      </SafeAreaView>
+    );
+  }
 };
 
 const SECTIONS = [
   {
-    title: 'Favorieten',
     subtitle: 'Jouw favorieten',
     horizontal: true,
     data: [
       {
         key: '1',
         text: '    Honolulu     ',
-        rating: 5,
+        title: 'Honolulu Poke Bowl',
         body: 'lorem ipsum',
-        uri: 'https://i.imgur.com/MSBX5gq.jpg',
+        rating: 5,
+        price: 15,
+        protein: 'Salmon',
+        size: 'Medium',
+        uri: 'https://i.imgur.com/5udjQhd.jpeg',
       },
       {
         key: '2',
-        text: '       Tokyo       ',
-        rating: 5,
+        text: '       Tokyo        ',
+        title: 'Tokyo Poke Bowl',
         body: 'lorem ipsum',
-        uri: 'https://i.imgur.com/MSBX5gq.jpg',
+        rating: '5 sterren',
+        price: 15,
+        protein: 'Salmon',
+        size: 'Medium',
+        uri: 'https://i.imgur.com/QqO13hE.png',
       },
 
       {
         key: '3',
-        text: '         Bali         ',
-        rating: 5,
+        text: '         Bali          ',
+        title: 'Bali Poke Bowl',
         body: 'lorem ipsum',
+        rating: 5,
+        price: 15,
+        protein: 'Salmon',
+        size: 'Medium',
         uri: 'https://i.imgur.com/MSBX5gq.jpg',
       },
       {
         key: '4',
-        text: '        Jeju        ',
-        rating: 5,
+        text: '        Jeju         ',
+        title: 'Jeju Poke Bowl',
         body: 'lorem ipsum',
-        uri: 'https://i.imgur.com/MSBX5gq.jpg',
+        rating: 5,
+        price: 15,
+        protein: 'Salmon',
+        size: 'Medium',
+        uri: 'https://i.imgur.com/iO4FRur.png',
       },
       {
         key: '5',
-        text: 'Item text 5',
-        rating: 5,
+        text: '        Taipei       ',
+        title: 'Honolulu Poke Bowl',
         body: 'lorem ipsum',
-        uri: 'https://i.imgur.com/MSBX5gq.jpg',
-      }
+        rating: 5,
+        price: 15,
+        protein: 'Salmon',
+        size: 'Medium',
+        uri: 'https://i.imgur.com/5udjQhd.jpeg',
+      },
     ],
   },
   {
@@ -139,21 +212,40 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#121212',
   },
+  renderHeaderBack: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginLeft: 8,
+    marginRight: -8,
+    marginTop: 50,
+    paddingBottom: 10,
+  },
+  renderHeaderText: {
+    height: 40,
+    color: 'white',
+    fontFamily: 'Sharp-Sans-Bold',
+    fontSize: 16,
+    lineHeight: 37,
+    paddingRight: 50,
+    borderRadius: 6,
+    paddingLeft: 50,
+    marginLeft: -20,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
   sectionHeader: {
-    fontWeight: '800',
+    fontWeight: '500',
     fontFamily: 'Sharp-Sans-Bold',
     fontSize: 24,
     color: '#f4f4f4',
-    marginTop: 10,
     marginLeft: 5,
-    marginBottom: 15,
   },
   sectionSubTitle: {
     fontWeight: '800',
     fontFamily: 'Sharp-Sans-Bold',
     fontSize: 14,
     color: '#404040',
-    margin: 5,
+    margin: 4,
   },
   item: {
     margin: 5,

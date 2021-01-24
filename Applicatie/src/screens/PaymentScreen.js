@@ -1,5 +1,4 @@
-
-import { View, Text, Image, StyleSheet, auto, wrap,row, TouchableOpacity, ActivityIndicator, SafeAreaView, onPress } from 'react-native';
+import { View, Text, Image, StyleSheet, auto, wrap,row, TouchableOpacity, ScrollView, ActivityIndicator, SafeAreaView, onPress } from 'react-native';
 import ViewPager from '@react-native-community/viewpager';
 import { useNavigation } from '@react-navigation/native';
 import Footer from '../components/Footer';
@@ -66,7 +65,7 @@ const PaymentScreen = () => {
 
           <View style={styles.vectorWrapper}>
             <TouchableOpacity  onPress={() => { navigation.navigate('Tracking')}}>
-            <MaterialCommunityIcons style={styles.vectorExit} name="exit-to-app" size={54} color="#54FA9C" />
+            <MaterialCommunityIcons style={styles.vectorExit} name="exit-to-app" size={45} color="#54FA9C" />
             </TouchableOpacity>
           </View>
         </View>
@@ -75,20 +74,20 @@ const PaymentScreen = () => {
 
     function RenderBodyContentWrapper_2() {
       return (
-        <View style={styles.wrapper}>
-          <View style={styles.orderDescription}>
-            <Text style={styles.descriptionHeadline}>Prijs</Text>
-            <Text style={styles.descriptionDetails}>$17.97</Text>
+        <View style={styles.wrapper_2}>
+          <View>
+            <Text style={{color: 'white', fontFamily: 'Sharp-Sans-Medium', fontSize: 16, paddingBottom: 10, textAlign: 'center'}}>Totaal</Text>
+            <Text style={{color: 'white', fontFamily: 'Sharp-Sans-Regular', textAlign: 'center'}}>$17.97</Text>
           </View>    
 
-          <View style={styles.orderDescription}>
-            <Text style={styles.descriptionHeadline}>Grootte</Text>
-            <Text style={styles.descriptionDetails}>Medium</Text>
+          <View>
+            <Text style={{color: 'white', fontFamily: 'Sharp-Sans-Medium', fontSize: 16, paddingBottom: 10, textAlign: 'center'}}>Grootte</Text>
+            <Text style={{color: 'white', fontFamily: 'Sharp-Sans-Regular', textAlign: 'center'}}>Medium</Text>
           </View> 
 
-          <View style={styles.orderDescription}>
-            <Text style={styles.descriptionHeadline}>Toppings</Text>
-            <Text style={styles.descriptionDetails}>5 Stuks</Text>
+          <View>
+            <Text style={{color: 'white', fontFamily: 'Sharp-Sans-Medium', fontSize: 16, paddingBottom: 10, textAlign: 'center'}}>Toppings</Text>
+            <Text style={{color: 'white', fontFamily: 'Sharp-Sans-Regular', textAlign: 'center'}}>5 Stuks</Text>
           </View> 
        </View>
       );
@@ -146,6 +145,7 @@ const PaymentScreen = () => {
 
     return (
         <SafeAreaView style={styles.droidSafeArea}>
+          <ScrollView>
           <RenderHeaderBlock />
           <RenderHeaderTitle />
           <RenderBodyContentWrapper_1 />
@@ -153,6 +153,7 @@ const PaymentScreen = () => {
           <RenderBodyContentWrapper_3 />
           <RenderBodyContentWrapper_4 />
           <RenderFooter />
+          </ScrollView>
         </SafeAreaView>
     )
 }
@@ -198,7 +199,7 @@ const styles = StyleSheet.create({
     headerTitle: {
       color: '#C1C1C1',
       fontFamily: 'Sharp-Sans-Bold',
-      fontSize: 42,
+      fontSize: 32,
       maxWidth: '70%',
     },
     headerSubTitle: {
@@ -208,25 +209,23 @@ const styles = StyleSheet.create({
     },
     headerSemiTitle: {
       fontFamily: 'Sharp-Sans-Medium',
-      fontSize: 28,
+      fontSize: 20,
       margin: 10,
       marginLeft: 0,
       marginBottom: '10%',
       color: '#404040',
     },
     wrapper: {
-      width: '95%',
-      height: 'auto',
-      margin: 10,
+      margin: 12,
       flexDirection: 'row',
-      borderWidth: 1.5 ,
+      borderWidth: 1.5,
       borderRadius: 8,
       borderColor: '#343434',
     },
     description: {
       alignSelf: 'flex-start',
       justifyContent: 'flex-start',
-      width: '65%',
+      width: '70%',
     },
     descriptionHeadline: {
       color: '#888888',
@@ -247,11 +246,13 @@ const styles = StyleSheet.create({
     },
     vectorWrapper: {
       width: '25%',
+      justifyContent: 'center',
+      alignItems: 'center',
+      flexGrow: 1,
     },
     vectorExit: {
       alignSelf: 'flex-end',
-      marginTop: 15,
-      marginBottom: 'auto',
+      margin: 'auto',
     },
     orderDescription: {
       alignSelf: 'flex-start',
@@ -281,13 +282,14 @@ const styles = StyleSheet.create({
     fontSize: 18,
 },
    wrapper_2: {
-    width: '95%',
-    margin: 10,
+    justifyContent: 'space-around',
+    margin: 12,
+    paddingTop: 15,
+    paddingBottom: 10,
     flexDirection: 'row',
-    backgroundColor: '#181818',
-    height: 'auto',
-    flexDirection: 'row',
+    borderWidth: 1.5,
     borderRadius: 8,
+    borderColor: '#343434',
   },
   cardVector: {
     margin: 27,

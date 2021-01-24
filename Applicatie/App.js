@@ -10,6 +10,7 @@ import OrderCompleteScreen from './src/screens/OrderCompleteScreen';
 import RestaurantsScreen from './src/screens/RestaurantsScreen';
 import TrackingScreen from './src/screens/TrackingScreen';
 import HomeScreen from './src/screens/HomeScreen';
+import DetailsScreen from './src/screens/DetailsScreen';
 import DishesScreen from './src/screens/DishesScreen';
 import PaymentScreen from './src/screens/PaymentScreen';
 import AccountScreen from './src/screens/AccountScreen';
@@ -24,6 +25,9 @@ function RouteStack() {
         <AppStack.Screen name='Onboarding' component={OnboardingScreen} />
         <AppStack.Screen name='OrderComplete' component={OrderCompleteScreen} />
         <AppStack.Screen name='Tracking' component={TrackingScreen} />
+        <AppStack.Screen name='Details' component={DetailsScreen} />
+        <AppStack.Screen name='Dishes' component={DishesScreen} />
+        <AppStack.Screen name='Payment' component={PaymentScreen} />
       </AppStack.Navigator>
     </>
   );
@@ -60,12 +64,12 @@ function RouteTabs() {
         }}
       />
       <Tab.Screen
-        name='Dishes'
-        component={DishesScreen}
+        name='Account'
+        component={AccountScreen}
         options={{
-          tabBarLabel: 'Dishes',
+          tabBarLabel: 'Account',
           tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name='database' color={color} size={20} />
+            <MaterialCommunityIcons name='bell' color={color} size={20} />
           ),
         }}
       />

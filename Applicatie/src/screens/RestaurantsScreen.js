@@ -1,10 +1,10 @@
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, ActivityIndicator, SafeAreaView, onPress } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, TouchableHighlight, ActivityIndicator, SafeAreaView, onPress } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { useFonts } from 'expo-font';
-import { AntDesign, MaterialCommunityIcons } from '@expo/vector-icons';
 
 import Restaurants from '../components/Restaurants';
+import BasicModal from '../components/BasicModal';
 import { ScrollView } from 'react-native-gesture-handler';
 
 const RestaurantScreen = () => {
@@ -25,8 +25,9 @@ const RestaurantScreen = () => {
           <Text style={styles.paragraph}>
            Eigen Poke Bowl maken
           </Text>
-          <TouchableOpacity style={styles.button} onPress={() => { navigation.navigate('Tracking')}}><AntDesign name="appstore1" size={24} color="black" /></TouchableOpacity>
-        </View>
+          <TouchableOpacity style={styles.button}><BasicModal /></TouchableOpacity>
+          </View>
+        <Text style={styles.smallText}>Favorieten</Text>
        <Restaurants />
        </ScrollView>
       </SafeAreaView>
@@ -41,14 +42,11 @@ const styles = StyleSheet.create({
     backgroundColor: '#000000'
   },
   button: {
-    backgroundColor: '#54FA9C',
-    flex: 0.22,
-    height: '100%',
-    width: 10,
-    padding: 8,
-    alignItems: 'center',
-    borderRadius: 8,
-    fontFamily: 'Sharp-Sans-Medium'
+    flex: 0.30,
+    marginBottom: '6%',
+  },
+  buttonLogo: {
+    lineHeight: 30,
   },
   item: {
     flexDirection: 'row',
@@ -58,9 +56,10 @@ const styles = StyleSheet.create({
     width: '90%',
     margin: 10,
     borderRadius: 8,
+    borderWidth: 1,
+    borderColor: '#343434',
     padding: 10,
-    height: 58,
-    backgroundColor: '#181818',
+    height: '8%',
   },
   text: {
     fontSize: 28,
@@ -70,6 +69,15 @@ const styles = StyleSheet.create({
     paddingBottom: 10,
     color: 'white',
     fontFamily: 'Sharp-Sans-Bold'
+  },
+  smallText: {
+    fontSize: 14,
+    paddingLeft: '7%',
+    paddingRight: 20,
+    paddingTop: 20,
+    paddingBottom: 10,
+    color: '#404040',
+    fontFamily: 'Sharp-Sans-Medium'
   },
   paragraph: {
     color: 'white',

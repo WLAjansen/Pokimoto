@@ -97,7 +97,7 @@ const App = () => {
 
   const getItem = (item) => {
     // Function for click on an item
-    alert(item.title + '\n\n' + item.description + '\n\n' + item.location);
+    alert('Id : ' + item.id + ' Title : ' + item.title);
   };
 
   return (
