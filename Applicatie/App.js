@@ -11,6 +11,8 @@ import RestaurantsScreen from './src/screens/RestaurantsScreen';
 import TrackingScreen from './src/screens/TrackingScreen';
 import HomeScreen from './src/screens/HomeScreen';
 import DishesScreen from './src/screens/DishesScreen';
+import PaymentScreen from './src/screens/PaymentScreen';
+import AccountScreen from './src/screens/AccountScreen';
 
 const AppStack = createStackNavigator();
 
