@@ -44,8 +44,8 @@ const ListItem = ({ item }) => {
         resizeMode='cover'
       />
       <Text style={styles.itemSubTitle}>{item.title}</Text>
-      <Text style={styles.itemTitle}>{item.short}</Text>
-      <Text style={styles.itemDescription}>{item.body}</Text>
+      <Text style={styles.itemTitle}>{item.meal}</Text>
+      <Text style={styles.itemDescription}>{item.description}</Text>
       <Text style={styles.itemTime}>{currentDate}</Text>
       </View>
       </TouchableOpacity>
@@ -74,7 +74,7 @@ const HomeScreen = () => {
           <AntDesign name='left' resizeMode='contain' size={20} color='white' />
         </TouchableOpacity>
         <View style={{alignItems: 'center', justifyContent: 'center'}}>
-          <Text style={styles.renderHeaderText}>Favorieten</Text>
+          <Text style={styles.renderHeaderText}>Favorites</Text>
         </View>
         <TouchableOpacity
           style={{
@@ -137,7 +137,6 @@ const HomeScreen = () => {
     );
   }
 };
-
 const SECTIONS = [
   {
     title: 'Today',
@@ -145,10 +144,10 @@ const SECTIONS = [
     data: [
       {
         key: '1',
-        short: 'Classic Tuna with vegetables and extras',
+        meal: 'Classic Tuna with vegetables and extras',
         type: 'Poke bowl',
-        title: 'Honolulu Poke Bowl',
-        body: 'Met tonijn, avocado, mais, kerstomaatjes, komkommer, wortel, rode kool & sriracha mayonaise.',
+        title: 'Honolulu | Poke Bowl',
+        description: 'With tuna, avocado, corn, cherry tomatoes, cucumber, carrot, red cabbage & sriracha mayonnaise.',
         rating: 5,
         price: 15,
         protein: 'Salmon',
@@ -157,35 +156,35 @@ const SECTIONS = [
       },
       {
         key: '2',
-        short: 'Poke bowl with tuna, wasabi and sushi rice',
+        meal: 'Poke bowl with tuna, wasabi and sushi rice',
         type: 'Poke bowl',
-        title: 'Tokyo Poke Bowl',
-        body: 'Met sushirijst, rauwe tonijn en groentes. En vergeet de ingemaakte shiitakes niet!',
+        title: 'Tokyo | Poke Bowl',
+        description: 'With sushi rice, raw tuna and vegetables. And do not forget the pickled shiitakes!',
         rating: '5',
-        price: 15,
-        protein: 'Salmon',
-        size: 'Medium',
-        uri: 'https://i.imgur.com/98dgjV4.jpeg',
-      },
-
-      {
-        key: '3',
-        short: 'Bali',
-        type: 'Poke bowl',
-        title: 'Bali Poke Bowl',
-        body: 'lorem ipsum',
-        rating: 5,
         price: 15,
         protein: 'Salmon',
         size: 'Medium',
         uri: 'https://i.imgur.com/MSBX5gq.jpg',
       },
+
+      {
+        key: '3',
+        meal: 'Teriyaki chicken sushi bowl',
+        type: 'Poke bowl',
+        title: 'Bali | Poke Bowl',
+        description: 'A bowl full of sushi rice, asian vegetables and teriyaki chicken.',
+        rating: 5,
+        price: 15,
+        protein: 'Salmon',
+        size: 'Medium',
+        uri: 'https://i.imgur.com/98dgjV4.jpeg',
+      },
       {
         key: '4',
-        short: 'Jeju',
+        meal: 'Shoyu ahi bowl',
         type: 'Poke bowl',
-        title: 'Jeju Poke Bowl',
-        body: 'lorem ipsum',
+        title: 'Jeju | Poke Bowl',
+        description: 'This bowl is flavored with furikake - a sea vegetable packed with umami - to deepen the flavor and add some extra layers to this already tasty bag!',
         rating: 5,
         price: 15,
         protein: 'Salmon',
@@ -194,10 +193,10 @@ const SECTIONS = [
       },
       {
         key: '5',
-        short: 'Taipei',
+        meal: 'Alaskan sockeye salmon poke bowl',
         type: 'Poke bowl',
-        title: 'Honolulu Poke Bowl',
-        body: 'lorem ipsum',
+        title: 'Taipei | Poke Bowl',
+        description: 'Served on a nice crunchy salad with cabbage, carrots, avocado and edamame.',
         rating: 5,
         price: 15,
         protein: 'Salmon',
@@ -212,20 +211,25 @@ const SECTIONS = [
     data: [
       {
         key: '1',
+        meal: 'Thai satay bowl',
+        title: 'Bangkok | Poke Bowl',
+        description: 'Fresh Thai satay bowl with crispy tofu',
         uri: 'https://i.imgur.com/Vt3PnU5.jpeg',
       },
       {
         key: '2',
+        meal: 'Seared steak sushi bowl',
+        title: 'Manilla | Poke Bowl',
+        description: 'Cubes of marinated fillet steak, served alongside rice, avocado, crunchy vegetables and caramelized pineapple slices. All finished with a slightly spicy, garlicky dressing.',
         uri: 'https://i.imgur.com/4txvT81.jpg',
       },
 
       {
         key: '3',
+        meal: 'Octopus Poke with Kimchi',
+        title: 'Kuala | Lumpur Poke Bowl',
+        description: 'Delicious bowl of poke with octopus and kimchi!',
         uri: 'https://i.imgur.com/jgwyPYl.jpeg',
-      },
-      {
-        key: '4',
-        uri: 'https://i.imgur.com/GUeOWyI.jpg',
       },
     ],
   },
