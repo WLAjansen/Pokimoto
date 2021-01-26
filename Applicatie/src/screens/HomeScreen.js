@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import {
   StyleSheet,
   Text,
@@ -9,6 +9,7 @@ import {
   Image,
   FlatList,
   ActivityIndicator,
+  TouchableWithoutFeedback,
   TouchableOpacity,
 } from 'react-native';
 import { useFonts } from 'expo-font';
@@ -18,9 +19,23 @@ import { useNavigation } from '@react-navigation/native';
 
 const ListItem = ({ item }) => {
   const navigation = useNavigation();
+  const [currentDate, setCurrentDate] = useState('');
+
+  useEffect(() => {
+    var date = new Date().getDate(); //Current Date
+    var month = new Date().getMonth() + 1; //Current Month
+    var year = new Date().getFullYear(); //Current Year
+    var hours = new Date().getHours(); //Current Hours
+    var min = new Date().getMinutes() + 30; //Current Minutes
+    var sec = new Date().getSeconds(); //Current Seconds
+    setCurrentDate(
+       hours + ':' + min 
+    );
+  }, []);
   return (
     <View style={styles.item}>
-      <TouchableOpacity onPress={() => navigation.navigate('Details', item)}>
+      <TouchableOpacity style={styles.innerItem} onPress={() => navigation.navigate('Details', item)}>
+      <View>
       <Image
         source={{
           uri: item.uri,
@@ -28,8 +43,12 @@ const ListItem = ({ item }) => {
         style={styles.itemPhoto}
         resizeMode='cover'
       />
+      <Text style={styles.itemSubTitle}>{item.title}</Text>
+      <Text style={styles.itemTitle}>{item.short}</Text>
+      <Text style={styles.itemDescription}>{item.body}</Text>
+      <Text style={styles.itemTime}>{currentDate}</Text>
+      </View>
       </TouchableOpacity>
-      <Text style={styles.itemText}>{item.text}</Text>
     </View>
   );
 };
@@ -42,7 +61,7 @@ const HomeScreen = () => {
     'Sharp-Sans-Bold': require('../assets/fonts/samsungsharpsans-bold.otf'),
   });
 
-  function renderHeader() {
+  function RenderHeader() {
     return (
       <SafeAreaView style={styles.renderHeaderBack}>
         <TouchableOpacity
@@ -72,7 +91,7 @@ const HomeScreen = () => {
     );
   }
 
-  function renderContentBody() {
+  function RenderContentBody() {
     return (
       <SafeAreaView style={{ flex: 1 }}>
         <SectionList
@@ -108,10 +127,12 @@ const HomeScreen = () => {
     return <ActivityIndicator size='large' color='#ffffff' />;
   } else {
     return (
-      <SafeAreaView style={styles.container}>
+      <SafeAreaView style={styles.droidSafeArea}>
+      <View style={styles.container}>
         <StatusBar style='light' />
-        {renderHeader()}
-        {renderContentBody()}
+        <RenderHeader />
+        <RenderContentBody />
+      </View>
       </SafeAreaView>
     );
   }
@@ -119,14 +140,15 @@ const HomeScreen = () => {
 
 const SECTIONS = [
   {
-    subtitle: 'Jouw favorieten',
-    horizontal: true,
+    title: 'Today',
+    subtitle: 'Personal favorites',
     data: [
       {
         key: '1',
-        text: '    Honolulu     ',
+        short: 'Classic Tuna with vegetables and extras',
+        type: 'Poke bowl',
         title: 'Honolulu Poke Bowl',
-        body: 'lorem ipsum',
+        body: 'Met tonijn, avocado, mais, kerstomaatjes, komkommer, wortel, rode kool & sriracha mayonaise.',
         rating: 5,
         price: 15,
         protein: 'Salmon',
@@ -135,19 +157,21 @@ const SECTIONS = [
       },
       {
         key: '2',
-        text: '       Tokyo        ',
+        short: 'Poke bowl with tuna, wasabi and sushi rice',
+        type: 'Poke bowl',
         title: 'Tokyo Poke Bowl',
-        body: 'lorem ipsum',
+        body: 'Met sushirijst, rauwe tonijn en groentes. En vergeet de ingemaakte shiitakes niet!',
         rating: '5',
         price: 15,
         protein: 'Salmon',
         size: 'Medium',
-        uri: 'https://i.imgur.com/QqO13hE.png',
+        uri: 'https://i.imgur.com/98dgjV4.jpeg',
       },
 
       {
         key: '3',
-        text: '         Bali          ',
+        short: 'Bali',
+        type: 'Poke bowl',
         title: 'Bali Poke Bowl',
         body: 'lorem ipsum',
         rating: 5,
@@ -158,7 +182,8 @@ const SECTIONS = [
       },
       {
         key: '4',
-        text: '        Jeju         ',
+        short: 'Jeju',
+        type: 'Poke bowl',
         title: 'Jeju Poke Bowl',
         body: 'lorem ipsum',
         rating: 5,
@@ -169,7 +194,8 @@ const SECTIONS = [
       },
       {
         key: '5',
-        text: '        Taipei       ',
+        short: 'Taipei',
+        type: 'Poke bowl',
         title: 'Honolulu Poke Bowl',
         body: 'lorem ipsum',
         rating: 5,
@@ -181,8 +207,8 @@ const SECTIONS = [
     ],
   },
   {
-    title: '',
-    subtitle: 'Meer informatie',
+    title: 'More poke bowls',
+    subtitle: 'Others favorites',
     data: [
       {
         key: '1',
@@ -208,16 +234,21 @@ const SECTIONS = [
 export default HomeScreen;
 
 const styles = StyleSheet.create({
+  droidSafeArea: {
+    flex: 1,
+    paddingTop: Platform.OS === 'android' ? 25 : 0,
+    backgroundColor: 'black',
+  },
   container: {
     flex: 1,
-    backgroundColor: '#121212',
+    backgroundColor: 'black',
+    margin: 6,
   },
   renderHeaderBack: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     marginLeft: 8,
     marginRight: -8,
-    marginTop: 50,
     paddingBottom: 10,
   },
   renderHeaderText: {
@@ -250,17 +281,60 @@ const styles = StyleSheet.create({
   item: {
     margin: 5,
   },
+  innerItem: {
+    borderStyle: 'solid',
+    borderWidth: 1,
+    borderRadius: 12,
+    backgroundColor: '#181818',
+    paddingBottom: 20,
+  },
   itemPhoto: {
     width: '100%',
-    height: 125,
-    borderRadius: 6,
+    height: 400,
+    borderTopLeftRadius: 6,
+    borderTopRightRadius: 6
   },
   itemPhotoLarge: {
     width: '100%',
     height: '100%',
   },
-  itemText: {
-    color: 'rgba(255, 255, 255, 0.5)',
-    marginTop: 5,
+  itemTitle: {
+    fontFamily: 'Sharp-Sans-Bold',
+    color: 'white',
+    fontSize: 20,
+    maxWidth: '90%',
+    lineHeight: 30,
+    marginLeft: 10,
+    marginRight: 10,
+    marginBottom: 7
   },
+  itemSubTitle: {
+    fontFamily: 'Sharp-Sans-Medium',
+    color: 'rgba(255, 255, 255, 0.5)',
+    marginTop: 10,
+    marginLeft: 10,
+    marginRight: 10,
+    marginBottom: 3
+  },
+  itemDescription: {
+    fontFamily: 'Sharp-Sans-Medium',
+    color: 'rgba(255, 255, 255, 0.5)',
+    fontSize: 12,
+    lineHeight: 18,
+    maxWidth: '80%',
+    marginLeft: 10,
+    marginRight: 10,
+    marginBottom: 3
+  },
+  itemTime: {
+    fontFamily: 'Sharp-Sans-Medium',
+    color: '#606060',
+    fontSize: 14,
+    lineHeight: 18,
+    maxWidth: '80%',
+    marginLeft: 10,
+    marginTop: 3,
+    marginRight: 10,
+    marginBottom: 3
+  }
 });

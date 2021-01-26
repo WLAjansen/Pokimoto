@@ -4,6 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import { FontAwesome5 } from '@expo/vector-icons'; 
 
 import OnboardingScreen from './src/screens/OnboardingScreen';
 import OrderCompleteScreen from './src/screens/OrderCompleteScreen';
@@ -49,7 +50,7 @@ function RouteTabs() {
         options={{
           tabBarLabel: 'Home',
           tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name='home' color={color} size={20} />
+            <MaterialCommunityIcons name='apps' color={color} size={20} />
           ),
         }}
       />
@@ -59,7 +60,7 @@ function RouteTabs() {
         options={{
           tabBarLabel: 'Restaurants',
           tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name='bell' color={color} size={20} />
+            <MaterialCommunityIcons name='all-inclusive' color={color} size={20} />
           ),
         }}
       />
@@ -69,7 +70,7 @@ function RouteTabs() {
         options={{
           tabBarLabel: 'Account',
           tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name='bell' color={color} size={20} />
+            <MaterialCommunityIcons name='account-circle' color={color} size={20} />
           ),
         }}
       />
