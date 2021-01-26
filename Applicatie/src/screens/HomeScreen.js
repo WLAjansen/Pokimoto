@@ -138,7 +138,7 @@ const SECTIONS = [
         text: '       Tokyo        ',
         title: 'Tokyo Poke Bowl',
         body: 'lorem ipsum',
-        rating: '5 sterren',
+        rating: '5',
         price: 15,
         protein: 'Salmon',
         size: 'Medium',

@@ -18,10 +18,18 @@ import { Ionicons } from '@expo/vector-icons';
 
 import { AntDesign } from '@expo/vector-icons';
 import { useFonts } from 'expo-font';
+import { ScrollView, TouchableWithoutFeedback } from 'react-native-gesture-handler';
 
 const ReviewScreen = ({ route }) => {
   const navigation = useNavigation();
   const { title, body, rating, price, size, protein } = route.params;
+  // Dropdown
+  const [selectProtein, setSelectProtein] = useState('');
+  // Radio buttons
+  const [selectMixins, setSelectMixins] = React.useState('');
+  const [selectDressup, setSelectDressup] = React.useState('');
+  const [selectToppings, setSelectToppings] = React.useState('');
+  // Fonts import
   let [fontsLoaded] = useFonts({
     'Sharp-Sans-Regular': require('../assets/fonts/samsungsharpsans.otf'),
     'Sharp-Sans-Medium': require('../assets/fonts/samsungsharpsans-medium.otf'),
@@ -63,17 +71,21 @@ const ReviewScreen = ({ route }) => {
     );
   }
 
-  function RenderHeaderTitleFirst() {
+  function RenderHeaderTitleFirst(props) {
     return (
       <View style={styles.innerContainer}>
         <Text style={styles.headerTitle}>{title}</Text>
+        <View style={{flexDirection: 'row', justifyContent:'space-between'}}>
         <Text style={styles.headerSubTitle}>Protein</Text>
+        <TouchableWithoutFeedback><View style={{flexDirection: 'row', justifyContent:'space-between', alignItems: 'center', justifyContent: 'center', flexGrow: 1,}}>
+        <Text style={{fontFamily: 'Sharp-Sans-Medium', color: '#404040',fontSize: 14, marginRight: 10 }}>{rating}</Text>
+        <AntDesign name="star" size={20} color="#888888" /></View></TouchableWithoutFeedback>
+        </View>
       </View>
     );
   }
 
-  function RenderBodyDropDown() {
-    const [selectProtein, setSelectProtein] = useState('');
+  const RenderBodyDropDown = () => {
     return (
       <View style={styles.dropdownSelect}>
         <RNPickerSelect
@@ -97,16 +109,16 @@ const ReviewScreen = ({ route }) => {
   function RenderHeaderTitleSecond() {
     return (
       <View style={styles.innerContainer}>
-        <Text style={styles.headerSubTitle}>Protein</Text>
+        <Text style={styles.headerSubTitle}>Mix-ins</Text>
       </View>
     );
   }
 
-  function RenderBodyRadioGroup() {
-    const [value, setValue] = React.useState('first');
+  function RenderBodyRadioGroupMixins() {
     return (
       <View style={styles.dropdownSelect}>
-        <RadioButton.Group onValueChange={value => setValue(value)} value={value} color={'white'}>
+        <RadioButton.Group onValueChange={(selectMixins) => setSelectMixins(selectMixins)} value={selectMixins}>
+        <Text style={styles.headerSubTitle}>{selectMixins}</Text>
         <RadioButton.Item labelStyle={styles.bodyDropDownLabel}  label="First item" value="first" />
         <RadioButton.Item labelStyle={styles.bodyDropDownLabel}  label="Second item" value="second" />
         <RadioButton.Item labelStyle={styles.bodyDropDownLabel}  label="First item" value="third" />
@@ -116,17 +128,68 @@ const ReviewScreen = ({ route }) => {
       </View>
     );
   }
+
+  function RenderHeaderTitleThird() {
+    return (
+      <View style={styles.innerContainer}>
+        <Text style={styles.headerSubTitle}>Dress-up</Text>
+      </View>
+    );
+  }
+
+  function RenderBodyRadioGroupDressup() {
+    return (
+      <View style={styles.dropdownSelect}>
+        <RadioButton.Group onValueChange={(selectDressup) => setSelectDressup(selectDressup)} value={selectDressup}>
+        <RadioButton.Item labelStyle={styles.bodyDropDownLabel}  label="First item" value="first" />
+        <RadioButton.Item labelStyle={styles.bodyDropDownLabel}  label="Second item" value="second" />
+        <RadioButton.Item labelStyle={styles.bodyDropDownLabel}  label="First item" value="third" />
+        <RadioButton.Item labelStyle={styles.bodyDropDownLabel}  label="Second item" value="fourth" />
+        <RadioButton.Item labelStyle={styles.bodyDropDownLabel}  label="First item" value="fifth" />
+        </RadioButton.Group>
+      </View>
+    );
+  }
+
+  function RenderHeaderTitleFourth() {
+    return (
+      <View style={styles.innerContainer}>
+        <Text style={styles.headerSubTitle}>Toppings</Text>
+      </View>
+    );
+  }
+
+  function RenderBodyRadioGroupToppings() {
+    return (
+      <View style={styles.dropdownSelect}>
+        <RadioButton.Group onValueChange={(selectToppings) => setSelectToppings(selectToppings)} value={selectToppings}>
+        <RadioButton.Item labelStyle={styles.bodyDropDownLabel}  label="First item" value="first" />
+        <RadioButton.Item labelStyle={styles.bodyDropDownLabel}  label="Second item" value="second" />
+        <RadioButton.Item labelStyle={styles.bodyDropDownLabel}  label="First item" value="third" />
+        <RadioButton.Item labelStyle={styles.bodyDropDownLabel}  label="Second item" value="fourth" />
+        <RadioButton.Item labelStyle={styles.bodyDropDownLabel}  label="First item" value="fifth" />
+        </RadioButton.Group>
+      </View>
+    );
+
+  }
   if (!fontsLoaded) {
     return <ActivityIndicator size='large' color='#ffffff' />;
   } else {
     return (
       <SafeAreaView style={styles.droidSafeArea}>
         <StatusBar style='light' />
+        <ScrollView>
         <RenderHeaderBlock />
         <RenderHeaderTitleFirst />
         <RenderBodyDropDown />
         <RenderHeaderTitleSecond />
-        <RenderBodyRadioGroup />
+        <RenderBodyRadioGroupMixins />
+        <RenderHeaderTitleThird />
+        <RenderBodyRadioGroupDressup />
+        <RenderHeaderTitleFourth />
+        <RenderBodyRadioGroupToppings />
+        </ScrollView>
       </SafeAreaView>
     );
   }
