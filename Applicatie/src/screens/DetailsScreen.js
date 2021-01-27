@@ -189,32 +189,54 @@ const ReviewScreen = ({ route }) => {
           >
             <View style={PaymentModal.centeredView}>
               <View style={PaymentModal.modalView}>
-                <Text style={PaymentModal.modalText}>Hello World!</Text>
-    
+                <View style={PaymentModal.modalTextView}>
+                <Text style={PaymentModal.modalTitleText}>{title}</Text>
+                <Text style={PaymentModal.modalSubTitleText}>Your protein</Text>
+                <Text style={PaymentModal.modalText}>{selectProtein}</Text>
+                <Text style={PaymentModal.modalSubTitleText}>Your Mix-ins</Text>
+                <Text style={PaymentModal.modalText}>{selectMixins}</Text>
+                <Text style={PaymentModal.modalSubTitleText}>Your Toppings</Text>
+                <Text style={PaymentModal.modalText}>{selectToppings}</Text>
+                <Text style={PaymentModal.modalSubTitleText}>Your Dress-ups</Text>
+                <Text style={PaymentModal.modalText}>{selectDressup}</Text>
+                </View>
+                <View style={PaymentModal.modalButtonView}>
                 <TouchableHighlight
-                  style={{ ...PaymentModal.openButton, backgroundColor: "#2196F3" }}
+                  style={{ ...PaymentModal.openButton, backgroundColor: "white" }}
                   onPress={() => {
                     setModalVisible(!modalVisible);
                   }}
                 >
-                  <Text style={PaymentModal.textStyle}>Hide Modal</Text>
+                  <Text style={{color: 'black', fontWeight: "bold"}}>Undo changes</Text>
                 </TouchableHighlight>
+                <TouchableHighlight
+                  style={{ ...PaymentModal.openButton, backgroundColor: "#181818" }}
+                  onPress={() => {
+                    setModalVisible(!modalVisible);
+                  }}
+                >
+                  <Text style={PaymentModal.textStyle}>Undo changes</Text>
+                </TouchableHighlight>
+                </View>
               </View>
             </View>
           </Modal>
-    
           <TouchableHighlight
             style={PaymentModal.openButton}
             onPress={() => {
               setModalVisible(true);
             }}
           >
-            <FontAwesome name="edit" size={24} color="black" />
+            <View style={{flexDirection: 'row', justifyContent: 'center'}}>
+            <Text style={{fontFamily: 'Sharp-Sans-Bold', textAlign: 'center'}}>Finish editing | </Text>
+            <Text style={{fontFamily: 'Sharp-Sans-Bold', textAlign: 'center'}}> ${price}</Text>
+            </View>
           </TouchableHighlight>
         </View>
       );
+   }
 
-  }
+  
   if (!fontsLoaded) {
     return <ActivityIndicator size='large' color='#ffffff' />;
   } else {
@@ -231,8 +253,8 @@ const ReviewScreen = ({ route }) => {
         <RenderBodyRadioGroupDressup />
         <RenderHeaderTitleFourth />
         <RenderBodyRadioGroupToppings />
-        <RenderBodyModal />
         </ScrollView>
+        <RenderBodyModal />
       </SafeAreaView>
     );
   }
@@ -331,15 +353,18 @@ const styles = StyleSheet.create({
 const PaymentModal = StyleSheet.create({
   centeredView: {
     flex: 1,
-    justifyContent: "center",
+    justifyContent: "space-between",
     alignItems: "center",
     marginTop: 22
   },
   modalView: {
     height: '100%',
     width: '100%',
+    borderWidth: 1,
+    borderColor: '#343434',
     margin: 20,
-    backgroundColor: "white",
+    justifyContent: 'space-between',
+    backgroundColor: "black",
     borderRadius: 20,
     padding: 35,
     alignItems: "center",
@@ -347,22 +372,40 @@ const PaymentModal = StyleSheet.create({
   },
   openButton: {
     fontSize: 14,
-    backgroundColor: '#C1C1C1',
-    margin: 12,
+    backgroundColor: 'white',
+    marginRight: 12,
+    marginLeft: 12,
     paddingVertical: 12,
     paddingHorizontal: 12,
     borderRadius: 6,
     color: '#888888',
-    paddingRight: 30,
     elevation: 2
+  },
+  modalButtonView: {
+    flexDirection: 'row',
+    
   },
   textStyle: {
     color: "white",
     fontWeight: "bold",
     textAlign: "center"
   },
-  modalText: {
+  modalTitleText: {
     marginBottom: 15,
-    textAlign: "center"
+    fontFamily: 'Sharp-Sans-Bold',
+    fontSize: 30,
+    textAlign: "center",
+    color: 'white'
+  },
+  modalSubTitleText: {
+    fontFamily: 'Sharp-Sans-Bold',
+    color: '#C1C1C1',
+    fontSize: 20,
+  },
+  modalText: {
+    marginBottom: 50,
+    fontFamily: 'Sharp-Sans-Medium',
+    fontSize: 16,
+    color: '#888888',
   }
 });
