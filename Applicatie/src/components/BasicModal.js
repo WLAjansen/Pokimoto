@@ -22,24 +22,24 @@ const BasicModal = () => {
           Alert.alert("Modal has been closed.");
         }}
       >
-        <View style={styles.centeredView}>
-          <View style={styles.modalView}>
-            <Text style={styles.modalText}>Hello World!</Text>
+        <View style={PaymentModal.centeredView}>
+          <View style={PaymentModal.modalView}>
+            <Text style={PaymentModal.modalText}>Hello World!</Text>
 
             <TouchableHighlight
-              style={{ ...styles.openButton, backgroundColor: "#2196F3" }}
+              style={{ ...PaymentModal.openButton, backgroundColor: "#2196F3" }}
               onPress={() => {
                 setModalVisible(!modalVisible);
               }}
             >
-              <Text style={styles.textStyle}>Hide Modal</Text>
+              <Text style={PaymentModal.textStyle}>Hide Modal</Text>
             </TouchableHighlight>
           </View>
         </View>
       </Modal>
 
       <TouchableHighlight
-        style={styles.openButton}
+        style={PaymentModal.openButton}
         onPress={() => {
           setModalVisible(true);
         }}
@@ -50,7 +50,7 @@ const BasicModal = () => {
   );
 };
 
-const styles = StyleSheet.create({
+const PaymentModal = StyleSheet.create({
   centeredView: {
     flex: 1,
     justifyContent: "center",

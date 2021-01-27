@@ -6,15 +6,17 @@ import {
   StyleSheet,
   Image,
   StatusBar,
+  Modal,
   ActivityIndicator,
   Button,
+  TouchableHighlight,
   TouchableOpacity,
 } from 'react-native';
 import RNPickerSelect from 'react-native-picker-select';
 import { useNavigation } from '@react-navigation/native';
 
 import { RadioButton } from 'react-native-paper';
-import { Ionicons } from '@expo/vector-icons';
+import { Ionicons, FontAwesome } from '@expo/vector-icons';
 
 import { AntDesign } from '@expo/vector-icons';
 import { useFonts } from 'expo-font';
@@ -118,7 +120,6 @@ const ReviewScreen = ({ route }) => {
     return (
       <View style={styles.dropdownSelect}>
         <RadioButton.Group onValueChange={(selectMixins) => setSelectMixins(selectMixins)} value={selectMixins}>
-        <Text style={styles.headerSubTitle}>{selectMixins}</Text>
         <RadioButton.Item labelStyle={styles.bodyDropDownLabel}  label="First item" value="first" />
         <RadioButton.Item labelStyle={styles.bodyDropDownLabel}  label="Second item" value="second" />
         <RadioButton.Item labelStyle={styles.bodyDropDownLabel}  label="First item" value="third" />
@@ -171,13 +172,54 @@ const ReviewScreen = ({ route }) => {
         </RadioButton.Group>
       </View>
     );
+  }
+
+    const RenderBodyModal = () => {
+      const [modalVisible, setModalVisible] = useState(false);
+      return (
+        <View style={styles.centeredView}>
+          <Modal
+            animationType="slide"
+            transparent={true}
+            useNativeDriver={true} 
+            visible={modalVisible}
+            onRequestClose={() => {
+              Alert.alert("Modal has been closed.");
+            }}
+          >
+            <View style={PaymentModal.centeredView}>
+              <View style={PaymentModal.modalView}>
+                <Text style={PaymentModal.modalText}>Hello World!</Text>
+    
+                <TouchableHighlight
+                  style={{ ...PaymentModal.openButton, backgroundColor: "#2196F3" }}
+                  onPress={() => {
+                    setModalVisible(!modalVisible);
+                  }}
+                >
+                  <Text style={PaymentModal.textStyle}>Hide Modal</Text>
+                </TouchableHighlight>
+              </View>
+            </View>
+          </Modal>
+    
+          <TouchableHighlight
+            style={PaymentModal.openButton}
+            onPress={() => {
+              setModalVisible(true);
+            }}
+          >
+            <FontAwesome name="edit" size={24} color="black" />
+          </TouchableHighlight>
+        </View>
+      );
 
   }
   if (!fontsLoaded) {
     return <ActivityIndicator size='large' color='#ffffff' />;
   } else {
     return (
-      <SafeAreaView style={styles.droidSafeArea}>
+      <SafeAreaView stickyHeaderIndices={[1]} style={styles.droidSafeArea}>
         <StatusBar style='light' />
         <ScrollView>
         <RenderHeaderBlock />
@@ -189,6 +231,7 @@ const ReviewScreen = ({ route }) => {
         <RenderBodyRadioGroupDressup />
         <RenderHeaderTitleFourth />
         <RenderBodyRadioGroupToppings />
+        <RenderBodyModal />
         </ScrollView>
       </SafeAreaView>
     );
@@ -199,23 +242,21 @@ export default ReviewScreen;
 
 const customPickerStyles = StyleSheet.create({
   inputIOS: {
-    fontSize: 14,
-    paddingVertical: 20,
+    fontSize: 13,
+    paddingVertical: 12,
     paddingHorizontal: 12,
-    borderWidth: 1,
-    borderColor: '#343434',
     borderRadius: 8,
     color: '#888888',
     paddingRight: 30, // to ensure the text is never behind the icon
   },
   inputAndroid: {
-    fontSize: 14,
-    paddingHorizontal: 10,
-    paddingVertical: 8,
+    fontSize: 13,
+    paddingHorizontal: 12,
+    paddingVertical: 12,
     borderWidth: 1,
-    borderColor: '#343434',
     borderRadius: 8,
     color: '#888888',
+    fontFamily: 'Sharp-Sans-Medium',
     paddingRight: 30, // to ensure the text is never behind the icon
   },
 });
@@ -255,25 +296,73 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   dropdownSelect: {
-    borderStyle: 'solid',
-    borderWidth: 1,
-    borderRadius: 6,
+    borderRadius: 12,
     margin: 12,
-    borderColor: '#343434',
+    backgroundColor: '#181818',
   },
   headerTitle: {
     color: '#C1C1C1',
     fontFamily: 'Sharp-Sans-Bold',
-    fontSize: 42,
-    maxWidth: '70%',
+    fontSize: 32,
+    textAlign: 'left'
   },
   headerSubTitle: {
     fontFamily: 'Sharp-Sans-Medium',
-    fontSize: 14,
+    fontSize: 13,
     color: '#404040',
   },
   bodyDropDownLabel: {
+    fontSize: 13,
     color: '#888888',
-    fontSize: 14
+    fontFamily: 'Sharp-Sans-Medium',
+  },
+  completeButton: {
+    backgroundColor: 'white', 
+    margin: 12,
+    marginBottom: '5%', 
+    borderRadius: 6, 
+    paddingTop: 12, 
+    paddingBottom: 12, 
+    alignItems: 'center', 
+    justifyContent: 'center',
+  }
+});
+
+const PaymentModal = StyleSheet.create({
+  centeredView: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: 22
+  },
+  modalView: {
+    height: '100%',
+    width: '100%',
+    margin: 20,
+    backgroundColor: "white",
+    borderRadius: 20,
+    padding: 35,
+    alignItems: "center",
+    elevation: 5
+  },
+  openButton: {
+    fontSize: 14,
+    backgroundColor: '#C1C1C1',
+    margin: 12,
+    paddingVertical: 12,
+    paddingHorizontal: 12,
+    borderRadius: 6,
+    color: '#888888',
+    paddingRight: 30,
+    elevation: 2
+  },
+  textStyle: {
+    color: "white",
+    fontWeight: "bold",
+    textAlign: "center"
+  },
+  modalText: {
+    marginBottom: 15,
+    textAlign: "center"
   }
 });

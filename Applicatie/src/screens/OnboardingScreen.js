@@ -41,9 +41,7 @@ const Onboarding = () => {
             image={require('../assets/processor.png')}
             title="Terms and services"
             iconName="escalator-warning"
-            paragraph="Pokimoto collects usage data to improve the app. Your searches and purchases on your device
-            can be used to enhance your personal
-            experience and prevent fraud. See how your data is managed"
+            paragraph="Pokimoto collects usage data to improve the app. Your searches and purchases on your device can be used to enhance your experience"
           />
           <Footer
             backgroundColor="#000000"

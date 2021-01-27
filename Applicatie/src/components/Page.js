@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
   },
   innerParagraph: {
     fontSize: 11,
-    fontFamily: 'Sharp-Sans-Regular',
+    fontFamily: 'Sharp-Sans-Medium',
     marginTop: 16,
     maxWidth: '80%',
     textAlign: 'center',
