@@ -73,11 +73,7 @@ const HomeScreen = () => {
           <AntDesign name='left' resizeMode='contain' size={20} color='white' />
         </TouchableOpacity>
         <View style={{alignItems: 'center', justifyContent: 'center'}}>
-<<<<<<< Updated upstream
-          <Text style={styles.renderHeaderText}>Favorites</Text>
-=======
           <Text style={styles.renderHeaderText}>Home</Text>
->>>>>>> Stashed changes
         </View>
         <TouchableOpacity
           style={{
@@ -140,6 +136,7 @@ const HomeScreen = () => {
     );
   }
 };
+
 const SECTIONS = [
   {
     title: 'Today',
@@ -149,12 +146,8 @@ const SECTIONS = [
         key: '1',
         meal: 'Classic Tuna with vegetables and extras',
         type: 'Poke bowl',
-<<<<<<< Updated upstream
-        title: 'Honolulu | Poke Bowl',
-=======
         caption: 'Honolulu | Poke Bowl',
         title: 'Honolulu Poke Bowl',
->>>>>>> Stashed changes
         description: 'With tuna, avocado, corn, cherry tomatoes, cucumber, carrot, red cabbage & sriracha mayonnaise.',
         rating: 5,
         price: 15,
@@ -166,12 +159,8 @@ const SECTIONS = [
         key: '2',
         meal: 'Poke bowl with tuna, wasabi and sushi rice',
         type: 'Poke bowl',
-<<<<<<< Updated upstream
-        title: 'Tokyo | Poke Bowl',
-=======
         caption: 'Tokyo | Poke Bowl',
         title: 'Tokyo Poke Bowl',
->>>>>>> Stashed changes
         description: 'With sushi rice, raw tuna and vegetables. And do not forget the pickled shiitakes!',
         rating: '5',
         price: 15,
@@ -184,12 +173,8 @@ const SECTIONS = [
         key: '3',
         meal: 'Teriyaki chicken sushi bowl',
         type: 'Poke bowl',
-<<<<<<< Updated upstream
-        title: 'Bali | Poke Bowl',
-=======
         caption: 'Bali | Poke Bowl',
         title: 'Bali Poke Bowl',
->>>>>>> Stashed changes
         description: 'A bowl full of sushi rice, asian vegetables and teriyaki chicken.',
         rating: 5,
         price: 15,
@@ -201,12 +186,8 @@ const SECTIONS = [
         key: '4',
         meal: 'Shoyu ahi bowl',
         type: 'Poke bowl',
-<<<<<<< Updated upstream
-        title: 'Jeju | Poke Bowl',
-=======
         caption: 'Jeju | Poke Bowl',
         title: 'Jeju Poke Bowl',
->>>>>>> Stashed changes
         description: 'This bowl is flavored with furikake - a sea vegetable packed with umami - to deepen the flavor and add some extra layers to this already tasty bag!',
         rating: 5,
         price: 15,
@@ -218,12 +199,8 @@ const SECTIONS = [
         key: '5',
         meal: 'Alaskan sockeye salmon poke bowl',
         type: 'Poke bowl',
-<<<<<<< Updated upstream
-        title: 'Taipei | Poke Bowl',
-=======
         caption: 'Taipei | Poke Bowl',
         title: 'Taipei Poke Bowl',
->>>>>>> Stashed changes
         description: 'Served on a nice crunchy salad with cabbage, carrots, avocado and edamame.',
         rating: 5,
         price: 15,
@@ -240,24 +217,16 @@ const SECTIONS = [
       {
         key: '1',
         meal: 'Thai satay bowl',
-<<<<<<< Updated upstream
-        title: 'Bangkok | Poke Bowl',
-=======
         caption: 'Bangkok | Poke Bowl',
         title: 'Bangkok Poke Bowl',
->>>>>>> Stashed changes
         description: 'Fresh Thai satay bowl with crispy tofu',
         uri: 'https://i.imgur.com/Vt3PnU5.jpeg',
       },
       {
         key: '2',
         meal: 'Seared steak sushi bowl',
-<<<<<<< Updated upstream
-        title: 'Manilla | Poke Bowl',
-=======
         caption: 'Manilla | Poke Bowl',
         title: 'Manilla Poke Bowl',
->>>>>>> Stashed changes
         description: 'Cubes of marinated fillet steak, served alongside rice, avocado, crunchy vegetables and caramelized pineapple slices. All finished with a slightly spicy, garlicky dressing.',
         uri: 'https://i.imgur.com/4txvT81.jpg',
       },
@@ -265,12 +234,8 @@ const SECTIONS = [
       {
         key: '3',
         meal: 'Octopus Poke with Kimchi',
-<<<<<<< Updated upstream
-        title: 'Kuala | Lumpur Poke Bowl',
-=======
         caption: 'Kuala | Lumpur Poke Bowl',
         title: 'Kuala Poke Bowl',
->>>>>>> Stashed changes
         description: 'Delicious bowl of poke with octopus and kimchi!',
         uri: 'https://i.imgur.com/jgwyPYl.jpeg',
       },
