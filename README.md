@@ -5,15 +5,6 @@
 
 In de planning bevatten zich de meeste links zodat het team gemakkelijk door het project heen kan navigeren, hiervoor gebruiken wij een [Clickup bord](https://share.clickup.com/b/h/6-36232147-2/7dfafeeca8a42eb)
 
-## Task division
-
-| Team lid      | Taken |
-| ------------- |:-------------:| 
-| Lucas Jansen     |  Design, flowchart, opzet project, geheel project | 
-| Regilio Spee      | Marktonderzoek + PVA + docentenhandleiding, geheel project |  
-| Vadim Pisa | User stories, geheel project  |  
-| Kevin Geurts | Testplan & testrapporten, geheel project   |  
-
 ## Demo
 
 Check [Pokimoto op Expo](https://expo.io/@wlaj/projects/Pokimoto) voor meer informatie.
