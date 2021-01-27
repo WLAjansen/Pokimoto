@@ -15,24 +15,8 @@ Check [Pokimoto op Expo](https://expo.io/@wlaj/projects/Pokimoto) voor meer info
 
 ## Installation
 
-Om te beginnen, installeer [Expo CLI](https://docs.expo.io/get-started/installation/) met de volgende code. Je hebt hiervoor Node.js LTS en Git nodig.
+Om de installatie succesvol uit te voeren inclusief de opstart hiervan verwijzen we je door naar ons [Deployment plan](https://doc.clickup.com/p/h/49v6f-183/1a2b7aa665ff8a4)
 
-```
-$ / sudo: npm install --global expo-cli
-```
-
-Nu je de Expo CLI globaal hebt geïnstalleerd maak je een nieuw project aan 
-
-```
-$ / sudo: npm init Pokimoto
-```
-
-Clone nu het project op de github en zet de bestanden in de 'Applicatie' map in de root van je project. Hierna 
-kan je het project runnen met de volgende command.
-
-```
-$ / sudo: expo start
-```
 
 ## References
  
