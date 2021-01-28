@@ -9,6 +9,7 @@ import { FontAwesome5 } from '@expo/vector-icons';
 import OnboardingScreen from './src/screens/OnboardingScreen';
 import OrderCompleteScreen from './src/screens/OrderCompleteScreen';
 import RestaurantsScreen from './src/screens/RestaurantsScreen';
+import RestaurantsDetailScreen from './src/screens/RestaurantsDetailScreen';
 import TrackingScreen from './src/screens/TrackingScreen';
 import HomeScreen from './src/screens/HomeScreen';
 import DetailsScreen from './src/screens/DetailsScreen';
@@ -27,6 +28,7 @@ function RouteStack() {
         <AppStack.Screen name='OrderComplete' component={OrderCompleteScreen} />
         <AppStack.Screen name='Tracking' component={TrackingScreen} />
         <AppStack.Screen name='Details' component={DetailsScreen} />
+        <AppStack.Screen name='RestaurantDetails' component={RestaurantsDetailScreen} />
         <AppStack.Screen name='Dishes' component={DishesScreen} />
         <AppStack.Screen name='Payment' component={PaymentScreen} />
       </AppStack.Navigator>
