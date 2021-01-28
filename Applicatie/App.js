@@ -9,11 +9,11 @@ import { FontAwesome5 } from '@expo/vector-icons';
 import OnboardingScreen from './src/screens/OnboardingScreen';
 import OrderCompleteScreen from './src/screens/OrderCompleteScreen';
 import RestaurantsScreen from './src/screens/RestaurantsScreen';
-import RestaurantsDetailScreen from './src/screens/RestaurantsDetailScreen';
 import TrackingScreen from './src/screens/TrackingScreen';
 import HomeScreen from './src/screens/HomeScreen';
 import DetailsScreen from './src/screens/DetailsScreen';
 import DishesScreen from './src/screens/DishesScreen';
+import RestaurantsDetailScreen from './src/screens/RestaurantsDetailScreen';
 import PaymentScreen from './src/screens/PaymentScreen';
 import AccountScreen from './src/screens/AccountScreen';
 

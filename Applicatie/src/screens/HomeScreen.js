@@ -9,11 +9,10 @@ import {
   Image,
   FlatList,
   ActivityIndicator,
-  TouchableWithoutFeedback,
   TouchableOpacity,
+  TouchableHighlight
 } from 'react-native';
 import { useFonts } from 'expo-font';
-import { TouchableHighlight } from 'react-native-gesture-handler';
 import { AntDesign } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 
@@ -74,7 +73,7 @@ const HomeScreen = () => {
           <AntDesign name='left' resizeMode='contain' size={20} color='white' />
         </TouchableOpacity>
         <View style={{alignItems: 'center', justifyContent: 'center'}}>
-          <Text style={styles.renderHeaderText}>Favorites</Text>
+          <Text style={styles.renderHeaderText}>Home</Text>
         </View>
         <TouchableOpacity
           style={{
@@ -82,7 +81,7 @@ const HomeScreen = () => {
             justifyContent: 'center',
           }}
           onPress={() => {
-            navigation.navigate('Payment');
+            navigation.navigate('Dishes');
           }}
         >
           <AntDesign name='search1' resizeMode='contain' size={20} color='white' />
@@ -137,6 +136,7 @@ const HomeScreen = () => {
     );
   }
 };
+
 const SECTIONS = [
   {
     title: 'Today',
@@ -146,7 +146,8 @@ const SECTIONS = [
         key: '1',
         meal: 'Classic Tuna with vegetables and extras',
         type: 'Poke bowl',
-        title: 'Honolulu | Poke Bowl',
+        caption: 'Honolulu | Poke Bowl',
+        title: 'Honolulu Poke Bowl',
         description: 'With tuna, avocado, corn, cherry tomatoes, cucumber, carrot, red cabbage & sriracha mayonnaise.',
         rating: 5,
         price: 13.50,
@@ -158,7 +159,8 @@ const SECTIONS = [
         key: '2',
         meal: 'Poke bowl with tuna, wasabi and sushi rice',
         type: 'Poke bowl',
-        title: 'Tokyo | Poke Bowl',
+        caption: 'Tokyo | Poke Bowl',
+        title: 'Tokyo Poke Bowl',
         description: 'With sushi rice, raw tuna and vegetables. And do not forget the pickled shiitakes!',
         rating: '5',
         price: 11.95,
@@ -171,10 +173,11 @@ const SECTIONS = [
         key: '3',
         meal: 'Teriyaki chicken sushi bowl',
         type: 'Poke bowl',
-        title: 'Bali | Poke Bowl',
+        caption: 'Bali | Poke Bowl',
+        title: 'Bali Poke Bowl',
         description: 'A bowl full of sushi rice, asian vegetables and teriyaki chicken.',
         rating: 5,
-        price: 11.95,
+        price: 12.95,
         protein: 'Salmon',
         size: 'Medium',
         uri: 'https://i.imgur.com/98dgjV4.jpeg',
@@ -183,10 +186,11 @@ const SECTIONS = [
         key: '4',
         meal: 'Shoyu ahi bowl',
         type: 'Poke bowl',
-        title: 'Jeju | Poke Bowl',
+        caption: 'Jeju | Poke Bowl',
+        title: 'Jeju Poke Bowl',
         description: 'This bowl is flavored with furikake - a sea vegetable packed with umami - to deepen the flavor and add some extra layers to this already tasty bag!',
         rating: 5,
-        price: 12.95,
+        price: 9.95,
         protein: 'Salmon',
         size: 'Medium',
         uri: 'https://i.imgur.com/iO4FRur.png',
@@ -195,10 +199,11 @@ const SECTIONS = [
         key: '5',
         meal: 'Alaskan sockeye salmon poke bowl',
         type: 'Poke bowl',
-        title: 'Taipei | Poke Bowl',
+        caption: 'Taipei | Poke Bowl',
+        title: 'Taipei Poke Bowl',
         description: 'Served on a nice crunchy salad with cabbage, carrots, avocado and edamame.',
         rating: 5,
-        price: 9.95,
+        price: 15,
         protein: 'Salmon',
         size: 'Medium',
         uri: 'https://i.imgur.com/5udjQhd.jpeg',
@@ -212,24 +217,27 @@ const SECTIONS = [
       {
         key: '1',
         meal: 'Thai satay bowl',
-        title: 'Bangkok | Poke Bowl',
+        caption: 'Bangkok | Poke Bowl',
+        title: 'Bangkok Poke Bowl',
         description: 'Fresh Thai satay bowl with crispy tofu',
-        uri: 'https://img.taste.com.au/oeMbSXNJ/taste/2016/11/coconut-satay-chicken-noodle-bowl-our-recent-recipes-of-the-day-109407-2.jpeg',
+        uri: 'https://i.imgur.com/Vt3PnU5.jpeg',
       },
       {
         key: '2',
-        meal: 'Spicy salmon bowl',
-        title: 'Manilla | Poke Bowl',
-        description: 'If you like spicy a bit, we recommend the spicy salmon bowl!',
-        uri: 'https://www.jessicagavin.com/wp-content/uploads/2016/06/spicy-sockeye-salmon-poke-bowl-with-sriracha-aioli-1024x1536.jpg',
+        meal: 'Seared steak sushi bowl',
+        caption: 'Manilla | Poke Bowl',
+        title: 'Manilla Poke Bowl',
+        description: 'Cubes of marinated fillet steak, served alongside rice, avocado, crunchy vegetables and caramelized pineapple slices. All finished with a slightly spicy, garlicky dressing.',
+        uri: 'https://img.taste.com.au/oeMbSXNJ/taste/2016/11/coconut-satay-chicken-noodle-bowl-our-recent-recipes-of-the-day-109407-2.jpeg',
       },
 
       {
         key: '3',
         meal: 'Octopus Poke with Kimchi',
-        title: 'Kuala | Lumpur Poke Bowl',
+        caption: 'Kuala | Lumpur Poke Bowl',
+        title: 'Kuala Poke Bowl',
         description: 'Delicious bowl of poke with octopus and kimchi!',
-        uri: 'https://www.seriouseats.com/images/2016/06/20160608-poke-tuna-hamachi-octopus-salmon-hawaii-recipe-16.jpg',
+        uri: 'https://i.imgur.com/jgwyPYl.jpeg',
       },
     ],
   },
@@ -283,7 +291,10 @@ const styles = StyleSheet.create({
     margin: 4,
   },
   item: {
-    margin: 5,
+    marginRight: 5,
+    marginLeft: 5,
+    marginTop: 5,
+    marginBottom: 20
   },
   innerItem: {
     borderStyle: 'solid',

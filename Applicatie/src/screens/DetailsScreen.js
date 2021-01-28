@@ -16,15 +16,14 @@ import RNPickerSelect from 'react-native-picker-select';
 import { useNavigation } from '@react-navigation/native';
 
 import { RadioButton } from 'react-native-paper';
-import { Ionicons, FontAwesome } from '@expo/vector-icons';
+import { Ionicons, FontAwesome, AntDesign  } from '@expo/vector-icons';
 
-import { AntDesign } from '@expo/vector-icons';
 import { useFonts } from 'expo-font';
 import { ScrollView, TouchableWithoutFeedback } from 'react-native-gesture-handler';
 
 const ReviewScreen = ({ route }) => {
   const navigation = useNavigation();
-  const { title, body, rating, price, size, protein } = route.params;
+  const { title, description, rating, price, size, protein } = route.params;
   // Dropdown
   const [selectProtein, setSelectProtein] = useState('');
   // Radio buttons
@@ -46,7 +45,9 @@ const ReviewScreen = ({ route }) => {
             width: 50,
             justifyContent: 'center',
           }}
-          onPress={() => navigation.goBack()}
+          onPress={() => {
+            navigation.navigate('RouteTabs');
+          }}
         >
           <AntDesign name='left' resizeMode='contain' size={20} color='white' />
         </TouchableOpacity>
@@ -87,7 +88,7 @@ const ReviewScreen = ({ route }) => {
     );
   }
 
-  const RenderBodyDropDown = () => {
+  function RenderBodyDropDown () {
     return (
       <View style={styles.dropdownSelect}>
         <RNPickerSelect
@@ -96,12 +97,12 @@ const ReviewScreen = ({ route }) => {
           useNativeAndroidPickerStyle={false}
           placeholder={{ label: 'Select your favourite protein', value: null }}
           items={[
-            { label: 'JavaScript', value: 'JavaScript' },
-            { label: 'TypeStript', value: 'TypeStript' },
-            { label: 'Python', value: 'Python' },
-            { label: 'Java', value: 'Java' },
-            { label: 'C++', value: 'C++' },
-            { label: 'C', value: 'C' },
+            { label: 'Extra Salmon', value: 'Extra Salmon' },
+            { label: 'Extra Tuna', value: 'Extra Tuna' },
+            { label: 'Extra Octopus', value: 'Extra Octopus' },
+            { label: 'Extra Chicken', value: 'Extra Chicken' },
+            { label: 'Extra Beef', value: 'Extra Beef' },
+            { label: 'Extra Pork', value: 'Extra Pork ' },
           ]}
         />
       </View>
@@ -120,11 +121,11 @@ const ReviewScreen = ({ route }) => {
     return (
       <View style={styles.dropdownSelect}>
         <RadioButton.Group onValueChange={(selectMixins) => setSelectMixins(selectMixins)} value={selectMixins}>
-        <RadioButton.Item labelStyle={styles.bodyDropDownLabel}  label="First item" value="first" />
-        <RadioButton.Item labelStyle={styles.bodyDropDownLabel}  label="Second item" value="second" />
-        <RadioButton.Item labelStyle={styles.bodyDropDownLabel}  label="First item" value="third" />
-        <RadioButton.Item labelStyle={styles.bodyDropDownLabel}  label="Second item" value="fourth" />
-        <RadioButton.Item labelStyle={styles.bodyDropDownLabel}  label="First item" value="fifth" />
+        <RadioButton.Item uncheckedColor={"#353434"} labelStyle={styles.bodyDropDownLabel}  label="Cucumber" value="Cucumber" />
+        <RadioButton.Item uncheckedColor={"#353434"} labelStyle={styles.bodyDropDownLabel}  label="Avocado" value="Avocado" />
+        <RadioButton.Item uncheckedColor={"#353434"} labelStyle={styles.bodyDropDownLabel}  label="Mango" value="Mango" />
+        <RadioButton.Item uncheckedColor={"#353434"} labelStyle={styles.bodyDropDownLabel}  label="Surimi" value="Surimi" />
+        <RadioButton.Item uncheckedColor={"#353434"} labelStyle={styles.bodyDropDownLabel}  label="Takuan" value="Takuan" />
         </RadioButton.Group>
       </View>
     );
@@ -142,11 +143,11 @@ const ReviewScreen = ({ route }) => {
     return (
       <View style={styles.dropdownSelect}>
         <RadioButton.Group onValueChange={(selectDressup) => setSelectDressup(selectDressup)} value={selectDressup}>
-        <RadioButton.Item labelStyle={styles.bodyDropDownLabel}  label="First item" value="first" />
-        <RadioButton.Item labelStyle={styles.bodyDropDownLabel}  label="Second item" value="second" />
-        <RadioButton.Item labelStyle={styles.bodyDropDownLabel}  label="First item" value="third" />
-        <RadioButton.Item labelStyle={styles.bodyDropDownLabel}  label="Second item" value="fourth" />
-        <RadioButton.Item labelStyle={styles.bodyDropDownLabel}  label="First item" value="fifth" />
+        <RadioButton.Item uncheckedColor={"#353434"} labelStyle={styles.bodyDropDownLabel}  label="Steamed Edamame" value="Steamed Edamame" />
+        <RadioButton.Item uncheckedColor={"#353434"} labelStyle={styles.bodyDropDownLabel}  label="Takoyaki Balls" value="Soy Beans" />
+        <RadioButton.Item uncheckedColor={"#353434"} labelStyle={styles.bodyDropDownLabel}  label="Gyoza Dumplings" value="Gyoza Dumplings" />
+        <RadioButton.Item uncheckedColor={"#353434"} labelStyle={styles.bodyDropDownLabel}  label="Yakitori Chicken" value="Yakitori Chicken" />
+        <RadioButton.Item uncheckedColor={"#353434"} labelStyle={styles.bodyDropDownLabel}  label="Yakisoba Noodles" value="Yakisoba Noodles" />
         </RadioButton.Group>
       </View>
     );
@@ -164,11 +165,11 @@ const ReviewScreen = ({ route }) => {
     return (
       <View style={styles.dropdownSelect}>
         <RadioButton.Group onValueChange={(selectToppings) => setSelectToppings(selectToppings)} value={selectToppings}>
-        <RadioButton.Item labelStyle={styles.bodyDropDownLabel}  label="First item" value="first" />
-        <RadioButton.Item labelStyle={styles.bodyDropDownLabel}  label="Second item" value="second" />
-        <RadioButton.Item labelStyle={styles.bodyDropDownLabel}  label="First item" value="third" />
-        <RadioButton.Item labelStyle={styles.bodyDropDownLabel}  label="Second item" value="fourth" />
-        <RadioButton.Item labelStyle={styles.bodyDropDownLabel}  label="First item" value="fifth" />
+        <RadioButton.Item uncheckedColor={"#353434"} labelStyle={styles.bodyDropDownLabel}  label="Soy Sauce" value="Soy Sauce" />
+        <RadioButton.Item uncheckedColor={"#353434"} labelStyle={styles.bodyDropDownLabel}  label="Sriracha Mayonaise" value="Sriracha Mayonaise" />
+        <RadioButton.Item uncheckedColor={"#353434"} labelStyle={styles.bodyDropDownLabel}  label="Wasabi Mayonaise" value="Wasabi Mayonaise" />
+        <RadioButton.Item uncheckedColor={"#353434"} labelStyle={styles.bodyDropDownLabel}  label="Yuzu Citrus Sauce" value="Yuzu Citrus Sauce" />
+        <RadioButton.Item uncheckedColor={"#353434"} labelStyle={styles.bodyDropDownLabel}  label="Teriyaki Sauce" value="Teriyaki Sauce" />
         </RadioButton.Group>
       </View>
     );
@@ -176,6 +177,7 @@ const ReviewScreen = ({ route }) => {
 
     const RenderBodyModal = () => {
       const [modalVisible, setModalVisible] = useState(false);
+      const [selectPayment, setSelectPayment] = React.useState('');
       return (
         <View style={styles.centeredView}>
           <Modal
@@ -191,31 +193,66 @@ const ReviewScreen = ({ route }) => {
               <View style={PaymentModal.modalView}>
                 <View style={PaymentModal.modalTextView}>
                 <Text style={PaymentModal.modalTitleText}>{title}</Text>
-                <Text style={PaymentModal.modalSubTitleText}>Your protein</Text>
+                <View style={PaymentModal.dropdownSelectPayment}>
+                <RNPickerSelect
+                  style={{...customPickerStyles, borderColor: 'white'}}
+                  onValueChange={(selectPayment) => setSelectPayment(selectPayment)}
+                  useNativeAndroidPickerStyle={false}
+                  placeholder={{ label: 'Paypal', value: 'Paypal' }}
+                  items={[
+                    { label: 'Apple Pay', value: 'Apple Pay' },
+                    { label: 'Google Pay', value: 'Google Pay' },
+                    { label: 'Samsung Pay', value: 'Samsung Pay' },
+                  ]}
+                />
+                 <View style={{flex: 0.2, justifyContent:'center', alignItems: 'center'}}>
+                 <FontAwesome name="cc-paypal" size={24} color="white" />
+                </View>
+              </View>
+                <View style={PaymentModal.modalSubTextView}>
+                <View style={PaymentModal.modalDetailsTextView}>
+                </View>
+                {/* Size */}
+                <View style={PaymentModal.modalDetailsTextView}>
+                <Text style={PaymentModal.modalText}>Size</Text>
+                <Text style={{ color: '#C1C1C1', marginBottom: 12, marginTop: 12, 
+                fontFamily: 'Sharp-Sans-Medium', fontSize: 15,}}>{size}</Text>
+                </View>
+                {/* Protein */}
+                <View style={PaymentModal.modalDetailsTextView}>
+                <Text style={PaymentModal.modalText}>Protein</Text>
+                <Text style={{ color: '#C1C1C1', marginBottom: 12, marginTop: 12, 
+                fontFamily: 'Sharp-Sans-Medium', fontSize: 15,}}>{protein}</Text>
+                </View>
+                {/* Price */}
+                <View style={PaymentModal.modalDetailsTextView}>
+                <Text style={PaymentModal.modalText}>Price</Text>
+                <Text style={{ color: '#C1C1C1', marginBottom: 12, marginTop: 12, 
+                fontFamily: 'Sharp-Sans-Medium', fontSize: 15,}}>€ {price}</Text>
+                </View>
+                </View>
+                <Text style={PaymentModal.modalSubTitleText}>Your extra's</Text>
+                <View style={PaymentModal.modalSubTextView}>
                 <Text style={PaymentModal.modalText}>{selectProtein}</Text>
-                <Text style={PaymentModal.modalSubTitleText}>Your Mix-ins</Text>
                 <Text style={PaymentModal.modalText}>{selectMixins}</Text>
-                <Text style={PaymentModal.modalSubTitleText}>Your Toppings</Text>
                 <Text style={PaymentModal.modalText}>{selectToppings}</Text>
-                <Text style={PaymentModal.modalSubTitleText}>Your Dress-ups</Text>
                 <Text style={PaymentModal.modalText}>{selectDressup}</Text>
+                </View>
                 </View>
                 <View style={PaymentModal.modalButtonView}>
                 <TouchableHighlight
                   style={{ ...PaymentModal.openButton, backgroundColor: "white" }}
-                  onPress={() => {
-                    setModalVisible(!modalVisible);
-                  }}
+                  onPress={() => navigation.navigate('OrderComplete')}
                 >
-                  <Text style={{color: 'black', fontWeight: "bold"}}>Undo changes</Text>
+                  <Text style={{color: 'black', fontWeight: "bold"}}>Complete order</Text>
                 </TouchableHighlight>
                 <TouchableHighlight
-                  style={{ ...PaymentModal.openButton, backgroundColor: "#181818" }}
+                  style={{ ...PaymentModal.openButton, backgroundColor: "#232323" }}
                   onPress={() => {
                     setModalVisible(!modalVisible);
                   }}
                 >
-                  <Text style={PaymentModal.textStyle}>Undo changes</Text>
+                  <Text style={{color: '#727272', fontWeight: "bold"}}>Close Summary</Text>
                 </TouchableHighlight>
                 </View>
               </View>
@@ -275,12 +312,16 @@ const customPickerStyles = StyleSheet.create({
     fontSize: 13,
     paddingHorizontal: 12,
     paddingVertical: 12,
-    borderWidth: 1,
     borderRadius: 8,
     color: '#888888',
     fontFamily: 'Sharp-Sans-Medium',
-    paddingRight: 30, // to ensure the text is never behind the icon
+    // to ensure the text is never behind the icon
   },
+  iconContainer: {
+    flexGrow: 1,
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+  }
 });
 
 const styles = StyleSheet.create({
@@ -326,6 +367,14 @@ const styles = StyleSheet.create({
     color: '#C1C1C1',
     fontFamily: 'Sharp-Sans-Bold',
     fontSize: 32,
+    marginBottom: 20,
+    textAlign: 'left'
+  },
+  headerDescription: {
+    color: '#404040',
+    width: '80%',
+    fontFamily: 'Sharp-Sans-Bold',
+    fontSize: 13,
     textAlign: 'left'
   },
   headerSubTitle: {
@@ -360,11 +409,9 @@ const PaymentModal = StyleSheet.create({
   modalView: {
     height: '100%',
     width: '100%',
-    borderWidth: 1,
-    borderColor: '#343434',
     margin: 20,
     justifyContent: 'space-between',
-    backgroundColor: "black",
+    backgroundColor: "#181818",
     borderRadius: 20,
     padding: 35,
     alignItems: "center",
@@ -383,7 +430,15 @@ const PaymentModal = StyleSheet.create({
   },
   modalButtonView: {
     flexDirection: 'row',
-    
+  },
+  modalSubTextView: {
+    backgroundColor: '#242424',
+    padding: 15,
+    borderRadius: 12,
+  },
+  modalDetailsTextView: {
+    flexDirection: 'row',
+    justifyContent: 'space-between'
   },
   textStyle: {
     color: "white",
@@ -400,12 +455,28 @@ const PaymentModal = StyleSheet.create({
   modalSubTitleText: {
     fontFamily: 'Sharp-Sans-Bold',
     color: '#C1C1C1',
-    fontSize: 20,
+    fontSize: 16,
+    marginBottom: 20,
+    marginTop: 20,
   },
   modalText: {
-    marginBottom: 50,
+    marginBottom: 12,
+    marginTop: 12,
     fontFamily: 'Sharp-Sans-Medium',
-    fontSize: 16,
+    fontSize: 15,
     color: '#888888',
-  }
+  },
+  dropdownSelectPayment: {
+    marginBottom: 12,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    borderRadius: 8,
+    borderColor: '#242424',
+    borderWidth: 1,
+  },
+  dropdownSelectIcon: {
+    position: 'absolute',
+    right: 0,
+    bottom: 20,
+  },
 });

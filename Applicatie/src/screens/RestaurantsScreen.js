@@ -135,30 +135,39 @@ const RestaurantsScreen = () => {
 
 const SECTIONS = [
   {
-    title: 'All of our restaurants',
-    subtitle: '',
+    title: 'Today',
+    subtitle: 'All the restaurants',
     data: [
       {
         "userId": 1,
         "id": 1,
         "title": "Poké Market Amsterdam",
         "description": "Bij Poké Market kun je je Poké Bowl eten in het Instagram-waardige restaurant. Heb je geen zin om de deur uit te gaan? Je kunt het ook laten bezorgen via Pokimoto!",
+        "description1": "The Poké Market is in het leven geroepen door twee studenten die in de begeerde Schinkelbuurt woonde tegenover het vondel park. Na lange college dagen en lange nachten in de stad, ploften zij op de bank en hadden ze geen idee wat ze moesten eten. Naast dat een maaltijd smaakvol moest zijn, moest het natuurlijk ook voedzaam zijn.",
+        "description2": "Na tien tallen keren buiten de deur te hebben gegeten en talloze maaltijden hebben afgehaald waren ze het beu en besloten ze dit probleem aan te pakken. The Poké Market is ontstaan. Een smaakvol maar ook voedzaam concept. Een concept waar je al je vitamines, vezels en proteïne binnen kan krijgen en die ook nog heerlijk smaakt. Een plek die je meeneemt naar Hawaï. Door de verse vis, groenten en de exotische kleuren, krijg je al snel het gevoel dat je niet meer in Amsterdam bent.",
+        "description3": "Het doel van The Poké Market is om de jongeren generatie gezonder door het leven te laten gaan. Gezond eten kan ook lekker zijn. Daarnaast streven ze ook naar een gezondere wereld doormiddel van kartonnen bakjes en samen te werken met Too Good To Go vechten we tegen voedselverspilling.",
         "location": "Zeilstraat 34, Amsterdam",
-        uri: 'https://i.imgur.com/5udjQhd.jpeg',
+        uri: 'https://i.imgur.com/vR0qD2v.jpeg',
         },
         {
         "userId": 1,
         "id": 2,
         "title": "Konomi Haarlem",
         "description": "De nieuwe hotspot voor Poké Bowls en Japans dineren: Konomi.",
+        "description1": "Als je fan bent van kwalitatief goede sushi dan mag je Konomi zeker niet missen. Om de hoek van de Grote Kerk vind je dit smalle zaakje dat geheel in Japanse stijl is gehuld. Compleet met rode lampions en Japanse gordijntjes. Eigenaresse Tia Swierts komt uit een horeca gezin en maakte al jaren sushi. Een eigen sushizaak openen was dan ook een logische stap. ",
+        "description2": "Ze startte een crowdfundingcampagne en haalde al binnen 40 minuten het benodigde bedrag binnen. Het was duidelijk; Haarlem stond te poppelen om haar zaak! Naast de wat bekendere sushivarianten kun je hier ’s middags poké bowls snoepen en je vindt hier ook creatieve varianten zoals haar signature Konomi soft shell crab roll. Een plaatje om te zien en een feest om van te eten.",
+        "description3": " Persoonlijke aandacht en een goede service is naast geweldige gerechten serveren voor Tia en haar team prioriteit nummer één. Niet zo gek dus dat ze inmiddels een trouwe groep vaste gasten hebben.",
         "location": "Paarlaarsteeg 7, 2011TA Haarlem",
-        uri: 'https://i.imgur.com/5udjQhd.jpeg',
+        uri: 'https://i.imgur.com/Am0GXzS.jpeg',
         },
         {
         "userId": 1,
         "id": 3,
         "title": "Ohana Poké Den Haag",
         "description": "Een knus restaurant met een frisse uitstraling. Laat je het liever bezorgen? Dat kan ook via Pokimoto.",
+        "description1": "Als je fan bent van kwalitatief goede sushi dan mag je Konomi zeker niet missen. Om de hoek van de Grote Kerk vind je dit smalle zaakje dat geheel in Japanse stijl is gehuld. Compleet met rode lampions en Japanse gordijntjes. Eigenaresse Tia Swierts komt uit een horeca gezin en maakte al jaren sushi. Een eigen sushizaak openen was dan ook een logische stap. ",
+        "description2": "Ze startte een crowdfundingcampagne en haalde al binnen 40 minuten het benodigde bedrag binnen. Het was duidelijk; Haarlem stond te poppelen om haar zaak! Naast de wat bekendere sushivarianten kun je hier ’s middags poké bowls snoepen en je vindt hier ook creatieve varianten zoals haar signature Konomi soft shell crab roll. Een plaatje om te zien en een feest om van te eten.",
+        "description3": " Persoonlijke aandacht en een goede service is naast geweldige gerechten serveren voor Tia en haar team prioriteit nummer één. Niet zo gek dus dat ze inmiddels een trouwe groep vaste gasten hebben.",
         "location": "Prinsestraat 18, Den Haag",
         uri: 'https://i.imgur.com/5udjQhd.jpeg',
         },
@@ -167,6 +176,9 @@ const SECTIONS = [
         "id": 4,
         "title": "Sushito Amsterdam",
         "description": "Sushito heeft drie locaties in Amsterdam. Door de inrichting waan je je in een jungle met een Poké Bowl on the side.",
+        "description1": "Als je fan bent van kwalitatief goede sushi dan mag je Konomi zeker niet missen. Om de hoek van de Grote Kerk vind je dit smalle zaakje dat geheel in Japanse stijl is gehuld. Compleet met rode lampions en Japanse gordijntjes. Eigenaresse Tia Swierts komt uit een horeca gezin en maakte al jaren sushi. Een eigen sushizaak openen was dan ook een logische stap. ",
+        "description2": "Ze startte een crowdfundingcampagne en haalde al binnen 40 minuten het benodigde bedrag binnen. Het was duidelijk; Haarlem stond te poppelen om haar zaak! Naast de wat bekendere sushivarianten kun je hier ’s middags poké bowls snoepen en je vindt hier ook creatieve varianten zoals haar signature Konomi soft shell crab roll. Een plaatje om te zien en een feest om van te eten.",
+        "description3": " Persoonlijke aandacht en een goede service is naast geweldige gerechten serveren voor Tia en haar team prioriteit nummer één. Niet zo gek dus dat ze inmiddels een trouwe groep vaste gasten hebben.",
         "location": "Jan Pieter Heijestraat 127, Amsterdam (Oud-West)"
         },
         {
@@ -174,6 +186,9 @@ const SECTIONS = [
         "id": 5,
         "title": "Poké House Arnhem",
         "description": "Poké House is het eerste restaurant in Arnhem waar ze Poké Bowls verkopen. Een goede Instagramfoto gegarandeerd tijdens een avondje uiteten. Bezorgen is ook hier een optie via de Pokimoto app.",
+        "description1": "Als je fan bent van kwalitatief goede sushi dan mag je Konomi zeker niet missen. Om de hoek van de Grote Kerk vind je dit smalle zaakje dat geheel in Japanse stijl is gehuld. Compleet met rode lampions en Japanse gordijntjes. Eigenaresse Tia Swierts komt uit een horeca gezin en maakte al jaren sushi. Een eigen sushizaak openen was dan ook een logische stap. ",
+        "description2": "Ze startte een crowdfundingcampagne en haalde al binnen 40 minuten het benodigde bedrag binnen. Het was duidelijk; Haarlem stond te poppelen om haar zaak! Naast de wat bekendere sushivarianten kun je hier ’s middags poké bowls snoepen en je vindt hier ook creatieve varianten zoals haar signature Konomi soft shell crab roll. Een plaatje om te zien en een feest om van te eten.",
+        "description3": " Persoonlijke aandacht en een goede service is naast geweldige gerechten serveren voor Tia en haar team prioriteit nummer één. Niet zo gek dus dat ze inmiddels een trouwe groep vaste gasten hebben.",
         "location": "Marienburgstraat 8, Arnhem"
         },
         {
@@ -181,6 +196,9 @@ const SECTIONS = [
         "id": 6,
         "title": "Poké Bowl Rotterdam",
         "description": "In Rotterdam is – naar eigen zeggen - het eerste Poké Bowl restaurant geopend in 2016.",
+        "description1": "Als je fan bent van kwalitatief goede sushi dan mag je Konomi zeker niet missen. Om de hoek van de Grote Kerk vind je dit smalle zaakje dat geheel in Japanse stijl is gehuld. Compleet met rode lampions en Japanse gordijntjes. Eigenaresse Tia Swierts komt uit een horeca gezin en maakte al jaren sushi. Een eigen sushizaak openen was dan ook een logische stap. ",
+        "description2": "Ze startte een crowdfundingcampagne en haalde al binnen 40 minuten het benodigde bedrag binnen. Het was duidelijk; Haarlem stond te poppelen om haar zaak! Naast de wat bekendere sushivarianten kun je hier ’s middags poké bowls snoepen en je vindt hier ook creatieve varianten zoals haar signature Konomi soft shell crab roll. Een plaatje om te zien en een feest om van te eten.",
+        "description3": " Persoonlijke aandacht en een goede service is naast geweldige gerechten serveren voor Tia en haar team prioriteit nummer één. Niet zo gek dus dat ze inmiddels een trouwe groep vaste gasten hebben.",
         "location": "Karel doormanstraat 457A, Rotterdam"
         },
         {
@@ -188,6 +206,9 @@ const SECTIONS = [
         "id": 7,
         "title": "Poke Perfect Utrecht",
         "description": "Super Pokebowls!",
+        "description1": "Als je fan bent van kwalitatief goede sushi dan mag je Konomi zeker niet missen. Om de hoek van de Grote Kerk vind je dit smalle zaakje dat geheel in Japanse stijl is gehuld. Compleet met rode lampions en Japanse gordijntjes. Eigenaresse Tia Swierts komt uit een horeca gezin en maakte al jaren sushi. Een eigen sushizaak openen was dan ook een logische stap. ",
+        "description2": "Ze startte een crowdfundingcampagne en haalde al binnen 40 minuten het benodigde bedrag binnen. Het was duidelijk; Haarlem stond te poppelen om haar zaak! Naast de wat bekendere sushivarianten kun je hier ’s middags poké bowls snoepen en je vindt hier ook creatieve varianten zoals haar signature Konomi soft shell crab roll. Een plaatje om te zien en een feest om van te eten.",
+        "description3": " Persoonlijke aandacht en een goede service is naast geweldige gerechten serveren voor Tia en haar team prioriteit nummer één. Niet zo gek dus dat ze inmiddels een trouwe groep vaste gasten hebben.",
         "location": "Korte Jansstraat 17, Utrecht"
         },
         {
@@ -195,6 +216,9 @@ const SECTIONS = [
         "id": 8,
         "title": "Bowls and Buns in Market 33",
         "description": "Even snel een poké bowl happen kan bij Bowls and Buns in de foodhallen van de Zuidas: Market 33.",
+        "description1": "Als je fan bent van kwalitatief goede sushi dan mag je Konomi zeker niet missen. Om de hoek van de Grote Kerk vind je dit smalle zaakje dat geheel in Japanse stijl is gehuld. Compleet met rode lampions en Japanse gordijntjes. Eigenaresse Tia Swierts komt uit een horeca gezin en maakte al jaren sushi. Een eigen sushizaak openen was dan ook een logische stap. ",
+        "description2": "Ze startte een crowdfundingcampagne en haalde al binnen 40 minuten het benodigde bedrag binnen. Het was duidelijk; Haarlem stond te poppelen om haar zaak! Naast de wat bekendere sushivarianten kun je hier ’s middags poké bowls snoepen en je vindt hier ook creatieve varianten zoals haar signature Konomi soft shell crab roll. Een plaatje om te zien en een feest om van te eten.",
+        "description3": " Persoonlijke aandacht en een goede service is naast geweldige gerechten serveren voor Tia en haar team prioriteit nummer één. Niet zo gek dus dat ze inmiddels een trouwe groep vaste gasten hebben.",
         "location": "Market 33"
         },
         {
@@ -202,6 +226,9 @@ const SECTIONS = [
         "id": 9,
         "title": "Bar Sue",
         "description": "Op de kaart staan zes Sue Bowls die je kunt tweaken naar je eigen smaak. Witte rijst of bruine rijst? Zalm of kip? Het is aan jou.",
+        "description1": "Als je fan bent van kwalitatief goede sushi dan mag je Konomi zeker niet missen. Om de hoek van de Grote Kerk vind je dit smalle zaakje dat geheel in Japanse stijl is gehuld. Compleet met rode lampions en Japanse gordijntjes. Eigenaresse Tia Swierts komt uit een horeca gezin en maakte al jaren sushi. Een eigen sushizaak openen was dan ook een logische stap. ",
+        "description2": "Ze startte een crowdfundingcampagne en haalde al binnen 40 minuten het benodigde bedrag binnen. Het was duidelijk; Haarlem stond te poppelen om haar zaak! Naast de wat bekendere sushivarianten kun je hier ’s middags poké bowls snoepen en je vindt hier ook creatieve varianten zoals haar signature Konomi soft shell crab roll. Een plaatje om te zien en een feest om van te eten.",
+        "description3": " Persoonlijke aandacht en een goede service is naast geweldige gerechten serveren voor Tia en haar team prioriteit nummer één. Niet zo gek dus dat ze inmiddels een trouwe groep vaste gasten hebben.",
         "location": "Insulindeweg 1, Amsterdam Oost"
         },
         {
@@ -209,6 +236,9 @@ const SECTIONS = [
         "id": 10,
         "title": "Bar Mowgli",
         "description": "Op de kaart staat een bonte collectie van Aziatisch (geïnspireerde) gerechten en smaken. Zo ook een bowl met nori, zalm, avocado, sushirijst, Japanse mayo en zalmkaviaar.",
+        "description1": "Als je fan bent van kwalitatief goede sushi dan mag je Konomi zeker niet missen. Om de hoek van de Grote Kerk vind je dit smalle zaakje dat geheel in Japanse stijl is gehuld. Compleet met rode lampions en Japanse gordijntjes. Eigenaresse Tia Swierts komt uit een horeca gezin en maakte al jaren sushi. Een eigen sushizaak openen was dan ook een logische stap. ",
+        "description2": "Ze startte een crowdfundingcampagne en haalde al binnen 40 minuten het benodigde bedrag binnen. Het was duidelijk; Haarlem stond te poppelen om haar zaak! Naast de wat bekendere sushivarianten kun je hier ’s middags poké bowls snoepen en je vindt hier ook creatieve varianten zoals haar signature Konomi soft shell crab roll. Een plaatje om te zien en een feest om van te eten.",
+        "description3": " Persoonlijke aandacht en een goede service is naast geweldige gerechten serveren voor Tia en haar team prioriteit nummer één. Niet zo gek dus dat ze inmiddels een trouwe groep vaste gasten hebben.",
         "location": "Beukenplein 50, Amsterdam"
         },
         {
@@ -216,6 +246,9 @@ const SECTIONS = [
         "id": 11,
         "title": "STACH Asian food court",
         "description": "STACH winkel in Amsterdam Oud-West op de Overtoom (kruising Constantijn Huygensstraat) heeft stapels gezonde sushi salades, poké bowls, sashimi en nog meer rauwe vis lekkernijen om mee te nemen.",
+        "description1": "Als je fan bent van kwalitatief goede sushi dan mag je Konomi zeker niet missen. Om de hoek van de Grote Kerk vind je dit smalle zaakje dat geheel in Japanse stijl is gehuld. Compleet met rode lampions en Japanse gordijntjes. Eigenaresse Tia Swierts komt uit een horeca gezin en maakte al jaren sushi. Een eigen sushizaak openen was dan ook een logische stap. ",
+        "description2": "Ze startte een crowdfundingcampagne en haalde al binnen 40 minuten het benodigde bedrag binnen. Het was duidelijk; Haarlem stond te poppelen om haar zaak! Naast de wat bekendere sushivarianten kun je hier ’s middags poké bowls snoepen en je vindt hier ook creatieve varianten zoals haar signature Konomi soft shell crab roll. Een plaatje om te zien en een feest om van te eten.",
+        "description3": " Persoonlijke aandacht en een goede service is naast geweldige gerechten serveren voor Tia en haar team prioriteit nummer één. Niet zo gek dus dat ze inmiddels een trouwe groep vaste gasten hebben.",
         "location": "Overtoom 112, Amsterdam"
         },
         {
@@ -223,6 +256,9 @@ const SECTIONS = [
         "id": 12,
         "title": "Sushilee",
         "description": "verfijnde poké bowl met sticky sushirijst getopt met gemarineerde paddenstoelen, paling, garnaal, zalm, tonijn, krab, knapperige norivellen en avocado.",
+        "description1": "Als je fan bent van kwalitatief goede sushi dan mag je Konomi zeker niet missen. Om de hoek van de Grote Kerk vind je dit smalle zaakje dat geheel in Japanse stijl is gehuld. Compleet met rode lampions en Japanse gordijntjes. Eigenaresse Tia Swierts komt uit een horeca gezin en maakte al jaren sushi. Een eigen sushizaak openen was dan ook een logische stap. ",
+        "description2": "Ze startte een crowdfundingcampagne en haalde al binnen 40 minuten het benodigde bedrag binnen. Het was duidelijk; Haarlem stond te poppelen om haar zaak! Naast de wat bekendere sushivarianten kun je hier ’s middags poké bowls snoepen en je vindt hier ook creatieve varianten zoals haar signature Konomi soft shell crab roll. Een plaatje om te zien en een feest om van te eten.",
+        "description3": " Persoonlijke aandacht en een goede service is naast geweldige gerechten serveren voor Tia en haar team prioriteit nummer één. Niet zo gek dus dat ze inmiddels een trouwe groep vaste gasten hebben.",
         "location": "George Gershwinlaan 534, Amsterdam"
         },
         {
@@ -230,6 +266,9 @@ const SECTIONS = [
         "id": 13,
         "title": "Temakery",
         "description": "Pokebowls at it's finest!",
+        "description1": "Als je fan bent van kwalitatief goede sushi dan mag je Konomi zeker niet missen. Om de hoek van de Grote Kerk vind je dit smalle zaakje dat geheel in Japanse stijl is gehuld. Compleet met rode lampions en Japanse gordijntjes. Eigenaresse Tia Swierts komt uit een horeca gezin en maakte al jaren sushi. Een eigen sushizaak openen was dan ook een logische stap. ",
+        "description2": "Ze startte een crowdfundingcampagne en haalde al binnen 40 minuten het benodigde bedrag binnen. Het was duidelijk; Haarlem stond te poppelen om haar zaak! Naast de wat bekendere sushivarianten kun je hier ’s middags poké bowls snoepen en je vindt hier ook creatieve varianten zoals haar signature Konomi soft shell crab roll. Een plaatje om te zien en een feest om van te eten.",
+        "description3": " Persoonlijke aandacht en een goede service is naast geweldige gerechten serveren voor Tia en haar team prioriteit nummer één. Niet zo gek dus dat ze inmiddels een trouwe groep vaste gasten hebben.",
         "location": "Ferdinand Bolstraat 128, Amsterdam"
         },
         {
@@ -237,6 +276,9 @@ const SECTIONS = [
         "id": 14,
         "title": "Bowlsnrolls",
         "description": "Bowl’s n rolls is het eerste echte poké bowl restaurant van Leeuwarden en staat voor gemak en kwaliteit! ",
+        "description1": "Als je fan bent van kwalitatief goede sushi dan mag je Konomi zeker niet missen. Om de hoek van de Grote Kerk vind je dit smalle zaakje dat geheel in Japanse stijl is gehuld. Compleet met rode lampions en Japanse gordijntjes. Eigenaresse Tia Swierts komt uit een horeca gezin en maakte al jaren sushi. Een eigen sushizaak openen was dan ook een logische stap. ",
+        "description2": "Ze startte een crowdfundingcampagne en haalde al binnen 40 minuten het benodigde bedrag binnen. Het was duidelijk; Haarlem stond te poppelen om haar zaak! Naast de wat bekendere sushivarianten kun je hier ’s middags poké bowls snoepen en je vindt hier ook creatieve varianten zoals haar signature Konomi soft shell crab roll. Een plaatje om te zien en een feest om van te eten.",
+        "description3": " Persoonlijke aandacht en een goede service is naast geweldige gerechten serveren voor Tia en haar team prioriteit nummer één. Niet zo gek dus dat ze inmiddels een trouwe groep vaste gasten hebben.",
         "location": "Naauw 5, Leeuwarden"
         },
         {
@@ -244,6 +286,9 @@ const SECTIONS = [
         "id": 15,
         "title": "The Avocado Show",
         "description": "Great Poke bowls",
+        "description1": "Als je fan bent van kwalitatief goede sushi dan mag je Konomi zeker niet missen. Om de hoek van de Grote Kerk vind je dit smalle zaakje dat geheel in Japanse stijl is gehuld. Compleet met rode lampions en Japanse gordijntjes. Eigenaresse Tia Swierts komt uit een horeca gezin en maakte al jaren sushi. Een eigen sushizaak openen was dan ook een logische stap. ",
+        "description2": "Ze startte een crowdfundingcampagne en haalde al binnen 40 minuten het benodigde bedrag binnen. Het was duidelijk; Haarlem stond te poppelen om haar zaak! Naast de wat bekendere sushivarianten kun je hier ’s middags poké bowls snoepen en je vindt hier ook creatieve varianten zoals haar signature Konomi soft shell crab roll. Een plaatje om te zien en een feest om van te eten.",
+        "description3": " Persoonlijke aandacht en een goede service is naast geweldige gerechten serveren voor Tia en haar team prioriteit nummer één. Niet zo gek dus dat ze inmiddels een trouwe groep vaste gasten hebben.",
         "location": "Daniël Stalpertstraat 61, Amsterdam"
         },
     ],

@@ -52,7 +52,7 @@ const Onboarding = () => {
             // }}
             rightButtonLabel="Continue"
             rightButtonPress={() => {
-              navigation.navigate('OrderComplete');
+              navigation.navigate('RouteTabs');
             }}
           />
         </View>

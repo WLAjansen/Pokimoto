@@ -24,7 +24,7 @@ import { ScrollView, TouchableWithoutFeedback } from 'react-native-gesture-handl
 
 const RestaurantsDetailScreen = ({ route }) => {
   const navigation = useNavigation();
-  const { title, body, rating, price, size, protein, description,location , uri } = route.params;
+  const { title, body, rating, description1, description2, description3, price, size, protein, description,location , uri } = route.params;
   // Dropdown
   // Radio buttons
 
@@ -43,28 +43,9 @@ const RestaurantsDetailScreen = ({ route }) => {
             width: 50,
             justifyContent: 'center',
           }}
-          onPress={() => navigation.goBack()}
+          onPress={() => navigation.navigate('RouteTabs')}
         >
-          <AntDesign name='left' resizeMode='contain' size={20} color='white' />
-        </TouchableOpacity>
-        <View style={{ alignItems: 'center', justifyContent: 'center' }}>
-          <Text style={styles.renderHeaderText}>Restaurants</Text>
-        </View>
-        <TouchableOpacity
-          style={{
-            width: 50,
-            justifyContent: 'center',
-          }}
-          onPress={() => {
-            navigation.navigate('Dishes');
-          }}
-        >
-          <AntDesign
-            name='search1'
-            resizeMode='contain'
-            size={20}
-            color='white'
-          />
+          <AntDesign name="closecircle" size={26} color="white" />
         </TouchableOpacity>
       </SafeAreaView>
     );
@@ -73,7 +54,10 @@ const RestaurantsDetailScreen = ({ route }) => {
   function RenderHeaderTitleFirst(props) {
     return (
       <View style={styles.item}>
+        <View style={styles.headerTitleBlock}>
+        <Text style={styles.headerSubTitleTop}>Restaurants</Text>
         <Text style={styles.headerTitle}>{title}</Text>
+        </View>
         <View style={{flexDirection: 'row', justifyContent:'space-between'}}>
         <Image
         source={{
@@ -91,24 +75,21 @@ const RestaurantsDetailScreen = ({ route }) => {
     );
   }
 
-
-  
-
-
-  function RenderHeaderTitleThird() {
-    return (
-      <View style={styles.innerContainer}>
-         <Text style={styles.headerSubTitleL}>{location}</Text>
-      </View>
-    );
-  }
-
-
-
   function RenderHeaderTitleFourth() {
     return (
       <View style={styles.innerContainer}>
-        <Text style={styles.headerSubTitle}>{description}</Text>
+        <Text style={styles.headerSubTitle}>{description1}</Text>
+        <Text style={styles.headerSubTitle}>{description2}</Text>
+        <Text style={styles.headerSubTitle}>{description3}</Text>
+      </View>
+      
+    );
+  }
+
+  function RenderHeaderTitleFifth() {
+    return (
+      <View style={styles.innerContainer}>
+        <Text style={styles.headerSubTitleL}>{location}</Text>
       </View>
       
     );
@@ -119,13 +100,13 @@ const RestaurantsDetailScreen = ({ route }) => {
     return <ActivityIndicator size='large' color='#ffffff' />;
   } else {
     return (
-      <SafeAreaView stickyHeaderIndices={[1]} style={styles.droidSafeArea}>
-        <StatusBar style='light' />
+      <SafeAreaView stickyHeaderIndices={[1]} style={styles.container}>
+        <StatusBar hidden />
         <ScrollView>
         <RenderHeaderBlock />
         <RenderHeaderTitleFirst />
-        <RenderHeaderTitleThird />
         <RenderHeaderTitleFourth />
+        <RenderHeaderTitleFifth />
         </ScrollView>
       </SafeAreaView>
       
@@ -159,13 +140,10 @@ const customPickerStyles = StyleSheet.create({
 const styles = StyleSheet.create({
   droidSafeArea: {
     flex: 1,
-    paddingTop: Platform.OS === 'android' ? 25 : 0,
     backgroundColor: 'black',
   },
   item: {
     marginRight: 5,
-    marginLeft: 5,
-    marginTop: 5,
     marginBottom: 20
   },
   innerItem: {
@@ -184,10 +162,10 @@ const styles = StyleSheet.create({
     marginLeft: 12,
   },
   renderHeaderBack: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    marginLeft: 8,
-    marginRight: -8,
+    position: 'absolute',
+    right: 0,
+    zIndex: 2,
+    top: 20,
     paddingBottom: 10,
   },
   renderHeaderText: {
@@ -205,31 +183,49 @@ const styles = StyleSheet.create({
   },
   itemPhoto: {
     width: '100%',
-    height: 350,
     borderTopLeftRadius: 6,
-    borderTopRightRadius: 6
+    borderTopRightRadius: 6,
+    height: 450,
   },
   dropdownSelect: {
     borderRadius: 12,
     margin: 12,
     backgroundColor: '#181818',
   },
+  headerTitleBlock: {
+    position: 'absolute',
+    top: 30,
+    width: '60%',
+    zIndex: 2,
+    left: 20,
+  },
   headerTitle: {
-    color: '#C1C1C1',
+    color: 'white',
     fontFamily: 'Sharp-Sans-Bold',
-    fontSize: 32,
+    fontSize: 24,
     textAlign: 'left'
+  },
+  headerSubTitleTop: {
+    fontFamily: 'Sharp-Sans-Medium',
+    fontSize: 13,
+    color: 'white',
   },
   headerSubTitleL: {
     fontFamily: 'Sharp-Sans-Medium',
-    fontSize: 15,
+    fontSize: 13,
+    marginRight: 10,
+    marginLeft: 10, 
     color: '#404040',
     marginBottom: 3
   },
   headerSubTitle: {
     fontFamily: 'Sharp-Sans-Medium',
-    fontSize: 13,
-    color: '#404040',
+    fontSize: 13.5,
+    marginBottom: 10,
+    lineHeight: 19.5,
+    marginRight: 10,
+    marginLeft: 10, 
+    color: '#838383',
   },
   bodyDropDownLabel: {
     fontSize: 13,
