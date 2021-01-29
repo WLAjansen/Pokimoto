@@ -7,11 +7,11 @@ In de planning bevatten zich de meeste links zodat het team gemakkelijk door het
 
 ## Demo
 
-Check [Pokimoto op Expo](https://expo.io/@wlaj/projects/Pokimoto) voor meer informatie.
+Check [Pokimoto op Expo](https://expo.io/@wlaj/projects/Pokimotov1) voor meer informatie.
 
-- [Bekijk Pokimoto in de browser](https://expo.io/appetize-simulator?url=https://expo.io/@wlaj/Pokimoto)
+- [Bekijk Pokimoto in de browser](https://expo.io/appetize-simulator?url=https://expo.io/@wlaj/Pokimotov1)
 
-- [Open Pokimoto in de Expo Client app](https://i.imgur.com/uAgdSWf.png)
+- [Open Pokimoto in de Expo Client app](https://i.imgur.com/2wvl431.png)
 
 ## Installation
 
