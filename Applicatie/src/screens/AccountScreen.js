@@ -59,7 +59,7 @@ const AccountScreen = () => {
 
                 <View style={styles.wrapper}>
                     <TouchableOpacity onPress={()=>this.changeAdres()}>
-                        <AntDesign style={styles.card} name="creditcard" size={44} color="#888888" />
+                        <AntDesign style={styles.card} name="creditcard" size={35} color="#888888" />
                     </TouchableOpacity>   
 
                     <View style={styles.info}>
@@ -69,7 +69,7 @@ const AccountScreen = () => {
                 </View>
 
                 <View style={styles.wrapper_1}>
-                    <Feather style={styles.plus} name="plus" size={34} color="#404040" />
+                    <Feather style={styles.plus} name="plus" size={28} color="#404040" />
                     <Text style={styles.headline_1}>Add a payment Method</Text>
                 </View>
             </View>
@@ -88,32 +88,32 @@ const AccountScreen = () => {
          {/* optie 1 */}
         <View style={styles.wrapper_2}>
             <Text style={styles.headline_2}>API settings</Text>
-            <AntDesign style={styles.right} name="right" size={20} color="grey" />
+            <AntDesign style={styles.right} name="right" size={14} color="grey" />
         </View>
          {/* optie 2 */}
          <View style={styles.wrapper_2}>
             <Text style={styles.headline_2}>Fees</Text>
-            <AntDesign style={styles.right} name="right" size={20} color="grey" />
+            <AntDesign style={styles.right} name="right" size={14} color="grey" />
         </View>
          {/* optie 3 */}
          <View style={styles.wrapper_2}>
             <Text style={styles.headline_2}>Limits</Text>
-            <AntDesign style={styles.right} name="right" size={20} color="grey" />
+            <AntDesign style={styles.right} name="right" size={14} color="grey" />
         </View>
          {/* optie 4 */}
          <View style={styles.wrapper_2}>
             <Text style={styles.headline_2}>Security</Text>
-            <AntDesign style={styles.right} name="right" size={20} color="grey" />
+            <AntDesign style={styles.right} name="right" size={14} color="grey" />
         </View>
          {/* optie 5 */}
          <View style={styles.wrapper_2}>
             <Text style={styles.headline_2}>Support</Text>
-            <AntDesign style={styles.right} name="right" size={20} color="grey" />
+            <AntDesign style={styles.right} name="right" size={14} color="grey" />
         </View>
          {/* optie 6 */}
          <View style={styles.wrapper_2}>
             <Text style={styles.headline_2}>Legal</Text>
-            <AntDesign style={styles.right} name="right" size={20} color="grey" />
+            <AntDesign style={styles.right} name="right" size={14} color="grey" />
         </View>
 
         </SafeAreaView>

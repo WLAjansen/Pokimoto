@@ -1,8 +1,9 @@
 import * as React from 'react';
 import MapView, { Marker } from 'react-native-maps';
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigation } from '@react-navigation/native';
-import { StyleSheet, TouchableOpacity, Text, View, Dimensions, OverlayComponent, onPress } from 'react-native';
+import { StyleSheet, TouchableOpacity, Text, View, Dimensions, StatusBar, SafeAreaView, OverlayComponent, onPress } from 'react-native';
+import { useFonts } from 'expo-font';
 import { AntDesign, MaterialCommunityIcons } from '@expo/vector-icons';
 
 const mapStyle = [
@@ -192,7 +193,6 @@ const mapStyle = [
   }
 ];
 
-
 const TrackingScreen = () => {
   const navigation = useNavigation();
   const [region, setRegion] = useState({
@@ -202,8 +202,57 @@ const TrackingScreen = () => {
     longitudeDelta: 0.009
   });
 
+  function RenderHeaderTitle() {
+    const [currentDate, setCurrentDate] = useState('');
+    const [currentDate2, setCurrentDate2] = useState('');
+    let [fontsLoaded] = useFonts({
+      'Sharp-Sans-Regular': require('../assets/fonts/samsungsharpsans.otf'),
+      'Sharp-Sans-Medium': require('../assets/fonts/samsungsharpsans-medium.otf'),
+      'Sharp-Sans-Bold': require('../assets/fonts/samsungsharpsans-bold.otf'),
+    });
+    useEffect(() => {
+      var date = new Date().getDate(); //Current Date
+      var month = new Date().getMonth() + 1; //Current Month
+      var year = new Date().getFullYear(); //Current Year
+      var hours = new Date().getHours(); //Current Hours
+      var min = new Date().getMinutes(); //Current Minutes
+      var sec = new Date().getSeconds(); //Current Seconds
+      setCurrentDate2(
+         hours + ':' + min 
+      );
+    }, []);
+    useEffect(() => {
+      var date = new Date().getDate(); //Current Date
+      var month = new Date().getMonth() + 1; //Current Month
+      var year = new Date().getFullYear(); //Current Year
+      var hours = new Date().getHours() + 1; //Current Hours
+      var min = new Date().getMinutes(); //Current Minutes
+      var sec = new Date().getSeconds(); //Current Seconds
+      setCurrentDate(
+         hours + ':' + min 
+      );
+    }, []);
+    return (
+      <View style={styles.innerContainer}>
+        <TouchableOpacity
+          style={{
+            width: 50,
+            justifyContent: 'center',
+            marginBottom: 10,
+          }}
+          onPress={() => navigation.navigate('RouteTabs')}
+        >
+          <AntDesign name="left" size={20} color="white" />
+        </TouchableOpacity>
+        <Text style={styles.headerSubTitle}>{currentDate2} - {currentDate}</Text>
+      </View>
+    );
+  }
+
   return (
     <View style={styles.container}>
+    <StatusBar hidden />
+    <RenderHeaderTitle />
     <MapView style={styles.map}
       region={region}
       minZoomLevel={2}
@@ -216,8 +265,8 @@ const TrackingScreen = () => {
       />
     </MapView>
     <View style={styles.trackingContainer}>
-    <TouchableOpacity onPress={() => { navigation.navigate('Restaurants')}} style={styles.quitTracking}><AntDesign name="appstore1" size={24} color="black" /></TouchableOpacity>
-    <TouchableOpacity style={styles.trackingButton}><Text>Press Here</Text></TouchableOpacity>
+    <TouchableOpacity style={styles.trackingButton}><Text style={{fontFamily: 'Sharp-Sans-Bold'}}>Bezorger melden</Text><AntDesign style={{paddingLeft: 20}} name="flag" size={24} color="black" /></TouchableOpacity>
+    <TouchableOpacity onPress={() => { navigation.navigate('RouteTabs')}} style={styles.quitTracking}><MaterialCommunityIcons style={{marginLeft: 5}} name="export" size={25} color="black" /></TouchableOpacity>
     </View>
     </View>
   );
@@ -232,30 +281,42 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  innerContainer: {
+    position: 'absolute',
+    zIndex: 2,
+    top: 20,
+    left: 10,
+  },
+  headerSubTitle: {
+    color: 'white',
+    fontSize: 28,
+    fontFamily: 'Sharp-Sans-Bold'
+  },
   map: {
     width: Dimensions.get('window').width,
     height: Dimensions.get('window').height,
   },
-  trackingButton: {
+  trackingContainer: {
     position: 'absolute',
-    right: 10, // inverted
-    bottom: 10,
+    justifyContent: 'space-around',
+    width: '100%',
     zIndex: 2,
-    width: '45%',
-    flex: 0.5,
+    bottom: 10,
+
+    flexDirection: 'row'
+  },
+  trackingButton: {
     borderRadius: 10,
-    height: 100,
+    paddingHorizontal: 30,
+    paddingVertical: 20,
+    justifyContent: 'space-around',
+    flexDirection: 'row',
     backgroundColor: '#FFFFFF',
   },
   quitTracking: {
-    position: 'absolute',
-    left: 95, // inverted
-    bottom: 10,
-    zIndex: 2,
-    width: '20%',
-    flex: 0.5,
     borderRadius: 10,
-    height: 100,
+    paddingHorizontal: 20,
+    paddingVertical: 20,
     backgroundColor: '#54FA9C',
   },
   titleOrderStatus: {
